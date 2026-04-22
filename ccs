@@ -1,1 +1,18 @@
+/*MOBILE FIRST*/
 
+body {
+    background-color: hsla(207, 82%, 50%, 0.8);
+    border: 50px dotted #ff5523;
+}
+
+@media (min-width: 900px) {
+    body {
+        background-color: rgb(155, 23, 153);
+    }
+}/*cierre del media 900*/
+
+@media (min-width: 1300px) {
+    body {
+        background-color: rgb(70, 133, 179);
+    }
+}
