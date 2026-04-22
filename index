@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio Media Queries</title>
+
+    <!-- conexión al CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <h1>Probando Media Queries</h1>
+
     <p class="texto-columnas">
-      El océano profundo sigue siendo uno de los territorios más desconocidos del planeta, a pesar de que cubre más del setenta por ciento de la superficie terrestre. A diferencia del espacio, que ha capturado la imaginación colectiva durante décadas, las profundidades marinas permanecen en gran medida inexploradas debido a las condiciones extremas que presentan: presión aplastante, temperaturas cercanas al punto de congelación y una oscuridad absoluta que impide el paso de la luz solar.
-Sin embargo, en las últimas décadas, los avances tecnológicos han permitido a los científicos descender a zonas que antes eran inaccesibles. Vehículos operados remotamente, submarinos especializados y sensores de alta precisión han revelado ecosistemas sorprendentes, donde la vida ha encontrado formas únicas de adaptarse. Criaturas bioluminiscentes, por ejemplo, generan su propia luz mediante reacciones químicas, creando paisajes casi alienígenas en la oscuridad del fondo marino.
+        El océano profundo sigue siendo uno de los territorios más desconocidos del planeta Sin embargo, en las últimas décadas, los avances tecnológicos han permitido a los científicos descender a zonas que antes eran inaccesibles. Vehículos operados remotamente, submarinos especializados y sensores de alta precisión han revelado ecosistemas sorprendentes, donde la vida ha encontrado formas únicas de adaptarse. Criaturas bioluminiscentes, por ejemplo, generan su propia luz mediante reacciones químicas, creando paisajes casi alienígenas en la oscuridad del fondo marino.
+Uno de los descubrimientos más impactantes ha sido la existencia de comunidades que prosperan alrededor de fuentes hidrotermales. Estas grietas en el lecho oceánico expulsan agua extremadamente caliente rica en minerales, y a su alrededor se desarrollan complejos ecosistemas que no dependen de la luz solar, sino de procesos químicos conocidos como quimiosíntesis. Este hallazgo cambió por completo la comprensión científica sobre las condiciones necesarias para la vida.
+Además de su valor científico, el océano profundo también despierta interés económico. La posibilidad de extraer minerales raros, como el cobalto y el níquel, ha llevado a varios países y empresas a investigar métodos de minería submarina. No obstante, esta actividad plantea importantes riesgos ambientales, ya que podría alterar ecosistemas frágiles que tardaron millones de años en formarse.
+A medida que aumenta el conocimiento sobre estas regiones, también crece la conciencia sobre la necesidad de protegerlas. Diversas organizaciones internacionales están impulsando acuerdos para regular la actividad humana en aguas profundas y preservar su biodiversidad. En un mundo donde muchos ecosistemas ya han sido degradados, el océano profundo representa una de las últimas fronteras naturales que aún pueden ser estudiadas y protegidas antes de que sea demasiado tarde.
     </p>
+
 </body>
 </html>
