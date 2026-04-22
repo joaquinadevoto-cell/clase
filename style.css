@@ -16,3 +16,22 @@ body {
         background-color: rgb(249, 178, 51);
     }
 }
+/* texto en columnas */
+.texto-columnas {
+    column-count: 1;
+    column-gap: 20px;
+}
+
+/* tablet */
+@media (min-width: 700px) {
+    .texto-columnas {
+        column-count: 2;
+    }
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+    .texto-columnas {
+        column-count: 3;
+    }
+}
