@@ -68,6 +68,8 @@ nav ul {
     display: flex;
     align-items: center;
     padding: 0 var(--pad);
+    width: 100%;
+    height: auto;
 }
 
 .hero-text h2 {
