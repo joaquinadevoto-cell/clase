@@ -10,7 +10,8 @@
 
 /* BASE */
 body {
-    font-family: "roboto", Helvetica, sans-serif;
+  
+    font-family: 'Roboto', Helvetica, sans-serif;
     background-color: #ffffff;
     color: #111;
     line-height: 1.6;
@@ -62,6 +63,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 600px; 
 }
 
 section h2 {
@@ -138,39 +140,6 @@ footer a {
     font-size: 12px;
 }
 
-/* ========================= */
-/* 📱 TABLET (768px+) */
-/* ========================= */
-
-@media (min-width: 768px) {
-
-    body {
-        max-width: 720px;
-        margin: 0 auto;
-    }
-
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    form {
-        flex-direction: row;
-    }
-
-    input {
-        flex: 1;
-    }
-
-    button {
-        width: auto;
-    }
-}
-
-/* ========================= */
-/* 💻 DESKTOP (1024px+) */
-/* ========================= */
 
 @media (min-width: 1024px) {
 
@@ -178,28 +147,21 @@ footer a {
         max-width: 1000px;
     }
 
-    /* Layout más editorial */
     main {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 60px;
     }
 
-    /* Secciones principales ocupan la izquierda */
-    section {
-        grid-column: 1 / 2;
-    }
 
-    /* Aside a la derecha */
     aside {
-        grid-column: 2 / 3;
         border-top: none;
         border-left: 1px solid #ccc;
         padding-left: 20px;
     }
 
-    /* Destinos en fila */
-    section article {
+
+    section:last-of-type article {
         flex-direction: row;
         align-items: center;
         gap: 20px;
