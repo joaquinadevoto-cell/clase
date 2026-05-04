@@ -1,20 +1,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-/* RESET BÁSICO */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY GENERAL */
+/* BASE */
 body {
-    font-family: "Roboto", Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #ffffff;
     color: #111;
-    line-height: 1.5;
+    line-height: 1.6;
     padding: 16px;
+}
+
+/* IMÁGENES SIEMPRE RESPONSIVE */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* HEADER */
@@ -31,11 +38,10 @@ header {
 /* NAV */
 nav ul {
     list-style: none;
+    display: flex;
+    flex-direction: column; /* mobile */
+    gap: 8px;
     margin-top: 10px;
-}
-
-nav li {
-    margin: 8px 0;
 }
 
 nav a {
@@ -48,34 +54,31 @@ nav a {
 main {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 
 /* SECCIONES */
 section {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 section h2 {
     font-size: 18px;
-    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
-/* PÁRRAFOS */
+/* TEXTOS */
 p {
     font-size: 14px;
-    margin-bottom: 10px;
 }
 
-/* KOMOREBI BLOQUE DESTACADO */
-section article h3 {
-    font-size: 22px;
-    margin-bottom: 8px;
-}
-
-/* DESTINOS */
+/* ARTÍCULOS */
 article {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     margin-top: 15px;
 }
 
@@ -83,38 +86,29 @@ article h3 {
     font-size: 16px;
 }
 
-article img {
-    width: 100%;
-    margin-top: 8px;
-    border-radius: 6px;
-}
-
-/* ASIDE (newsletter) */
+/* ASIDE */
 aside {
-    margin-top: 30px;
-    padding-top: 15px;
     border-top: 1px solid #ccc;
-}
-
-aside h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 form {
     display: flex;
+    flex-direction: column;
     gap: 8px;
-    margin-top: 10px;
 }
 
 input {
-    flex: 1;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
+    width: 100%;
 }
 
 button {
-    padding: 8px 12px;
+    padding: 10px;
     border: none;
     background-color: black;
     color: white;
@@ -124,7 +118,7 @@ button {
 /* FOOTER */
 footer {
     margin-top: 40px;
-    padding-top: 15px;
+    padding-top: 20px;
     border-top: 1px solid #ccc;
     text-align: center;
 }
@@ -144,42 +138,74 @@ footer a {
     font-size: 12px;
 }
 
-footer p {
-    font-size: 12px;
-    color: #666;
-}
+/* ========================= */
+/* 📱 TABLET (768px+) */
+/* ========================= */
 
-/* -------- DESKTOP -------- */
 @media (min-width: 768px) {
 
     body {
-        max-width: 800px;
-        margin: auto;
+        max-width: 720px;
+        margin: 0 auto;
     }
 
     nav ul {
-        display: flex;
+        flex-direction: row;
         justify-content: center;
         gap: 20px;
     }
 
+    form {
+        flex-direction: row;
+    }
+
+    input {
+        flex: 1;
+    }
+
+    button {
+        width: auto;
+    }
+}
+
+/* ========================= */
+/* 💻 DESKTOP (1024px+) */
+/* ========================= */
+
+@media (min-width: 1024px) {
+
+    body {
+        max-width: 1000px;
+    }
+
+    /* Layout más editorial */
     main {
-        gap: 50px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 60px;
     }
 
-    section h2 {
-        font-size: 22px;
+    /* Secciones principales ocupan la izquierda */
+    section {
+        grid-column: 1 / 2;
     }
 
-    p {
-        font-size: 15px;
+    /* Aside a la derecha */
+    aside {
+        grid-column: 2 / 3;
+        border-top: none;
+        border-left: 1px solid #ccc;
+        padding-left: 20px;
+    }
+
+    /* Destinos en fila */
+    section article {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
     }
 
     article img {
-        max-width: 400px;
-    }
-
-    form {
-        max-width: 400px;
+        max-width: 250px;
     }
 }
