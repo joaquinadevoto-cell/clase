@@ -7,32 +7,812 @@
 
     <!-- conexión al CSS -->
     <link rel="stylesheet" href="style.css">
+    <!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conociendo Japón</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+JP:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+  <style>
+    /* ══════════════════════════════════
+       VARIABLES
+    ══════════════════════════════════ */
+    :root {
+      --rojo:        #CC0000;
+      --rojo-vivo:   #E8150A;
+      --negro:       #111111;
+      --gris-oscuro: #1C1C1C;
+      --gris-medio:  #2A2A2A;
+      --gris-calido: #F0EDE8;
+      --crema:       #F5F0EB;
+      --blanco:      #FFFFFF;
+
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-serif:   'Noto Serif JP', serif;
+      --font-body:    'Lato', sans-serif;
+
+      --px:      20px;
+      --radius:  4px;
+      --trans:   0.25s ease;
+    }
+
+    /* ══════════════════════════════════
+       RESET BASE
+    ══════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--negro);
+      color: var(--blanco);
+      line-height: 1.6;
+      max-width: 430px;
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ══════════════════════════════════
+       HEADER + NAV
+    ══════════════════════════════════ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(17, 17, 17, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(204, 0, 0, 0.25);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px var(--px);
+    }
+
+    /* Logo dentro del nav */
+    div#logo a {
+      font-family: var(--font-display);
+      font-size: 28px;
+      letter-spacing: 6px;
+      color: var(--blanco);
+      text-transform: uppercase;
+    }
+
+    /* Lista de íconos de navegación */
+    ul.nav-icons {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    ul.nav-icons li a {
+      font-size: 18px;
+      color: var(--blanco);
+      transition: color var(--trans);
+    }
+
+    ul.nav-icons li a:hover {
+      color: var(--rojo);
+    }
+
+    /* ══════════════════════════════════
+       MAIN — CONTENIDO PRINCIPAL
+    ══════════════════════════════════ */
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── HERO ── */
+    section#hero {
+      position: relative;
+      height: 520px;
+      overflow: hidden;
+    }
+
+    section#hero img {
+      filter: brightness(0.65);
+    }
+
+    div.hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.05) 0%,
+        rgba(0,0,0,0.3) 50%,
+        rgba(17,17,17,0.92) 100%
+      );
+    }
+
+    div.hero-content {
+      position: absolute;
+      bottom: 40px;
+      left: var(--px);
+      right: var(--px);
+    }
+
+    p.hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--rojo);
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 72px;
+      line-height: 0.9;
+      letter-spacing: 8px;
+      color: var(--blanco);
+      text-transform: uppercase;
+    }
+
+    h1 span {
+      color: var(--rojo-vivo);
+    }
+
+    /* ── INTRO ── */
+    section#intro {
+      padding: 36px var(--px);
+      background-color: var(--negro);
+    }
+
+    section#intro p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 14px;
+    }
+
+    section#intro p strong {
+      color: var(--blanco);
+    }
+
+    section#intro p:last-child {
+      font-weight: 700;
+      color: var(--blanco);
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    /* ── GALERÍA INTRO (3 imágenes) ── */
+    section#galeria {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 180px 180px;
+      gap: 4px;
+      padding: 0 var(--px) 4px;
+      background-color: var(--negro);
+    }
+
+    /* article = composición independiente con imagen */
+    article.galeria-item {
+      overflow: hidden;
+      border-radius: var(--radius);
+    }
+
+    /* El primer item ocupa las dos filas (columna izquierda) */
+    article.galeria-item:first-child {
+      grid-row: 1 / 3;
+    }
+
+    article.galeria-item img {
+      transition: transform 0.4s ease;
+    }
+
+    article.galeria-item:hover img {
+      transform: scale(1.04);
+    }
+
+    /* ── DESTINOS MÁS VISITADOS ── */
+    section#destinos {
+      background-color: var(--gris-oscuro);
+      padding: 40px var(--px);
+    }
+
+    section#destinos header {
+      position: static;
+      border: none;
+      background: transparent;
+      backdrop-filter: none;
+      margin-bottom: 24px;
+      padding: 0;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blanco);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    section#destinos p.destinos-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+    }
+
+    section#destinos p.destinos-desc strong {
+      color: var(--blanco);
+    }
+
+    /* Grid de destinos: 2 cards */
+    ul.destinos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    /* Cada destino es un li con article adentro */
+    ul.destinos-grid li article {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+    }
+
+    ul.destinos-grid li article img {
+      transition: transform 0.4s ease;
+    }
+
+    ul.destinos-grid li article:hover img {
+      transform: scale(1.05);
+    }
+
+    div.destino-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 32px 12px 12px;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+    }
+
+    h3.destino-nombre {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blanco);
+      line-height: 1.3;
+    }
+
+    p.destino-ciudad {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 2px;
+    }
+
+    /* ── CITA DESTACADA ── */
+    aside#cita {
+      background-color: var(--negro);
+      padding: 48px var(--px);
+      position: relative;
+    }
+
+    aside#cita::before {
+      content: '\201C';
+      position: absolute;
+      top: 16px;
+      left: 8px;
+      font-family: var(--font-serif);
+      font-size: 120px;
+      color: var(--rojo);
+      line-height: 1;
+      opacity: 0.8;
+    }
+
+    aside#cita::after {
+      content: '\201D';
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      font-family: var(--font-serif);
+      font-size: 120px;
+      color: var(--rojo);
+      line-height: 1;
+      opacity: 0.8;
+    }
+
+    blockquote {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.45;
+      color: var(--blanco);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── CULTURA / KOMOREBI ── */
+    section#cultura {
+      padding: 48px var(--px);
+      background-color: var(--gris-calido);
+      color: var(--negro);
+    }
+
+    p.cultura-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--rojo);
+      margin-bottom: 20px;
+    }
+
+    h2.cultura-titulo {
+      font-family: var(--font-display);
+      font-size: 42px;
+      letter-spacing: 3px;
+      color: var(--rojo);
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    p.cultura-kanji {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--negro);
+      margin-bottom: 16px;
+    }
+
+    hr {
+      width: 40px;
+      border: none;
+      border-top: 2px solid var(--rojo);
+      margin: 0 0 16px 0;
+    }
+
+    p.cultura-desc {
+      font-family: var(--font-body);
+      font-style: italic;
+      font-size: 15px;
+      color: rgba(17,17,17,0.75);
+      line-height: 1.7;
+    }
+
+    /* ── NEWSLETTER / CTA ── */
+    section#newsletter {
+      background-color: var(--gris-medio);
+      padding: 48px var(--px);
+    }
+
+    h2.newsletter-titulo {
+      font-family: var(--font-display);
+      font-size: 26px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blanco);
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    /* Formulario de suscripción */
+    form#form-newsletter {
+      display: flex;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    form#form-newsletter label {
+      /* Label oculto visualmente pero accesible */
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+    }
+
+    form#form-newsletter input[type="email"] {
+      flex: 1;
+      padding: 14px 16px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--blanco);
+    }
+
+    form#form-newsletter input[type="email"]::placeholder {
+      color: rgba(255,255,255,0.4);
+    }
+
+    form#form-newsletter button[type="submit"] {
+      padding: 14px 20px;
+      background-color: var(--rojo);
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-display);
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: var(--blanco);
+      text-transform: uppercase;
+      transition: background-color var(--trans);
+      white-space: nowrap;
+    }
+
+    form#form-newsletter button[type="submit"]:hover {
+      background-color: var(--rojo-vivo);
+    }
+
+    p.newsletter-nota {
+      margin-top: 12px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ══════════════════════════════════
+       FOOTER
+    ══════════════════════════════════ */
+    footer {
+      background-color: var(--negro);
+      padding: 40px var(--px) 24px;
+      text-align: center;
+      border-top: 1px solid rgba(204,0,0,0.2);
+    }
+
+    div#footer-logo {
+      font-family: var(--font-display);
+      font-size: 36px;
+      letter-spacing: 8px;
+      color: var(--blanco);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    /* Lista de redes sociales */
+    ul.social-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 36px;
+    }
+
+    ul.social-links li a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50%;
+      font-size: 15px;
+      transition: border-color var(--trans), background-color var(--trans);
+    }
+
+    ul.social-links li a:hover {
+      border-color: var(--rojo);
+      background-color: rgba(204,0,0,0.12);
+    }
+
+    /* Lista de links legales */
+    ul.legal-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    ul.legal-links li a {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      transition: color var(--trans);
+    }
+
+    ul.legal-links li a:hover {
+      color: var(--rojo);
+    }
+
+    p.copyright {
+      font-size: 10px;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 
 <body>
 
-    <h1>Probando Media Queries</h1>
-<section> 
-    <p class="texto-columnas">
-        El océano profundo sigue siendo uno de los territorios más desconocidos del planeta Sin embargo, en las últimas décadas, los avances tecnológicos han permitido a los científicos descender a zonas que antes eran inaccesibles. Vehículos operados remotamente, submarinos especializados y sensores de alta precisión han revelado ecosistemas sorprendentes, donde la vida ha encontrado formas únicas de adaptarse. Criaturas bioluminiscentes, por ejemplo, generan su propia luz mediante reacciones químicas, creando paisajes casi alienígenas en la oscuridad del fondo marino.
-Uno de los descubrimientos más impactantes ha sido la existencia de comunidades que prosperan alrededor de fuentes hidrotermales. Estas grietas en el lecho oceánico expulsan agua extremadamente caliente rica en minerales, y a su alrededor se desarrollan complejos ecosistemas que no dependen de la luz solar, sino de procesos químicos conocidos como quimiosíntesis. Este hallazgo cambió por completo la comprensión científica sobre las condiciones necesarias para la vida.
-Además de su valor científico, el océano profundo también despierta interés económico. La posibilidad de extraer minerales raros, como el cobalto y el níquel, ha llevado a varios países y empresas a investigar métodos de minería submarina. No obstante, esta actividad plantea importantes riesgos ambientales, ya que podría alterar ecosistemas frágiles que tardaron millones de años en formarse.
-A medida que aumenta el conocimiento sobre estas regiones, también crece la conciencia sobre la necesidad de protegerlas. Diversas organizaciones internacionales están impulsando acuerdos para regular la actividad humana en aguas profundas y preservar su biodiversidad. En un mundo donde muchos ecosistemas ya han sido degradados, el océano profundo representa una de las últimas fronteras naturales que aún pueden ser estudiadas y protegidas antes de que sea demasiado tarde.
-    </p>
-</section>
-    <section> 
-        <p class="texto2">
-             El océano profundo sigue siendo uno de los territorios más desconocidos del planeta Sin embargo, en las últimas décadas, los avances tecnológicos han permitido a los científicos descender a zonas que antes eran inaccesibles. Vehículos operados remotamente, submarinos especializados y sensores de alta precisión han revelado ecosistemas sorprendentes, donde la vida ha encontrado formas únicas de adaptarse. Criaturas bioluminiscentes, por ejemplo, generan su propia luz mediante reacciones químicas, creando paisajes casi alienígenas en la oscuridad del fondo marino.
-        </p>
-    <section>
-        <p class="texto3">
-            Uno de los descubrimientos más impactantes ha sido la existencia de comunidades que prosperan alrededor de fuentes hidrotermales.
-        </p>
-<p class="texto4">
-     Estas grietas en el lecho oceánico expulsan agua extremadamente caliente rica en minerales, y a su alrededor se desarrollan complejos ecosistemas que no dependen de la luz solar, sino de procesos químicos conocidos como quimiosíntesis.
-</p>
-    </section>
+  <!-- ══════════════════════════════════
+       HEADER — Barra de navegación
+       Concepto: <header> + <nav> + <div id="logo"> + <ul> de íconos
+  ══════════════════════════════════ -->
+  <header>
+    <nav>
+
+      <!-- Logo del sitio -->
+      <div id="logo">
+        <a href="index.html">JAPÓN</a>
+      </div>
+
+      <!-- Lista de íconos de navegación -->
+      <ul class="nav-icons">
+        <li><a href="#" aria-label="Buscar">🔍</a></li>
+        <li><a href="#" aria-label="Mi cuenta">👤</a></li>
+        <li><a href="#" aria-label="Menú">☰</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!-- ══════════════════════════════════
+       MAIN — Contenido principal
+       Concepto: <main> agrupa todo el contenido central
+  ══════════════════════════════════ -->
+  <main>
+
+    <!-- ── HERO
+         Concepto: <section> + <img> + estructura de contenido superpuesto
+    ── -->
+    <section id="hero">
+
+      <img
+        src="img/hero-japon.jpg"
+        alt="Monte Fuji con pagoda japonesa al atardecer"
+      >
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">Conociendo</p>
+        <h1>JAP<span>Ó</span>N</h1>
+      </div>
+
     </section>
 
+
+    <!-- ── INTRO
+         Concepto: <section> con <p> + uso de <strong> y <em>
+    ── -->
+    <section id="intro">
+
+      <p>
+        Donde la tradición se encuentra con el mañana. Explorar Japón es
+        descubrir un mosaico de regiones, cada una con <strong>su propio sabor,
+        su propio arte y sus propios rituales.</strong>
+      </p>
+
+      <p>
+        Déjate envolver por un territorio donde lo ancestral y lo innovador
+        no solo conviven, sino que <em>crean algo totalmente único.</em>
+      </p>
+
+      <p>Tu viaje por el corazón del Sol Naciente comienza aquí.</p>
+
+    </section>
+
+
+    <!-- ── GALERÍA DE IMÁGENES INTRO
+         Concepto: <section> con múltiples <article> (composiciones independientes)
+    ── -->
+    <section id="galeria">
+
+      <article class="galeria-item">
+        <img
+          src="img/pagoda.jpg"
+          alt="Pagoda roja tradicional japonesa entre cerezos en flor"
+        >
+      </article>
+
+      <article class="galeria-item">
+        <img
+          src="img/tokio-luces.jpg"
+          alt="Calle iluminada de Tokio de noche con letreros de colores"
+        >
+      </article>
+
+      <article class="galeria-item">
+        <img
+          src="img/bandera-japon.jpg"
+          alt="Bandera de Japón entre flores de cerezo"
+        >
+      </article>
+
+    </section>
+
+
+    <!-- ── DESTINOS MÁS VISITADOS
+         Concepto: <section> + <header> interno + <ul> + <article> por destino
+    ── -->
+    <section id="destinos">
+
+      <!-- header interno de la sección -->
+      <header>
+        <h2>Destinos más visitados</h2>
+        <p class="destinos-desc">
+          <strong>Algunos de los destinos más visitados reflejan la diversidad
+          cultural del país,</strong> desde la innovación de Tokio hasta la tradición
+          de Kioto y la historia de Hiroshima. Cada lugar ofrece una
+          experiencia única que combina pasado, presente y cultura.
+        </p>
+      </header>
+
+      <!-- Lista de destinos -->
+      <ul class="destinos-grid">
+
+        <li>
+          <article>
+            <img
+              src="img/hiroshima.jpg"
+              alt="Monumento de la Paz en Hiroshima al anochecer"
+            >
+            <div class="destino-info">
+              <h3 class="destino-nombre">Monumento de la paz</h3>
+              <p class="destino-ciudad">Hiroshima</p>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article>
+            <img
+              src="img/shibuya.jpg"
+              alt="Cruce de Shibuya con multitud de personas en Tokio"
+            >
+            <div class="destino-info">
+              <h3 class="destino-nombre">Cruce de Shibuya</h3>
+              <p class="destino-ciudad">Tokio</p>
+            </div>
+          </article>
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- ── CITA DESTACADA
+         Concepto: <aside> para contenido indirectamente relacionado
+                   + <blockquote> para cita
+    ── -->
+    <aside id="cita">
+      <blockquote>
+        Cada región japonesa revela una forma distinta de entender
+        el tiempo, el espacio y la cultura
+      </blockquote>
+    </aside>
+
+
+    <!-- ── CULTURA EN UNA PALABRA
+         Concepto: <section> con <h2>, <p>, <hr> (cambio de tema)
+    ── -->
+    <section id="cultura">
+
+      <p class="cultura-label">Cultura en una palabra</p>
+
+      <h2 class="cultura-titulo">KOMOREBI (木漏れ日)</h2>
+
+      <p class="cultura-kanji">木漏れ日</p>
+
+      <hr>
+
+      <p class="cultura-desc">
+        La luz del sol que se filtra a través de las hojas de los árboles
+      </p>
+
+    </section>
+
+
+    <!-- ── NEWSLETTER / CTA
+         Concepto: <section> con <form>, <label>, <input>, <button>
+    ── -->
+    <section id="newsletter">
+
+      <h2 class="newsletter-titulo">Conectate más con Japón</h2>
+
+      <form id="form-newsletter" action="#" method="post">
+
+        <label for="email-newsletter">Tu correo electrónico</label>
+
+        <input
+          type="email"
+          id="email-newsletter"
+          name="email"
+          placeholder="nombre@correo.com"
+          required
+        >
+
+        <button type="submit">Suscribite</button>
+
+      </form>
+
+      <p class="newsletter-nota">
+        Suscribite a nuestro newsletter para tener más novedades
+      </p>
+
+    </section>
+
+  </main><!-- fin main -->
+
+
+  <!-- ══════════════════════════════════
+       FOOTER
+       Concepto: <footer> + <ul> de redes sociales + <ul> de links legales
+  ══════════════════════════════════ -->
+  <footer>
+
+    <!-- Logo -->
+    <div id="footer-logo">JAPÓN</div>
+
+    <!-- Lista de redes sociales -->
+    <ul class="social-links">
+      <li>
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+      </li>
+      <li>
+        <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener">𝕏</a>
+      </li>
+      <li>
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener">▣</a>
+      </li>
+      <li>
+        <a href="#" aria-label="TikTok" target="_blank" rel="noopener">♪</a>
+      </li>
+    </ul>
+
+    <!-- Lista de links legales -->
+    <ul class="legal-links">
+      <li><a href="privacidad.html">Política de privacidad</a></li>
+      <li><a href="condiciones.html">Condiciones de uso</a></li>
+      <li><a href="cookies.html">Política de cookies</a></li>
+    </ul>
+
+    <p class="copyright">Copyright. Todos los derechos reservados</p>
+
+  </footer>
+
 </body>
+</html>
+
 </html>
