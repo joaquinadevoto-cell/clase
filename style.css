@@ -1,53 +1,255 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
-.hero {
-    position: relative;
-    overflow: hidden;
-    background: var(--blanco);
-}
-*, *::before, *::after {
+/* RESET */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-user agent stylesheet
-section {
-    display: block;
-    unicode-bidi: isolate;
-}
-body {
-    font-family: var(--fuente-sans);
-    background-color: var(--blanco);
-    color: var(--negro);
-    line-height: 1.6;
-    font-size: 15px;
-}
-@media (min-width: 640px) {
-    :root {
-        --padding-h: 32px;
-    }
-}
+
+/* VARIABLES */
 :root {
-    --rojo: #8B1A1A;
+    --rojo: #c62828;
     --rojo-oscuro: #6B1212;
-    --negro: #111111;
-    --blanco: #FFFFFF;
+    --negro: #111;
+    --blanco: #fff;
     --beige: #E8E4DC;
     --beige-claro: #F2EFE8;
-    --gris-texto: #4A4A4A;
-    --fuente-sans: 'Montserrat', sans-serif;
-    --radio: 12px;
-    --max-ancho: 1200px;
-    --padding-h: 20px;
+    --gris: #4a4a4a;
+
+    --max: 1200px;
+    --pad: 20px;
+    --radius: 12px;
 }
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+/* BASE */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--beige);
+    color: var(--negro);
+    line-height: 1.6;
 }
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+/* CONTENEDOR */
+.container {
+    max-width: var(--max);
+    margin: auto;
+    padding: 40px var(--pad);
+}
+
+/* ================= HEADER ================= */
+
+header {
+    background: #dcd6c8;
+    padding: 15px var(--pad);
+}
+
+.header-inner {
+    max-width: var(--max);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: none;
+    list-style: none;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 60vh;
+    background: url('../img/monte-fuji.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--pad);
+}
+
+.hero-text h2 {
+    font-size: 14px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    color: var(--rojo);
+    font-weight: 800;
+}
+
+/* ================= INTRO ================= */
+
+.intro p {
+    margin-bottom: 12px;
+    color: var(--gris);
+}
+
+.intro-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.intro-grid img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+/* ================= DESTINOS ================= */
+
+.destinos {
+    background: #3b3b3b;
+    color: white;
+}
+
+.destinos p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.destinos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+.card h3 {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* ================= FRASE ================= */
+
+.frase {
+    text-align: center;
+    padding: 40px 20px;
+    font-weight: 600;
+}
+
+/* ================= KOMOREBI ================= */
+
+.komorebi {
+    text-align: center;
+    padding: 30px;
+}
+
+.komorebi h2 {
+    color: var(--rojo);
+}
+
+.komorebi span {
+    display: inline-block;
+    background: #d9cbb5;
+    padding: 8px 16px;
+    margin-top: 10px;
+}
+
+/* ================= NEWSLETTER ================= */
+
+.newsletter {
+    background: url('../img/newsletter.jpg') center/cover no-repeat;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+.newsletter form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+}
+
+.newsletter button {
+    background: #3b0d14;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #2b0008;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* ================= TABLET ================= */
+
+@media (min-width: 768px) {
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero-text h1 {
+        font-size: 60px;
+    }
+
+    .intro-grid {
+        flex-direction: row;
+    }
+
+    .destinos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter form {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .newsletter input {
+        width: 300px;
+    }
+}
+
+/* ================= DESKTOP ================= */
+
+@media (min-width: 1024px) {
+
+    .hero {
+        height: 85vh;
+        padding-left: 80px;
+    }
+
+    .hero-text h1 {
+        font-size: 90px;
+    }
+
+    .intro-grid img {
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .destinos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .container {
+        padding: 60px var(--pad);
+    }
 }
