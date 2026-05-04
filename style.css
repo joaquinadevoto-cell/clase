@@ -210,41 +210,7 @@ footer {
     padding: 50px 20px;
 }
 
-/* ================= TABLET ================= */
 
-@media (min-width: 768px) {
-
-    .header-inner {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    nav ul {
-        flex-direction: row;
-        gap: 20px;
-    }
-
-    .hero {
-        height: 70vh;
-    }
-
-    .intro-grid {
-        flex-direction: row;
-    }
-
-    .destinos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .newsletter form {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .newsletter input {
-        width: 300px;
-    }
-}
 
 /* ================= DESKTOP ================= */
 
@@ -267,4 +233,64 @@ footer {
     .container {
         padding: 60px var(--pad);
     }
+    /* HEADER GENERAL */
+header {
+    background: #dcd6c8;
+    padding: 15px 40px;
+}
+
+/* CONTENEDOR INTERNO */
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+    height: 40px;
+}
+
+/* NAV CENTRAL */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ITEM ACTIVO (Inicio en rojo) */
+nav a.active {
+    color: #c62828;
+}
+
+/* ACCIONES DERECHA */
+.header-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-actions a {
+    text-decoration: none;
+    color: #c62828;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 }
