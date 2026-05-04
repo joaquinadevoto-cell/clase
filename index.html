@@ -2,96 +2,145 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Japón - Mobile</title>
-      <link rel="stylesheet" href="style.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japón - Cultura</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header id="inicio">
-
-        <h1>Japón y cultura</h1>
-
-        <div class="navbar">
+        <div class="header-inner">
 
             <!-- LOGO -->
             <a href="index.html">
-                <img src="img/Logo-01.png" alt="Logo Japón" class="logo">
+                <img src="img/logo-01.png" alt="Logo Japón" class="logo">
             </a>
 
-            <!-- MENÚ -->
+            <!-- NAV -->
             <nav>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="cultura.html">Cultura</a></li>
-                    <li><a href="gastronomia.html">Gastronomía</a></li>
-                    <li><a href="arte.html">Arte</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Cultura</a></li>
+                    <li><a href="#">Gastronomía</a></li>
+                    <li><a href="#">Arte</a></li>
                     <li><a href="#">Festividades</a></li>
                     <li><a href="#">Curiosidades</a></li>
                 </ul>
             </nav>
 
         </div>
-
     </header>
 
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Conociendo</h2>
+            <h1>Japón</h1>
+        </div>
+    </section>
+
+    <!-- MAIN -->
     <main>
 
-        <section>
-            <h2>Tradición y Modernidad</h2>
+        <!-- INTRO -->
+        <section class="intro">
+            <div class="container">
 
-            <img src="img/fuji.jpg" alt="Monte Fuji">
+                <p>
+                    Donde la tradición se encuentra con el mañana. Explorar Japón es descubrir un mosaico de regiones,
+                    cada una con su propio sabor, su propio arte y sus propios rituales.
+                </p>
 
-            <p>
-                Donde la tradición se encuentra con el mañana. Explorar Japón es descubrir un mosaico de regiones, cada una con su
-propio sabor, su propio arte y sus propios rituales.
-Déjate envolver por un territorio donde lo ancestral y lo innovador no solo conviven, sino que crean algo totalmente
-único.
-Tu viaje por el corazón del Sol Naciente comienza aquí.
-         
+                <p>
+                    Déjate envolver por un territorio donde lo ancestral y lo innovador no solo conviven, sino que crean algo totalmente único.
+                </p>
+
+                <p>
+                    <strong>Tu viaje por el corazón del Sol Naciente comienza aquí.</strong>
+                </p>
+
+                <!-- IMÁGENES -->
+                <div class="intro-grid">
+                    <img src="img/templo1.jpeg" alt="Templo japonés">
+                    <img src="img/tokio-pantallas.jpg" alt="Ciudad de Tokio">
+                    <img src="img/bandera.jpg" alt="Bandera de Japón">
+                </div>
+
+            </div>
         </section>
-<img src="img/templo1.jpeg" alt="Templo japones"> 
-<img src="img/tokio pantallas.jpg" alt="Centro de Japon">
-<img src="img/bandera.jpg alt="Bandera de Japon con flores de cerezo">
 
-        <section>
-            <h2>DESCUBRÍ LOS DESTINOS MÁS VISITADOS</h2>
+        <!-- DESTINOS -->
+        <section class="destinos">
+            <div class="container">
 
-            <p>
-                Algunos de los destinos más visitados reflejan la diversidad cultural del país, desde la innovación de Tokio hasta la tradición de
-Kioto y la historia de Hiroshima. Cada lugar ofrece una experiencia única que combina pasado, presente y cultura.
-            </p>
-<img src="img/monumento.jpg" alt="Monumento de la paz">
-<img src="img/shibuya.jpg" alt="Cruce de Shibuya, Tokio" width="200">
-<img src="img/dotonbori.jpg" alt="dotonbori, Osaka">
-<img src="img/kiyomizudera.jpeg" alt="Torre de Koyasu en Templo Kiyomizu-dera">
-<img src="img/Jardin de Koraku.jpg" alt="Jardin de Koraku-en Okayama">
-<img src="img/torre.jpg" alt="Torre de Tsutenkaku Osaka">
+                <h2>Descubrí los destinos más visitados</h2>
+
+                <p>
+                    Algunos de los destinos más visitados reflejan la diversidad cultural del país, desde la innovación de Tokio hasta la tradición de Kioto y la historia de Hiroshima.
+                </p>
+
+                <div class="destinos-grid">
+
+                    <article class="card">
+                        <img src="img/monumento.jpg" alt="Hiroshima">
+                        <h3>Monumento de la paz</h3>
+                        <span>Hiroshima</span>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/shibuya.jpg" alt="Shibuya">
+                        <h3>Cruce de Shibuya</h3>
+                        <span>Tokio</span>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/torre.jpg" alt="Osaka">
+                        <h3>Torre Tsutenkaku</h3>
+                        <span>Osaka</span>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/kiyomizudera.jpeg" alt="Kioto">
+                        <h3>Kiyomizu-dera</h3>
+                        <span>Kioto</span>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/dotonbori.jpg" alt="Osaka">
+                        <h3>Dotonbori</h3>
+                        <span>Osaka</span>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/jardin-koraku.jpg" alt="Okayama">
+                        <h3>Jardín Koraku-en</h3>
+                        <span>Okayama</span>
+                    </article>
+
+                </div>
+
+            </div>
         </section>
 
     </main>
 
-    <aside>
-        <h3>Enlaces útiles</h3>
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <h2>Conectate más con Japón</h2>
+        <p>Suscribite a nuestro newsletter para tener más novedades</p>
 
-        <ul>
-            <li><a href="https://www.japan.travel/en/my/">Japan Endless Discovery</a></li>
-            <li><a href="https://www.ar.emb-japan.go.jp/">Embajada de Japón en Argentina</a></li>
-            <li><a href="https://www.jal.co.jp/jp/en/">Japan Airlines</a></li>
-            <li><a href="https://www.japan.go.jp/">Gobierno de Japón</a></li>
-        </ul>
-    </aside>
+        <form>
+            <input type="email" placeholder="nombre@correo.com">
+            <button type="submit">Suscribite</button>
+        </form>
+    </section>
 
-    <a href="#inicio">Volver al inicio</a>
-
+    <!-- FOOTER -->
     <footer>
-        <h3>Contacto</h3>
-
-        <p>Email: info@japon.com</p>
-        <p>Teléfono: +54 9 11 3443 5541</p>
-
-        <hr>
+        <h2>Japón</h2>
 
         <p>Política de privacidad | Condiciones de uso | Cookies</p>
         <p>2026 © Todos los derechos reservados</p>
@@ -99,6 +148,5 @@ Kioto y la historia de Hiroshima. Cada lugar ofrece una experiencia única que c
 
 </body>
 </html>
-
   
 
