@@ -11,10 +11,10 @@
     --rojo: #c62828;
     --negro: #1a1a1a;
     --beige: #E8E4DC;
-    --gris-fondo: #3e3c3a; /* Color exacto del fondo de destinos */
+    --gris-fondo: #3e3c3a; 
     --blanco: #ffffff;
     --max-width: 1200px;
-    --radius: 25px; /* Los bordes redondeados del diseño */
+    --radius: 25px; 
 }
 
 body {
@@ -24,7 +24,8 @@ body {
     line-height: 1.6;
 }
 
-/* 2. CONTENEDOR (Para centrar contenido como pide la cátedra) */
+/*mobile*/
+/* CONTENEDOR */
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -37,41 +38,50 @@ header {
     padding: 15px 0;
 }
 
+
 .navbar {
-    display: flex;
+    display: flex; display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px;
     justify-content: space-between;
     align-items: center;
+}
+nav ul { display: flex; 
+    gap: 15px; 
+    list-style: none; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+nav a { text-decoration: none; 
+    color: var(--negro); 
+    font-size: 13px; 
+    text-transform: uppercase; 
 }
 
 .logo { height: 40px; }
 
-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--negro);
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
 
 /* 4. HERO SECTION (Igual al JPG) */
 .hero {
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
                 url('img/montefuji-01.png') center/cover no-repeat;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .hero h1 {
     color: var(--rojo);
-    font-size: clamp(50px, 10vw, 110px);
+    font-size: clamp(45px, 12vw, 90px);
     font-weight: 800;
-    line-height: 0.9
+}
+.intro-mosaic {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
 }
