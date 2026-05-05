@@ -151,9 +151,10 @@ nav a.active {
         padding-left: 20px
     }
 
-.intro-text p {
-    margin-top: 40px;
-    line-height: 2.2; 
+    .intro-text p {
+        margin-top: 40px;
+        line-height: 2.2; 
+        padding-left: 40px
 }
 
 /* El primer párrafo se separa de la imagen Fuji */
