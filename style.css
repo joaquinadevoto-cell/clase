@@ -193,13 +193,13 @@ footer h3 {
     color: var(--blanco);
     font-size: 3rem;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     letter-spacing: 2px;
 }
 
 footer hr {
     border: 0;
-    border-top: 1px solid #333;
+    border-top: 1px solid #ffffff;
     margin: 25px auto;
     width: 80%;
 }
