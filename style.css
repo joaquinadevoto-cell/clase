@@ -142,12 +142,11 @@ nav a.active {
     }
     
 
-    /* Mosaico Intro: 3 columnas iguales */
+    /* Grilla de fotos */
     .intro-mosaic { grid-template-columns: repeat(3, 1fr); }
     .intro-mosaic img:first-child { grid-row: span 1; aspect-ratio: 4/5; }
     .intro-mosaic img { aspect-ratio: 4/5; }
 
-    /* Grilla Destinos: 3 columnas exactas */
     .destinos-grid { grid-template-columns: repeat(3, 1fr); gap: 35px; }
     
     .destinos h2 { font-size: 2.2rem; }
