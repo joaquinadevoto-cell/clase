@@ -146,10 +146,9 @@ nav a.active {
     }
 
     .hero {
-        /* Mantiene la alineación abajo a la izquierda en desktop */
         justify-content: flex-start;
-        align-items: flex-end;
-        padding-left: 5%; 
+        align-items: flex-end; ;
+        padding-left: 2%; 
     }
 
     .intro-mosaic { grid-template-columns: repeat(3, 1fr); }
