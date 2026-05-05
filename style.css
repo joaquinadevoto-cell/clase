@@ -139,29 +139,75 @@ nav a { text-decoration: none;
     
     .destinos h2 { font-size: 2.2rem; }
 }
+
+/*NEWSLETTER*/
 .newsletter {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('img/kiyomizudera.jpeg') center/cover;
-    color: white;
+    /* Gradiente oscuro para que el texto blanco se lea bien sobre la imagen */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('img/hojas-rojas.jpg') center/cover no-repeat;
+    color: var(--blanco);
     padding: 100px 20px;
     text-align: center;
+}
+
+.newsletter h2 {
+    margin-bottom: 10px;
 }
 
 .newsletter form {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
+
+.newsletter input {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    max-width: 350px;
+}
+
+.newsletter button {
+    padding: 15px 30px;
+    background-color: #1a0505; /* Bordó muy oscuro como el footer */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ==========================================
+   FOOTER (Fiel a la captura Desktop)
+   ========================================== */
 footer {
-    background-color: #370f1d; /* Bordó oscuro */
-    color: #888;
-    padding: 60px 0 20px;
+    background-color: #370f1d; /* El color bordó oscuro de la foto */
+    color: #888; /* Gris para textos legales */
+    padding: 60px 0 30px;
     text-align: center;
 }
 
 footer h3 {
-    color: white;
-    font-size: 2.5rem;
+    color: var(--blanco);
+    font-size: 3rem;
+    font-weight: 800;
     margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 25px auto;
+    width: 80%;
+}
+
+/* Ajuste responsive para el formulario en móvil */
+@media (max-width: 768px) {
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+    }
 }
