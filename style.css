@@ -69,8 +69,9 @@ nav a { text-decoration: none;
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
                 url('img/fuji-01.png') center/cover no-repeat;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
     text-align: center;
 }
 
@@ -110,10 +111,22 @@ nav a { text-decoration: none;
 /*desktop*/
 @media (min-width: 1024px) {
     /* Navbar horizontal */
-    .navbar { flex-direction: row; justify-content: space-between; }
+    .navbar { 
+        flex-direction: row; 
+        justify-content: space-between; 
+    }
     
     /* Hero alineado a la izquierda */
-    .hero { justify-content: flex-start; padding-left: 10%; text-align: left; height: 75vh; }
+    .hero { 
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center; 
+        align-items: flex-start; 
+        align-content: stretch;
+        text-align: left;
+        padding-left: 10%;
+    }
 
     /* Mosaico Intro: 3 columnas iguales */
     .intro-mosaic { grid-template-columns: repeat(3, 1fr); }
