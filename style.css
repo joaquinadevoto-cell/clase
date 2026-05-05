@@ -151,6 +151,14 @@ nav a.active {
         padding-left: 20px
     }
 
+.intro-text p {
+    margin-top: 40px;
+    line-height: 2.2; 
+}
+
+/* El primer párrafo se separa de la imagen Fuji */
+.intro-text p:first-child {
+    margin-top: 60px;
     .intro-mosaic { grid-template-columns: repeat(3, 1fr); }
     .intro-mosaic img:first-child { grid-row: span 1; aspect-ratio: 4/5; }
     .intro-mosaic img { aspect-ratio: 4/5; }
