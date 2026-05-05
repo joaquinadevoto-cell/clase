@@ -146,20 +146,17 @@ padding-bottom: 5px;
 /* 4. HERO SECTION (Igual al JPG) */
 
 .hero {
-
-
-
-height: 70vh;
-
-background: url('img/fuji-01.png') center/cover no-repeat;
-
-display: flex;
-
-
-justify-content: flex-start;
-
-align-items: center;
-
+    height: 70vh;
+    background: url('img/fuji-01.png') center/cover no-repeat;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: flex-end; 
+    
+    align-items: flex-start; 
+    
+    padding-left: 5%; 
+    padding-bottom: 40px;
 }
 
 
