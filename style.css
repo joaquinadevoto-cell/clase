@@ -88,6 +88,7 @@ nav a { text-decoration: none;
 }
 .intro-mosaic img:first-child 
 { grid-row: span 2;
+    height: 100%;
  }
 .intro-mosaic img { width: 100%; 
     object-fit: cover; 
@@ -110,7 +111,7 @@ nav a { text-decoration: none;
 
 /*desktop*/
 @media (min-width: 1024px) {
-    /* Navbar horizontal */
+    
     .navbar { 
         flex-direction: row; 
         justify-content: space-between; 
@@ -137,4 +138,30 @@ nav a { text-decoration: none;
     .destinos-grid { grid-template-columns: repeat(3, 1fr); gap: 35px; }
     
     .destinos h2 { font-size: 2.2rem; }
+}
+.newsletter {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('img/kiyomizudera.jpeg') center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+footer {
+    background-color: #370f1d; /* Bordó oscuro */
+    color: #888;
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+footer h3 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
