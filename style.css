@@ -22,6 +22,11 @@ body {
     color: var(--negro);
     line-height: 1.6;
 }
+ul, strong{
+font-weight: var(--font-bold);
+}
+
+
 
 /*mobile*/
 /* CONTENEDOR */
