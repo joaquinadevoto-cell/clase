@@ -67,7 +67,7 @@ nav a { text-decoration: none;
     width: 100%;
     height: 60vh;
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
-                url('img/montefuji-01.png') center/cover no-repeat;
+                url('img/fuji-01.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
