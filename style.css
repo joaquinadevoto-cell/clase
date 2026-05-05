@@ -21,7 +21,6 @@ body {
     background-color: var(--beige);
     color: var(--negro);
     line-height: 1.6;
-    border: 10px solid red;
 }
 ul, strong{
 font-weight: var(--font-bold);
