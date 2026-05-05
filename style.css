@@ -73,21 +73,24 @@ nav a.active {
 
 /* 4. HERO SECTION (Igual al JPG) */
 .hero {
-    width: 100%;
+
     height: 70vh;
     background: url('img/fuji-01.png') center/cover no-repeat;
     display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: flex-start;     
-    padding-left: 10%;
+   
+    justify-content: flex-start; 
+    align-items: center;     
 }
 
 .hero h1 {
-    display: flex;
-    flex-direction: column; 
-    line-height: 0.85;      
-    text-align: left;
+    color: #c62828;     
+    font-size: 100px;    
+    font-weight: 800;
+    line-height: 0.8;
+}
+.hero h1::first-line {
+    color: #370f1d;      
+    font-size: 30px;     
 }
 .intro-mosaic {
     display: grid;
