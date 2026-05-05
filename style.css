@@ -48,199 +48,12 @@ img {
 
 /* ================= HEADER ================= */
 
-header {
-    background: #dcd6c8;
-    padding: 15px var(--pad);
-}
-
-.header-inner {
-   {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: space-between;
-}
-
-/* NAV */
-nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    list-style: none;
-    text-align: center;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--negro);
-    font-size: 14px;
-}
-
-/* ================= HERO ================= */
-
-.hero {
-    height: 60vh;
-    background: url('../img/monte-fuji.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    padding: 0 var(--pad);
-}
-
-.hero-text h2 {
-    font-size: clamp(12px, 2vw, 18px);
-}
-
-.hero-text h1 {
-    font-size: clamp(32px, 6vw, 90px);
-    color: var(--rojo);
-    font-weight: 800;
-}
-
-/* ================= INTRO ================= */
-
-.intro p {
-    margin-bottom: 12px;
-    color: var(--gris);
-}
-
-.intro-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.intro-grid img {
-    border-radius: var(--radius);
-}
-
-/* ================= DESTINOS ================= */
-
-.destinos {
-    background: #3b3b3b;
-    color: white;
-}
-
-.destinos p {
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.destinos-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.card img {
-    height: 180px;
-    object-fit: cover;
-    border-radius: var(--radius);
-}
-
-.card h3 {
-    margin-top: 8px;
-    font-size: 14px;
-}
-
-/* ================= FRASE ================= */
-
-.frase {
-    text-align: center;
-    padding: 40px 20px;
-    font-weight: 600;
-}
-
-/* ================= KOMOREBI ================= */
-
-.komorebi {
-    text-align: center;
-    padding: 30px;
-}
-
-.komorebi h2 {
-    color: var(--rojo);
-}
-
-.komorebi span {
-    display: inline-block;
-    background: #d9cbb5;
-    padding: 8px 16px;
-    margin-top: 10px;
-}
-
-/* ================= NEWSLETTER ================= */
-
-.newsletter {
-    background: url('../img/kiyomizudera.jpg') center/cover no-repeat;
-    padding: 60px 20px;
-    color: white;
-    text-align: center;
-}
-
-.newsletter form {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.newsletter input {
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-}
-
-.newsletter button {
-    background: #3b0d14;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* ================= FOOTER ================= */
-
-footer {
-    background: #2b0008;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-
-
-/* ================= DESKTOP ================= */
-
-@media (min-width: 1024px) {
-
-    .hero {
-        height: 85vh;
-        padding-left: 80px;
-    }
-
-    .intro-grid img {
-        height: 220px;
-        object-fit: cover;
-    }
-
-    .destinos-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .container {
-        padding: 60px var(--pad);
-    }
-    /* HEADER GENERAL */
+/* HEADER */
 header {
     background: #dcd6c8;
     padding: 15px 40px;
 }
 
-/* CONTENEDOR INTERNO */
 .header-inner {
     max-width: 1200px;
     margin: auto;
@@ -254,7 +67,7 @@ header {
     height: 40px;
 }
 
-/* NAV CENTRAL */
+/* NAV */
 nav {
     flex: 1;
     display: flex;
@@ -263,7 +76,7 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     list-style: none;
 }
 
@@ -271,27 +84,21 @@ nav a {
     text-decoration: none;
     color: #111;
     font-size: 14px;
-    font-weight: 500;
 }
 
-/* ITEM ACTIVO (Inicio en rojo) */
+/* ACTIVO */
 nav a.active {
     color: #c62828;
 }
 
-/* ACCIONES DERECHA */
+/* DERECHA */
 .header-actions {
     display: flex;
     gap: 20px;
-    align-items: center;
+    margin-left: auto;
 }
 
 .header-actions a {
-    text-decoration: none;
     color: #c62828;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
+    text-decoration: none;
 }
