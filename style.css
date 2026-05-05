@@ -27,7 +27,7 @@ body {
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 /* 3. HEADER Y NAVBAR */
