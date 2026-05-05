@@ -140,6 +140,16 @@ nav a.active {
         text-align: left;
         padding-left: 10%;
     }
+    .hero h1 {
+    color: #c62828;     
+    font-size: 100px;    
+    font-weight: 800;
+    line-height: 0.8;
+}
+.hero h1::first-line {
+    color: #370f1d;      
+    font-size: 30px;     
+}
 
     /* Mosaico Intro: 3 columnas iguales */
     .intro-mosaic { grid-template-columns: repeat(3, 1fr); }
