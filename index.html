@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Japón - Cultura</title>
-    
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,13 +14,15 @@
     <header id="inicio">
         <div class="header-inner">
 
-    <!-- LOGO -->
-    <img src="img/logo.png" class="logo">
+            <!-- LOGO (mejor clickeable) -->
+            <a href="#">
+                <img src="img/logo.png" class="logo" alt="Logo Japón">
+            </a>
 
             <!-- NAV -->
             <nav>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#" class="active">Inicio</a></li>
                     <li><a href="#">Cultura</a></li>
                     <li><a href="#">Gastronomía</a></li>
                     <li><a href="#">Arte</a></li>
@@ -29,11 +30,13 @@
                     <li><a href="#">Curiosidades</a></li>
                 </ul>
             </nav>
- <!-- DERECHA -->
-    <div class="header-actions">
-      <a href="#">🔍 Buscar</a>
-      <a href="#">👤 Iniciar Sesión</a>
-    </div>
+
+            <!-- DERECHA -->
+            <div class="header-actions">
+                <a href="#">🔍 Buscar</a>
+                <a href="#">👤 Iniciar Sesión</a>
+            </div>
+
         </div>
     </header>
 
@@ -67,9 +70,9 @@
 
                 <!-- IMÁGENES -->
                 <div class="intro-grid">
-                    <img src="img/templo1.jpeg" alt="Templo japonés" width="500">
-                    <img src="img/tokio-pantallas.jpg" alt="Ciudad de Tokio" width="500">
-                    <img src="img/bandera.jpg" alt="Bandera de Japón" width="500">
+                    <img src="img/templo1.jpeg" alt="Templo japonés">
+                    <img src="img/tokio pantallas.jpg" alt="Ciudad de Tokio">
+                    <img src="img/bandera.jpg" alt="Bandera de Japón">
                 </div>
 
             </div>
@@ -88,37 +91,37 @@
                 <div class="destinos-grid">
 
                     <article class="card">
-                        <img src="img/monumento.jpg" alt="Hiroshima" width="500">
+                        <img src="img/monumento.jpg" alt="Monumento de la paz en Hiroshima">
                         <h3>Monumento de la paz</h3>
                         <span>Hiroshima</span>
                     </article>
 
                     <article class="card">
-                        <img src="img/shibuya.jpg" alt="Shibuya" width="500">
+                        <img src="img/shibuya.jpg" alt="Cruce de Shibuya en Tokio">
                         <h3>Cruce de Shibuya</h3>
                         <span>Tokio</span>
                     </article>
 
                     <article class="card">
-                        <img src="img/torre.jpg" alt="Osaka" width="500">
+                        <img src="img/torre.jpg" alt="Torre Tsutenkaku en Osaka">
                         <h3>Torre Tsutenkaku</h3>
                         <span>Osaka</span>
                     </article>
 
                     <article class="card">
-                        <img src="img/kiyomizudera.jpeg" alt="Kioto" width="500">
+                        <img src="img/kiyomizudera.jpeg" alt="Templo Kiyomizudera en Kioto">
                         <h3>Kiyomizu-dera</h3>
                         <span>Kioto</span>
                     </article>
 
                     <article class="card">
-                        <img src="img/dotonbori.jpg" alt="Osaka" width="500">
+                        <img src="img/dotonbori.jpg" alt="Dotonbori en Osaka">
                         <h3>Dotonbori</h3>
                         <span>Osaka</span>
                     </article>
 
                     <article class="card">
-                        <img src="img/jardin-koraku.jpg" alt="Okayama" width="500">
+                        <img src="img/Jardin de Koraku.jpg" alt="Jardín Koraku-en en Okayama">
                         <h3>Jardín Koraku-en</h3>
                         <span>Okayama</span>
                     </article>
@@ -132,13 +135,15 @@
 
     <!-- NEWSLETTER -->
     <section class="newsletter">
-        <h2>Conectate más con Japón</h2>
-        <p>Suscribite a nuestro newsletter para tener más novedades</p>
+        <div class="container">
+            <h2>Conectate más con Japón</h2>
+            <p>Suscribite a nuestro newsletter para tener más novedades</p>
 
-        <form>
-            <input type="email" placeholder="nombre@correo.com">
-            <button type="submit">Suscribite</button>
-        </form>
+            <form>
+                <input type="email" placeholder="nombre@correo.com" required>
+                <button type="submit">Suscribite</button>
+            </form>
+        </div>
     </section>
 
     <!-- FOOTER -->
