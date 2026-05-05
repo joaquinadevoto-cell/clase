@@ -9,7 +9,6 @@
 
 :root {
     --rojo: #c62828;
-    --negro: #1a1a1a;
     --beige: #E8E4DC;
     --gris-fondo: #3e3c3a; 
     --blanco: #ffffff;
@@ -171,7 +170,7 @@ nav a { text-decoration: none;
 
 .newsletter button {
     padding: 15px 30px;
-    background-color: #370f1d; /* Bordó muy oscuro como el footer */
+    background-color: #370f1d; 
     color: #f0efeb;
     border: none;
     border-radius: 10px;
@@ -183,8 +182,8 @@ nav a { text-decoration: none;
    FOOTER (Fiel a la captura Desktop)
    ========================================== */
 footer {
-    background-color: #370f1d; /* El color bordó oscuro de la foto */
-    color: #ffffff; /* Gris para textos legales */
+    background-color: #370f1d; 
+    color: #ffffff; 
     padding: 60px 0 30px;
     text-align: center;
 }
