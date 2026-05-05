@@ -9,26 +9,21 @@
 
 :root {
     --rojo: #c62828;
-    --rojo-oscuro: #6B1212;
     --negro: #111;
-    --blanco: #fff;
     --beige: #E8E4DC;
-    --beige-claro: #F2EFE8;
     --gris: #4a4a4a;
     --max: 1200px;
     --pad: 20px;
-    /* Radio de borde más pronunciado para coincidir con la imagen */
-    --radius: 30px; 
+    --radius: 30px; /* Bordes redondeados como tu foto */
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     background: var(--beige);
     color: var(--negro);
-    line-height: 1.6;
 }
 
-/* ================= HEADER RESPONSIVE ================= */
+/* HEADER */
 header {
     background: #f0efeb;
     padding: 15px var(--pad);
@@ -40,8 +35,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Permite que baje en móviles si no cabe */
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .logo { height: 35px; }
@@ -52,91 +47,68 @@ nav ul {
     list-style: none;
 }
 
-nav a {
-    text-decoration: none;
-    color: var(--negro);
-    font-size: 14px;
-    font-weight: 500;
-}
+nav a { text-decoration: none; color: var(--negro); font-weight: 500; }
 
-/* Ocultar acciones en móvil o ajustarlas */
-.header-actions {
-    display: flex;
-    gap: 15px;
-}
-
-/* Media Query para Header Móvil */
-@media (max-width: 600px) {
-    .header-inner { flex-direction: column; text-align: center; }
-    nav ul { gap: 10px; font-size: 12px; }
-}
+/* HERO */
 .hero {
     width: 100%;
     height: 60vh; 
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
-                url('../img/montefuji-01.png') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('img/montefuji-01.png') center/cover no-repeat;
     display: flex;
     align-items: center;
-    padding: 0 var(--pad);
+    justify-content: center;
+    text-align: center;
 }
 
-/* ================= HERO ================= */
-
-
-.hero-text {
-    max-width: var(--max);
-    margin: auto;
-    width: 100%;
-}
-
-.hero-text h1 {
-    font-size: clamp(40px, 8vw, 90px);
-    color: var(--rojo);
+.hero h1 {
+    font-size: clamp(50px, 10vw, 120px);
+    color: white;
     font-weight: 800;
-    line-height: 1.1;
 }
 
-/* ================= GRID DE DESTINOS (EL CAMBIO CLAVE) ================= */
+/* CONTENEDOR GENERAL */
 .container {
     max-width: var(--max);
     margin: auto;
     padding: 60px var(--pad);
 }
 
-.intro-grid {
+/* GRIDS (USO DE CLASES GENÉRICAS PARA AMBAS SECCIONES) */
+.grid-layout, .image-grid {
     display: grid;
-    /* 1 columna en móvil, 2 en tablets, 3 en desktop */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 30px;
     margin-top: 30px;
 }
 
+/* TARJETAS Y AJUSTE DE IMAGEN */
 .card {
     display: flex;
     flex-direction: column;
 }
 
-.card img {
+.card img, .image-grid img {
     width: 100%;
-    /* Mantiene la proporción 4:3 para que todas sean iguales */
-    aspect-ratio: 4 / 3; 
+    aspect-ratio: 4 / 3; /* Esto hace que todas las fotos sean del mismo tamaño */
     object-fit: cover; 
     border-radius: var(--radius);
     margin-bottom: 15px;
-    transition: transform 0.3s ease;
-}
-
-.card img:hover {
-    transform: translateY(-5px);
+    display: block;
 }
 
 .card h3 {
     font-size: 1.1rem;
-    margin-bottom: 2px;
-    text-transform: none; /* Ajusta según prefieras */
+    margin-bottom: 5px;
 }
 
-.card p {
-    font-size: 0.9rem;
+.card span {
     color: var(--gris);
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-inner { flex-direction: column; }
+    nav ul { flex-wrap: wrap; justify-content: center; }
 }
