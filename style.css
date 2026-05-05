@@ -1,15 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap');
 
 /* RESET */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* VARIABLES */
 :root {
     --rojo: #c62828;
     --rojo-oscuro: #6B1212;
@@ -18,13 +15,12 @@
     --beige: #E8E4DC;
     --beige-claro: #F2EFE8;
     --gris: #4a4a4a;
-
     --max: 1200px;
     --pad: 20px;
-    --radius: 12px;
+    /* Radio de borde más pronunciado para coincidir con la imagen */
+    --radius: 30px; 
 }
 
-/* BASE */
 body {
     font-family: 'Roboto', sans-serif;
     background: var(--beige);
@@ -32,122 +28,114 @@ body {
     line-height: 1.6;
 }
 
-/* CONTENEDOR */
-.container {
-    max-width: var(--max);
-    margin: auto;
-    padding: 40px var(--pad);
-}
-
-/* IMÁGENES RESPONSIVE */
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* ================= HEADER ================= */
-
-/* HEADER */
+/* ================= HEADER RESPONSIVE ================= */
 header {
     background: #f0efeb;
-    padding: 15px 40px;
+    padding: 15px var(--pad);
 }
 
 .header-inner {
-    max-width: 1200px;
+    max-width: var(--max);
     margin: auto;
     display: flex;
-    align-items:flex-start;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que baje en móviles si no cabe */
+    gap: 15px;
 }
 
-/* LOGO */
-.logo {
-    height: 40px;
-}
-
-/* NAV */
-nav {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
+.logo { height: 35px; }
 
 nav ul {
     display: flex;
-    gap: 25px;
+    gap: 20px;
     list-style: none;
 }
 
 nav a {
     text-decoration: none;
-    color: #111;
+    color: var(--negro);
     font-size: 14px;
+    font-weight: 500;
 }
 
-/* ACTIVO */
-nav a.active {
-    color: #c62828;
-}
-
-/* DERECHA */
+/* Ocultar acciones en móvil o ajustarlas */
 .header-actions {
     display: flex;
-    gap: 20px;
-    margin-left: auto;
+    gap: 15px;
 }
 
-.header-actions a {
-    color: #c62828;
-    text-decoration: none;
+/* Media Query para Header Móvil */
+@media (max-width: 600px) {
+    .header-inner { flex-direction: column; text-align: center; }
+    nav ul { gap: 10px; font-size: 12px; }
 }
 
-/* HERO RESPONSIVE */
-
-@media (min-width: 768px) {
-    .hero {
-        height: 65vh;
-    }
-}
-
-@media (min-width: 1024px) {
-    .hero {
-        height: 85vh;
-        padding-left: 80px;
-    }
-}
 /* ================= HERO ================= */
-
 .hero {
     width: 100%;
-    height: 50vh; /* mobile */
-    background: url('../img/montefuji-01.png') center/cover no-repeat;
+    height: 60vh; 
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                url('../img/montefuji-01.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     padding: 0 var(--pad);
 }
 
-.hero-text h2 {
-    font-size: clamp(12px, 2vw, 18px);
+.hero-text {
+    max-width: var(--max);
+    margin: auto;
+    width: 100%;
 }
 
 .hero-text h1 {
-    font-size: clamp(32px, 6vw, 90px);
+    font-size: clamp(40px, 8vw, 90px);
     color: var(--rojo);
     font-weight: 800;
-}
-.intro-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-    gap: 20px;
-    margin-top: 20px;
+    line-height: 1.1;
 }
 
-.intro-grid img {
+/* ================= GRID DE DESTINOS (EL CAMBIO CLAVE) ================= */
+.container {
+    max-width: var(--max);
+    margin: auto;
+    padding: 60px var(--pad);
+}
+
+.intro-grid {
+    display: grid;
+    /* 1 columna en móvil, 2 en tablets, 3 en desktop */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
     width: 100%;
-    height: 250px; 
+    /* Mantiene la proporción 4:3 para que todas sean iguales */
+    aspect-ratio: 4 / 3; 
     object-fit: cover; 
-    border-radius: 16px; 
+    border-radius: var(--radius);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card img:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+    text-transform: none; /* Ajusta según prefieras */
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: var(--gris);
 }
