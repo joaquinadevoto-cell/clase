@@ -1,440 +1,226 @@
  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap');
 
-
-
-/* */
-
 * {
-
-margin: 0;
-
-padding: 0;
-
-box-sizing: border-box;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-
 
 :root {
-
---rojo: #c62828;
-
---beige: #E8E4DC;
-
---gris-fondo: #50464a;
-
---blanco: #f0efeb;
-
---max-width: 1200px;
-
---radius: 25px;
-
+    --rojo: #c62828;
+    --beige: #E8E4DC;
+    --gris-fondo: #50464a;
+    --blanco: #f0efeb;
+    --negro: #1a1a1a;
+    --max-width: 1200px;
+    --radius: 25px;
 }
-
-
 
 body {
-
-font-family: 'Roboto', sans-serif;
-
-background-color: var(--beige);
-
-color: var(--negro);
-
-line-height: 1.6;
-
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--beige);
+    color: var(--negro);
+    line-height: 1.6;
 }
-
-
-
-
-
-
-
-
-
-/*mobile*/
 
 /* CONTENEDOR */
-
 .container {
-
-max-width: var(--max-width);
-
-margin: 0 auto;
-
-padding: 0 20px;
-
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
 }
-
-
 
 /* 3. HEADER Y NAVBAR */
-
 header {
-
-background-color: #e1decd;
-
-padding: 15px 0;
-
+    background-color: #e1decd;
+    padding: 15px 0;
 }
-
-
-
-
 
 .navbar {
-
-display: flex; display: flex;
-
-flex-direction: column;
-
-align-items: center;
-
-gap: 15px;
-
-justify-content: space-between;
-
-align-items: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
 }
 
-nav ul { display: flex;
-
-gap: 15px;
-
-list-style: none;
-
-flex-wrap: wrap;
-
-justify-content: center;
-
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-nav a { text-decoration: none;
-
-color: var(--negro);
-
-font-size: 13px;
-
-text-transform: uppercase;
-
-
+nav a {
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 13px;
+    text-transform: uppercase;
 }
 
 nav a.active {
-
-color: var(#e6342f);
-
-font-weight: var(--font-bold);
-
-border-bottom: 2px solid var(--rojo);
-
-padding-bottom: 5px;
-
+    color: var(--rojo);
+    font-weight: 700;
+    border-bottom: 2px solid var(--rojo);
+    padding-bottom: 5px;
 }
-
-
 
 .logo { height: 60px; }
 
-
-
-
-
-/* 4. HERO SECTION (Igual al JPG) */
-
+/* 4. HERO SECTION (Ajustado abajo a la izquierda) */
 .hero {
     height: 70vh;
     background: url('img/fuji-01.png') center/cover no-repeat;
     display: flex;
-    
-    flex-direction: column;
-    justify-content: flex-end; 
-    
-    align-items: flex-start; 
-    
-    padding-left: 5%; 
-    padding-bottom: 40px;
+    /* Alineación del texto al fondo a la izquierda */
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 40px; 
 }
 
-
-
 .hero h1 {
-
-color: #c62828;
-
-font-size: 100px;
-
-font-weight: 800;
-
-line-height: 0.8;
-
+    color: #c62828;
+    font-size: 100px;
+    font-weight: 800;
+    line-height: 0.8;
 }
 
 .hero h1::first-line {
-
-color: #370f1d;
-
-font-size: 30px;
-
+    color: #370f1d;
+    font-size: 30px;
 }
 
+/* TEXTO DEBAJO DE LA IMAGEN (Añadido para interlineado y espacio) */
+.container p {
+    margin-top: 60px;     /* Más separado de la imagen */
+    line-height: 2.2;     /* Más interlineado */
+    font-size: 18px;
+}
+
+/* INTRO MOSAIC */
 .intro-mosaic {
-
-display: grid;
-
-gap: 15px;
-
-grid-template-columns: 1fr 1fr;
-
-margin-top: 30px;
-
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
 }
 
-.intro-mosaic img:first-child
-
-{ grid-row: span 2;
-
-height: 100%;
-
+.intro-mosaic img:first-child {
+    grid-row: span 2;
+    height: 100%;
 }
 
-.intro-mosaic img { width: 100%;
-
-object-fit: cover;
-
-border-radius: var(--radius);
-
-aspect-ratio: 1/1;
-
+.intro-mosaic img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+    aspect-ratio: 1/1;
 }
 
-
-
-.destinos { background-color: var(--gris-fondo);
-
-color: white;
-
-padding: 60px 0;
-
+.destinos {
+    background-color: var(--gris-fondo);
+    color: white;
+    padding: 60px 0;
 }
 
-.destinos-grid { display: grid;
-
-gap: 25px; grid-template-columns: 1fr;
-
+.destinos-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr;
 }
 
-.card img { width: 100%;
-
-aspect-ratio: 4/3;
-
-object-fit: cover;
-
-border-radius: var(--radius);
-
+.card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: var(--radius);
 }
 
-
-
-/*desktop*/
-
+/* DESKTOP */
 @media (min-width: 1024px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
+    .hero {
+        /* Mantiene la alineación abajo a la izquierda en desktop */
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-left: 5%; 
+    }
 
-.navbar {
+    .intro-mosaic { grid-template-columns: repeat(3, 1fr); }
+    .intro-mosaic img:first-child { grid-row: span 1; aspect-ratio: 4/5; }
+    .intro-mosaic img { aspect-ratio: 4/5; }
 
-flex-direction: row;
-
-justify-content: space-between;
-
+    .destinos-grid { grid-template-columns: repeat(3, 1fr); gap: 35px; }
+    .destinos h2 { font-size: 2.2rem; }
 }
 
-
-/* Hero alineado a la izquierda */
-
-.hero {
-
-display: flex;
-
-flex-direction: column;
-
-flex-wrap: nowrap;
-
-justify-content: flex-start;
-
-align-items: flex-start;
-
-align-content: stretch;
-
-text-align: left;
-
-padding-left: 10%;
-
-}
-
-
-
-
-/* Grilla de fotos */
-
-.intro-mosaic { grid-template-columns: repeat(3, 1fr); }
-
-.intro-mosaic img:first-child { grid-row: span 1; aspect-ratio: 4/5; }
-
-.intro-mosaic img { aspect-ratio: 4/5; }
-
-
-
-.destinos-grid { grid-template-columns: repeat(3, 1fr); gap: 35px; }
-
-
-.destinos h2 { font-size: 2.2rem; }
-
-}
-
-
-
-/*NEWSLETTER*/
-
+/* NEWSLETTER */
 .newsletter {
-
-/* Gradiente oscuro para que el texto blanco se lea bien sobre la imagen */
-
-background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-
-url('img/kiyomizudera.jpeg') center/cover no-repeat;
-
-color: var(--blanco);
-
-padding: 100px 20px;
-
-text-align: center;
-
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('img/kiyomizudera.jpeg') center/cover no-repeat;
+    color: var(--blanco);
+    padding: 100px 20px;
+    text-align: center;
 }
 
-
-
-.newsletter h2 {
-
-margin-bottom: 10px;
-
-}
-
-
+.newsletter h2 { margin-bottom: 10px; }
 
 .newsletter form {
-
-display: flex;
-
-justify-content: center;
-
-gap: 10px;
-
-margin-top: 25px;
-
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
 }
-
-
 
 .newsletter input {
-
-padding: 15px;
-
-border-radius: 10px;
-
-border: none;
-
-width: 100%;
-
-max-width: 350px;
-
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    max-width: 350px;
 }
-
-
 
 .newsletter button {
-
-padding: 15px 30px;
-
-background-color: #370f1d;
-
-color: #f0efeb;
-
-border: none;
-
-border-radius: 10px;
-
-font-weight: bold;
-
-cursor: pointer;
-
+    padding: 15px 30px;
+    background-color: #370f1d;
+    color: #f0efeb;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-
-
-/* ==========================================
-
-FOOTER (Fiel a la captura Desktop)
-
-========================================== */
-
+/* FOOTER */
 footer {
-
-background-color: #370f1d;
-
-color: #ffffff;
-
-padding: 60px 0 30px;
-
-text-align: center;
-
+    background-color: #370f1d;
+    color: #ffffff;
+    padding: 60px 0 30px;
+    text-align: center;
 }
-
-
 
 footer h3 {
-
-color: var(--blanco);
-
-font-size: 30px;
-
-font-weight: 800;
-
-margin-bottom: 80px;
-
-letter-spacing: 2px;
-
+    color: var(--blanco);
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 80px;
+    letter-spacing: 2px;
 }
-
-
 
 footer hr {
-
-border: 0;
-
-border-top: 1px solid #ffffff;
-
-margin: 25px auto;
-
-width: 80%;
-
+    border: 0;
+    border-top: 1px solid #ffffff;
+    margin: 25px auto;
+    width: 80%;
 }
-
-
-
-/* Ajuste responsive para el formulario en móvil */
 
 @media (max-width: 768px) {
-
-.newsletter form {
-
-flex-direction: column;
-
-align-items: center;
-
-}
-
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+    }
 }
