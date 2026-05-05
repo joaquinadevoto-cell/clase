@@ -148,6 +148,7 @@ nav a.active {
     .hero {
         justify-content: flex-start;
         align-items: flex-end
+        padding-left
     }
 
     .intro-mosaic { grid-template-columns: repeat(3, 1fr); }
