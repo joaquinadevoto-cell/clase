@@ -144,7 +144,7 @@ nav a { text-decoration: none;
 .newsletter {
     /* Gradiente oscuro para que el texto blanco se lea bien sobre la imagen */
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('img/hojas-rojas.jpg') center/cover no-repeat;
+                url('img/kiyomizudera.jpeg') center/cover no-repeat;
     color: var(--blanco);
     padding: 100px 20px;
     text-align: center;
