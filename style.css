@@ -202,3 +202,64 @@ nav a {
     .newsletter form { flex-direction: column; align-items: center; }
     .newsletter input { width: 90%; }
 }
+
+/* HEADER GENERAL */
+header {
+    background: #dcd6c8;
+    padding: 15px 40px;
+}
+
+/* CONTENEDOR INTERNO */
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+    height: 40px;
+}
+
+/* NAV CENTRAL */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ITEM ACTIVO (Inicio en rojo) */
+nav a.active {
+    color: #c62828;
+}
+
+/* ACCIONES DERECHA */
+.header-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-actions a {
+    text-decoration: none;
+    color: #c62828;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
