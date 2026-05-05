@@ -61,6 +61,13 @@ nav a { text-decoration: none;
     color: var(--negro); 
     font-size: 13px; 
     text-transform: uppercase; 
+    
+}
+nav a.active {
+    color: var(#e6342f); 
+    font-weight: var(--font-bold);
+    border-bottom: 2px solid var(--rojo); 
+    padding-bottom: 5px;
 }
 
 .logo { height: 60px; }
