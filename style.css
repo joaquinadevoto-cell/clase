@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap');
 
-/* RESET */
+/* 1. RESET Y VARIABLES (Basado en el diseño JPG) */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -9,37 +9,45 @@
 
 :root {
     --rojo: #c62828;
-    --negro: #111;
-    --beige: #E8E4DC;
-    --gris-oscuro: #3e3c3a; /* Color de fondo de la sección destinos */
-    --gris-texto: #888;
+    --negro: #1a1a1a;
+    --beige: #E8E4DC; /* Fondo general */
+    --gris-oscuro: #3e3c3a; /* Fondo sección destinos */
+    --bordo-footer: #1a0505; /* Fondo footer */
     --blanco: #ffffff;
-    --max: 1200px;
-    --pad: 20px;
-    --radius: 25px; /* Radio según la imagen */
+    --max-width: 1200px;
+    --padding-side: 20px;
+    --radius: 25px; /* Bordes redondeados de las fotos */
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: var(--beige);
+    background-color: var(--beige);
     color: var(--negro);
+    line-height: 1.6;
 }
 
-/* ================= HEADER & NAV ================= */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--padding-side);
+}
+
+/* 2. HEADER Y NAVEGACIÓN (Responsive) */
 header {
-    background: #f0efeb;
-    padding: 15px var(--pad);
+    background-color: #f0efeb;
+    padding: 15px 0;
 }
 
-.header-inner {
-    max-width: var(--max);
-    margin: auto;
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--padding-side);
 }
 
-.logo { height: 35px; }
+.logo { height: 40px; }
 
 nav ul {
     display: flex;
@@ -47,66 +55,56 @@ nav ul {
     list-style: none;
 }
 
-nav a { 
-    text-decoration: none; 
-    color: var(--negro); 
-    font-size: 13px; 
+nav a {
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 14px;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
-/* ================= HERO ================= */
+/* 3. HERO (Imagen principal) */
 .hero {
     width: 100%;
-    height: 70vh; 
-    background: url('img/montefuji-01.png') center/cover no-repeat;
+    height: 65vh;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
+                url('img/montefuji-01.png') center/cover no-repeat;
     display: flex;
     align-items: center;
-    padding-left: 10%; /* Para que el texto no esté pegado */
+    padding-left: 10%;
 }
 
 .hero h1 {
-    font-size: clamp(50px, 8vw, 100px);
     color: var(--rojo);
+    font-size: clamp(50px, 10vw, 110px);
     font-weight: 800;
-    line-height: 0.9;
+    line-height: 1;
 }
 
-/* ================= INTRO (MOSAICO DE IMÁGENES) ================= */
+/* 4. INTRODUCCIÓN (Mosaico de imágenes) */
 .intro { padding: 60px 0; }
 
-.image-grid {
+.intro-grid {
     display: grid;
     gap: 15px;
-    grid-template-columns: 1fr 1fr; /* Móvil: 2 columnas */
     margin-top: 30px;
+    grid-template-columns: 1fr 1fr; /* Móvil: 2 columnas */
 }
 
-/* En móvil, la primera imagen es alta y las otras dos van a la derecha */
-.image-grid img:first-child {
+/* Primera imagen alta en móvil como en la foto */
+.intro-grid img:first-child {
     grid-row: span 2;
-    aspect-ratio: 2 / 3;
+    height: 100%;
 }
 
-.image-grid img {
+.intro-grid img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: var(--radius);
+    aspect-ratio: 1 / 1;
 }
 
-/* Desktop: Las 3 imágenes en una fila */
-@media (min-width: 1024px) {
-    .image-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .image-grid img:first-child {
-        grid-row: span 1;
-        aspect-ratio: 4 / 5;
-    }
-    .image-grid img { aspect-ratio: 4 / 5; }
-}
-
-/* ================= DESTINOS (SECCIÓN OSCURA) ================= */
+/* 5. SECCIÓN DESTINOS (Fondo Oscuro) */
 .destinos {
     background-color: var(--gris-oscuro);
     color: var(--blanco);
@@ -114,28 +112,17 @@ nav a {
 }
 
 .destinos h2 {
-    font-weight: 700;
-    text-transform: uppercase;
+    font-size: 1.8rem;
     letter-spacing: 1px;
     margin-bottom: 15px;
-}
-
-.destinos p {
-    font-weight: 300;
-    margin-bottom: 40px;
-    max-width: 800px;
+    text-transform: uppercase;
 }
 
 .destinos-grid {
     display: grid;
     gap: 30px;
-    /* 1 columna en móvil, 3 en desktop */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
+    margin-top: 40px;
 }
 
 .card img {
@@ -146,22 +133,72 @@ nav a {
     margin-bottom: 15px;
 }
 
-.card h3 {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 2px;
+.card h3 { font-size: 1.1rem; margin-bottom: 5px; }
+.card p { color: #ccc; font-size: 0.9rem; }
+
+/* 6. NEWSLETTER (Fondo con imagen) */
+.newsletter {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('img/hojas-rojas.jpg') center/cover no-repeat;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
 }
 
-.card span {
-    color: var(--gris-texto);
-    font-size: 0.85rem;
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
 }
 
-/* ================= RESPONSIVE GENERAL ================= */
-@media (max-width: 768px) {
-    .header-inner { flex-direction: column; gap: 15px; }
-    .hero { justify-content: center; padding-left: 0; text-align: center; }
+.newsletter input {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    width: 300px;
+}
+
+.newsletter button {
+    background-color: var(--bordo-footer);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* 7. FOOTER */
+.main-footer {
+    background-color: var(--bordo-footer);
+    color: #888;
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+.main-footer h3 { color: white; font-size: 2.5rem; margin-bottom: 20px; }
+
+/* 8. MEDIA QUERIES (Desktop) */
+@media (min-width: 1024px) {
+    .intro-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en PC */
+    }
+    .intro-grid img:first-child {
+        grid-row: span 1;
+        aspect-ratio: 4 / 5;
+    }
+    .intro-grid img { aspect-ratio: 4 / 5; }
     
-    /* En móvil ocultamos algunos elementos del nav si es necesario o los apilamos */
-    nav ul { gap: 10px; font-size: 11px; flex-wrap: wrap; justify-content: center; }
+    .destinos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Media Query para Móvil */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .hero { padding-left: 0; justify-content: center; text-align: center; }
+    .newsletter form { flex-direction: column; align-items: center; }
+    .newsletter input { width: 90%; }
 }
