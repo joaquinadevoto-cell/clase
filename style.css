@@ -91,11 +91,12 @@ nav a.active {
     font-size: 30px;
 }
 
-/* TEXTO DEBAJO DE LA IMAGEN (Añadido para interlineado y espacio) */
-.container p {
-    margin-top: 60px;     /* Más separado de la imagen */
-    line-height: 2.2;     /* Más interlineado */
+/* TEXTO DEBAJO DE LA IMAGEN */
+.texto-intro {
+    margin-top: 80px;     
+    line-height: 2;     
     font-size: 18px;
+    margin-bottom: 20px
 }
 
 /* INTRO MOSAIC */
