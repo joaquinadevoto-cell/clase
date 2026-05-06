@@ -873,13 +873,27 @@ width: 80%;
 }
 
 footer a {
+  
   display: block;
+  
   color: var(--blanco);
+  
   text-decoration: none;
+  
   font-size: 13px;
+  
   text-transform: uppercase;
+  
   letter-spacing: 2px;
+  
   margin-bottom: 30px;
+  
+  padding-left: 40px;
+  
+  padding-top: 20px;
+
+  text-align: left;
+  
 }
 
 
