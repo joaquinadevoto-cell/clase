@@ -314,7 +314,11 @@ display: flex;
 
 
 
+flex-direction: column;
 
+
+
+  
 justify-content: flex-end;
 
 
@@ -399,6 +403,10 @@ grid-template-columns: 1fr 1fr;
 
 
 margin-top: 30px;
+
+
+
+padding: 60px 0;
 
 
 
