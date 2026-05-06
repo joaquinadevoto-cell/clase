@@ -282,15 +282,19 @@ footer a {
 
 /* GASTRONOMIA*/
 .hero-gastro {
-  background-color: #e52b2b; 
-  text-align: center;
+  background-color: #e52b2b;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  padding-top: 40px;
+  position: relative;
 }
 
 .hero-gastro h1 {
-  color: #f5e6c8; /* beige */
-  font-size: 40px;
+  color: #f5e6c8; 
+  font-size: 32px;
   font-weight: 800;
   margin-bottom: 20px;
 }
