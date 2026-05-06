@@ -911,21 +911,18 @@ footer a {
 /* Ajuste responsive para el formulario en móvil */
 
 
-
 @media (max-width: 768px) {
-
-
-
-.newsletter form {
-
-
-
-flex-direction: column;
-
-
-
-align-items: center;
-
-}
-
+  
+  footer p {
+    
+    font-size: 12px;
+  }
+  
+  .newsletter form {
+    
+    flex-direction: column;
+    
+    align-items: center;
+    
+  }
 }
