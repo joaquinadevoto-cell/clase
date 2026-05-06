@@ -605,12 +605,15 @@ padding-left: 10%;
 
 }
 
-
+.frase-destacada {
+  text-align: center;
+  padding: 120px 20px;
+}
 
 /* Komorebi */
   .komorebi {
     padding: 160px 20px;
-
+  }
 
 
 
