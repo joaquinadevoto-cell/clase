@@ -1,29 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap');
 
-/* ==========================================
-   RESET
-   ========================================== */
+
+
+/* RESET */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ==========================================
-   VARIABLES
-   ========================================== */
+/* ESTILOS */
+
 :root {
   --rojo: #c62828;
+   
   --beige: #E8E4DC;
+   
   --gris-fondo: #50464a;
+   
   --blanco: #f0efeb;
+   
   --max-width: 1200px;
+   
   --radius: 25px;
 }
 
-/* ==========================================
-   BASE
-   ========================================== */
+
+
+/* BASE */
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--beige);
@@ -31,9 +37,10 @@ body {
   line-height: 1.6;
 }
 
-/* ==========================================
-   CONTENEDOR
-   ========================================== */
+
+
+/* CONTENEDOR */
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -41,9 +48,10 @@ body {
   flex-end:
 }
 
-/* ==========================================
-   HEADER Y NAVBAR
-   ========================================== */
+
+
+/* HEADER Y NAVBAR */
+
 header {
   background-color: #e1decd;
   padding: 15px 0;
@@ -84,9 +92,11 @@ nav a.active {
   height: 60px;
 }
 
-/* ==========================================
-   HERO
-   ========================================== */
+
+
+
+/* HERO */
+
 .hero {
   height: 70vh;
   background: url('img/fuji-01.png') center/cover no-repeat;
@@ -110,9 +120,11 @@ nav a.active {
   font-size: 30px;
 }
 
-/* ==========================================
-   INTRO
-   ========================================== */
+
+
+
+/* INTRO */
+
 .intro-text {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -138,9 +150,11 @@ nav a.active {
   aspect-ratio: 1/1;
 }
 
-/* ==========================================
-   DESTINOS
-   ========================================== */
+
+
+
+/* DESTINOS */
+
 .destinos {
   background-color: var(--gris-fondo);
   color: white;
@@ -161,17 +175,21 @@ nav a.active {
   border-radius: var(--radius);
 }
 
-/* ==========================================
-   FRASE DESTACADA
-   ========================================== */
+
+
+
+/* FRASE DESTACADA */
+
 .frase-destacada {
   text-align: center;
   padding: 90px 20px;
 }
 
-/* ==========================================
-   KOMOREBI
-   ========================================== */
+
+
+
+/* KOMOREBI */
+
 .komorebi {
   text-align: center;
   padding: 90px 20px;
@@ -185,9 +203,11 @@ nav a.active {
   margin: 10px 0;
 }
 
-/* ==========================================
-   NEWSLETTER
-   ========================================== */
+
+
+
+/* NEWSLETTER */
+
 .newsletter {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url('img/kiyomizudera.jpeg') center/cover no-repeat;
@@ -225,9 +245,10 @@ nav a.active {
   cursor: pointer;
 }
 
-/* ==========================================
-   FOOTER
-   ========================================== */
+
+
+/* FOOTER */
+
 footer {
   background-color: #370f1d;
   color: #ffffff;
@@ -260,9 +281,10 @@ footer a {
   margin-bottom: 30px;
 }
 
-/* ==========================================
-   RESPONSIVE — DESKTOP (1024px)
-   ========================================== */
+
+
+/* RESPONSIVE — DESKTOP (1024px) */
+
 @media (min-width: 1024px) {
   .navbar {
     flex-direction: row;
@@ -288,9 +310,10 @@ footer a {
   .destinos h2 { font-size: 2.2rem; }
 }
 
-/* ==========================================
-   RESPONSIVE — MOBILE (768px)
-   ========================================== */
+
+
+/*RESPONSIVE — MOBILE (768px)*/
+
 @media (max-width: 768px) {
   footer p {
     font-size: 12px;
