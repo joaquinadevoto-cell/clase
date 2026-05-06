@@ -280,7 +280,40 @@ footer a {
   margin-bottom: 30px;
 }
 
+/* GASTRONOMIA*/
+.hero-gastro {
+  background-color: #e52b2b; /* rojo */
+  text-align: center;
+  overflow: hidden;
+  padding-top: 40px;
+}
 
+.hero-gastro h1 {
+  color: #f5e6c8; /* beige */
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* CONTENEDOR DE IMÁGENES */
+.hero-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* IMÁGENES LATERALES */
+.hero-imgs img {
+  width: 180px;
+  transform: translateY(40px); /* baja las imágenes */
+}
+
+/* IMAGEN CENTRAL MÁS GRANDE */
+.hero-imgs .centro {
+  width: 220px;
+  transform: translateY(20px);
+}
 
 /* desktop */
 
