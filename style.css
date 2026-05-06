@@ -870,24 +870,17 @@ margin: 25px auto;
 
 width: 80%;
 
-a[href="#inicio"] {
+}
+
+footer a {
   display: block;
-  text-align: center;
-  padding: 20px;
-  background-color: #370f1d;
   color: var(--blanco);
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 2px;
-
+  margin-bottom: 30px;
 }
-
-
-
-
-
 
 
 /* Ajuste responsive para el formulario en móvil */
