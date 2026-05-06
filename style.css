@@ -470,11 +470,13 @@ padding: 60px 0;
 
 
 
-.destinos-grid { display: grid;
+.destinos-grid { 
+  
+  display: grid;
 
+  margin-top: 40px
 
-
-gap: 25px; grid-template-columns: 1fr;
+  gap: 25px; grid-template-columns: 1fr;
 
 
 
