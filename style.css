@@ -474,6 +474,7 @@ footer a {
 }
 
 /* ── DESKTOP ── */
+/* ── DESKTOP GASTRONOMÍA ── */
 @media (min-width: 1024px) {
 
     .hero-imgs h1 {
@@ -482,55 +483,18 @@ footer a {
         left: 5%;
     }
 
-    /* Platos, postres y bebidas en grilla de 3 */
-    .container {
-        display: block;
-    }
-
-    .container > h2 + .bloque,
-    .container > h2 ~ .bloque {
-        display: inline-block;
-    }
-
-    /* Grilla de 3 columnas para los bloques */
-    section.container {
+    .container:has(> .bloque) {
         display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    section.container h2 {
-        grid-column: 1 / -1;
-    }
-
-    section.container .bloque ~ .bloque ~ * {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* Forma más directa: grilla en secciones con artículos */
-    .container:has(.bloque) {
-        display: grid;
-        grid-template-columns: 1fr;
         gap: 25px;
     }
 
-    .container:has(.bloque) h2 {
+    .container:has(> .bloque) h2 {
         grid-column: 1 / -1;
         margin-bottom: 0;
     }
 
-    .container:has(.bloque) .bloque {
+    .container:has(> .bloque) .bloque {
         margin-bottom: 0;
-    }
-
-    @supports selector(:has(.bloque)) {
-        .container:has(.bloque) {
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
-}
-
-@media (min-width: 1024px) {
-    .container:has(> .bloque) {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
