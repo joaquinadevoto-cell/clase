@@ -393,9 +393,8 @@ footer a {
  .destinos h2 { font-size: 2.2rem; }
 
  .hero-imgs h1 {
-   font-size: 120px;
+   font-size: 80px;
    top: 40px;
-   left: 5%;
  }
 
  .container:has(> .bloque) {
