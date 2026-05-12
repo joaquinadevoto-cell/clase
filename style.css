@@ -473,7 +473,6 @@ footer a {
     letter-spacing: 1px;
 }
 
-/* ── DESKTOP ── */
 /* ── DESKTOP GASTRONOMÍA ── */
 @media (min-width: 1024px) {
 
@@ -497,4 +496,5 @@ footer a {
     .container:has(> .bloque) .bloque {
         margin-bottom: 0;
     }
+
 }
