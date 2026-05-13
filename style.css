@@ -111,7 +111,6 @@ body {
 /* INTRO Y MOSAICO (ESTRUCTURA FIJA) */
 .intro-section {
    padding: 30px 20px;
-    padding: 0 20px;
 }
 
 .intro-description p {
@@ -178,7 +177,7 @@ body {
  
 .quote-section {
     text-align: center;
-    padding: 80px 20px;
+    padding: 40px 20px;
 }
  
 .quote-section blockquote {
