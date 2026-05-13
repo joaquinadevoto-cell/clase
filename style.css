@@ -3,21 +3,13 @@
 /* --- VARIABLES Y RESET --- */
 :root {
     --rojo: #c62828;
- 
- --beige: #e1decd;
- 
- --gris-fondo: #50464a;
- 
- --blanco: #f0efeb;
-
- --vinotinto: #370F1D;
-
---beige-caja: #d3c2a7;
- 
- --max-width: 1200px;
- 
- --radius: 25px;
-
+    --beige: #e1decd;
+    --gris-fondo: #50464a;
+    --blanco: #f0efeb;
+    --vinotinto: #370F1D;
+    --beige-caja: #d3c2a7;
+    --max-width: 1200px;
+    --radius: 25px;
 }
 
 * {
@@ -27,9 +19,9 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     background-color: var(--beige);
-    color: var(--gris-oscuro);
+    color: var(--vinotinto);
     line-height: 1.4;
     overflow-x: hidden;
 }
@@ -42,7 +34,9 @@ body {
 }
 
 
-/* HEADER Y NAVEGACIÓN (CONTROLADO) */
+/* ============================================
+   HEADER Y NAVEGACIÓN
+   ============================================ */
 .main-header {
     padding: 10px 0;
     background-color: var(--beige);
@@ -55,7 +49,7 @@ body {
 }
 
 .logo {
-    height: 40px; 
+    height: 40px;
     width: auto;
     display: block;
 }
@@ -69,7 +63,7 @@ body {
 .nav-link {
     text-decoration: none;
     color: var(--vinotinto);
-    font-size: 11px; /* Más pequeño para mobile */
+    font-size: 11px;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -79,322 +73,216 @@ body {
     border-bottom: 2px solid var(--rojo);
 }
 
-/* HERO SECTION */
-.hero-section {
-   height: 70vh;
- background: url('img/fuji-01.png') center/cover no-repeat;
- display: flex;
- flex-direction: column;
- justify-content: flex-end;
- align-items: flex-start;
- padding: 0 0 40px 5%;
- margin-bottom: 30px;
-
-}
- 
-/* "CONOCIENDO"  */
-.hero-sub {
- color: #370f1d;
- font-size: 30px;
-
-}
- 
-/* "JAPÓN"  */
-.hero-title {
-   color: #c62828;
- font-size: 100px;
- font-weight: 800;
- line-height: 0.8;
-
-}
-
-/* INTRO Y MOSAICO (ESTRUCTURA FIJA) */
-.intro-section {
-   padding: 30px 20px;
-}
-
-.intro-description p {
-  
-    margin-bottom: 15px;
-    font-size: 1rem;
-     margin-top: 25px;
- margin-bottom: 25px;
-}
-
-.intro-mosaic {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 150px; /* Altura fija para alinear */
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.mosaic-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--radius);
-}
-
-.mosaic-img:first-child {
-    grid-row: span 2;
-}
-
-/* DESTINOS (Gris Oscuro) */
-.destinations-section {
-    background-color: #50464a;
-    color: #ffffff;
-    padding: 15px 0;
-}
-
-.section-title {
-    font-weight: 900;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.destinations-grid {
+/* Acciones del nav: Buscar + Iniciar Sesión */
+.nav-actions {
     display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.destination-card img {
-    width: 100%;
-    aspect-ratio: 1/1; /* Imágenes cuadradas controladas */
-    object-fit: cover;
-    border-radius: var(--radius);
-}
-
-.card-info h3 {
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-/* ── FRASE DESTACADA ── */
- 
-.quote-section {
-    text-align: center;
-    padding: 40px 20px;
-}
- 
-.quote-section blockquote {
-    font-size: 1.3rem;
-    font-weight: 700;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.5;
-}
-
-/* PALABRA CULTURAL KOMOREBI */
-.word-definition-section {
-     padding: 60px 20px;
-    text-align: center;
-}
-
-.definition-box {
-  background-color: #d3c2a7;
-    padding: 20px 20px;
-    border-radius: var(--radius);
-    margin-top: 20px;
-}
-
-
-.word-title {
-    color: var(--rojo);
-    font-size: 2rem;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
-/* NEWSLETTER Y FOOTER */
-.newsletter-section {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('img/kiyomizudera.jpeg') center/cover no-repeat;
-    padding: 70px 20px;
-    text-align: center;
-    color: white;
-}
-
-.newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.newsletter-form input {
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-}
-
-.btn-submit {
-  background-color: #370F1D;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: 800;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-    
-
-
-.main-footer {
-    background-color: var(--vinotinto);
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.footer-logo { font-size: 2rem; letter-spacing: 3px; margin: 15px 0; }
-
-.legal-list { 
-    list-style: none;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 8px;
-    font-size: 11px;
-    margin: 20px 0;
+    gap: 16px;
 }
 
-.legal-list a { color: white; text-decoration: none; }
+.nav-actions a {
+    text-decoration: none;
+    color: var(--vinotinto);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-actions a:hover {
+    color: var(--rojo);
+}
 
 
-/* ── GASTRONOMÍA ── */
- 
+/* ============================================
+   HERO GASTRONOMÍA
+   ============================================ */
 .hero-gastro {
     background-color: var(--rojo);
     overflow: hidden;
-}
- 
-.hero-imgs {
-    position: relative;
+    padding: 50px 40px 0;
     text-align: center;
 }
- 
-.hero-imgs img {
-    width: 100%;
-    display: block;
-}
- 
-.hero-imgs h1 {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 50px;
+
+/* Título GASTRONOMÍA encima de las imágenes */
+.hero-gastro h1 {
+    font-size: 72px;
     font-weight: 800;
     color: var(--beige);
     text-transform: uppercase;
-    line-height: 1;
+    letter-spacing: 6px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    position: static; /* Quita el absolute del móvil */
 }
- 
-.hero-gastro + .container {
-    padding-top: 40px;
-    padding-bottom: 40px;
+
+/* Contenedor de imágenes circulares en fila */
+.hero-imgs {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+    position: relative;
+    text-align: center;
 }
- 
-.hero-gastro + .container h2 {
-    font-size: 1.3rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: var(--rojo);
-    margin-bottom: 15px;
-}
- 
-.bloque {
-    background-color: var(--gris-oscuro);
-    border-radius: var(--radius);
-    overflow: hidden;
-    margin-bottom: 25px;
-    color: var(--blanco);
-}
- 
-.bloque img {
-    width: 100%;
-    max-height: 250px;
-    aspect-ratio: 4/3;
+
+.hero-imgs img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
     object-fit: cover;
     display: block;
+    flex-shrink: 0;
 }
- 
-.bloque h3 {
-    font-size: 1.2rem;
+
+
+/* ============================================
+   INTRO (debajo del hero)
+   ============================================ */
+.hero-gastro + .container {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.hero-gastro + .container h2 {
+    font-size: 1.5rem;
     font-weight: 800;
     text-transform: uppercase;
-    background-color: var(--rojo);
-    color: var(--blanco);
-    padding: 12px 20px;
-    text-align: center;
-    letter-spacing: 2px;
+    color: var(--vinotinto);
+    margin-bottom: 20px;
+    line-height: 1.3;
 }
- 
-.bloque p {
-    padding: 15px 20px 20px;
-    font-size: 0.9rem;
-    line-height: 1.6;
+
+.hero-gastro + .container p {
+    font-size: 0.95rem;
+    color: #444;
+    max-width: 680px;
+    margin: 0 auto 12px;
+    text-align: left;
 }
- 
+
+
+/* ============================================
+   TÍTULOS DE SECCIÓN (Platos / Postres / Bebidas)
+   ============================================ */
 .container h2 {
-    font-size: 1.3rem;
-    font-weight: 800;
+    font-size: 1.1rem;
+    font-weight: 900;
     text-transform: uppercase;
     color: var(--rojo);
     margin: 40px 0 20px;
+    letter-spacing: 1px;
 }
- 
+
+
+/* ============================================
+   GRILLA DE CARDS (3 columnas, sin bloque gris)
+   ============================================ */
+
+/* Elimina el estilo de bloque anterior */
+.bloque {
+    background-color: transparent;
+    border-radius: 0;
+    overflow: visible;
+    margin-bottom: 0;
+    color: var(--vinotinto);
+}
+
+.bloque img {
+    width: 100%;
+    height: 200px;
+    aspect-ratio: unset;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+
+/* Título de la card: encima de la imagen, texto simple */
+.bloque h3 {
+    font-size: 0.85rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: var(--vinotinto);
+    padding: 0 0 8px 0;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.bloque p {
+    padding: 8px 0 0;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Grilla de 3 columnas para desktop */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+
+/* ============================================
+   SECCIÓN "CULTURA EN UNA PALABRA"
+   ============================================ */
 .palabra {
     background-color: var(--beige);
     text-align: center;
     padding: 60px 20px;
 }
- 
+
 .palabra h4 {
     font-size: 1rem;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--gris-oscuro);
+    color: var(--rojo);      /* Rojo, igual al PDF */
 }
- 
+
 .palabra h2 {
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 2.8rem;
+    font-weight: 900;
     text-transform: uppercase;
-    color: var(--rojo);
-    margin: 5px 0 30px;
+    color: var(--vinotinto);
+    margin: 4px 0 32px;
+    letter-spacing: 2px;
 }
- 
+
+/* Caja beige/marrón clara (no gris oscuro) */
 .palabra-box {
-    background-color: var(--gris-oscuro);
-    color: var(--blanco);
-    border-radius: var(--radius);
-    padding: 25px 20px;
-    max-width: 500px;
+    background-color: var(--beige-caja);   /* #d3c2a7 */
+    color: var(--vinotinto);
+    border-radius: 6px;                    /* radio pequeño como en el PDF */
+    padding: 32px 40px;
+    max-width: 640px;
     margin: 0 auto;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: left;
 }
- 
+
 .palabra-box strong {
     display: block;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: var(--blanco);
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--rojo);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
 }
- 
+
 .volver {
     display: block;
     text-align: center;
     padding: 30px 0;
-    color: var(--gris-oscuro);
+    color: var(--vinotinto);
     text-decoration: none;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -402,51 +290,143 @@ body {
 }
 
 
+/* ============================================
+   FOOTER
+   ============================================ */
+.main-footer {
+    background-color: var(--vinotinto);
+    color: white;
+    padding: 50px 0 30px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+    color: white;
+}
+
+/* Redes sociales */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 28px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.footer-social a:hover {
+    opacity: 1;
+}
+
+/* Links legales */
+.legal-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    margin: 0 0 16px;
+}
+
+.legal-list a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+}
+
+.legal-list a:hover {
+    opacity: 1;
+}
+
+.footer-copy {
+    font-size: 11px;
+    color: white;
+    opacity: 0.45;
+    margin-top: 10px;
+}
+
+
+/* ============================================
+   RESPONSIVE — TABLET (700px+)
+   ============================================ */
 @media (min-width: 700px) {
     .logo { height: 50px; }
     .nav-link { font-size: 13px; }
-    .hero-title { font-size: 80px; }
-    .hero-title::first-line { font-size: 25px; }
 
-    .destinations-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+    .hero-gastro h1 { font-size: 56px; }
+
+    .hero-imgs img {
+        width: 200px;
+        height: 200px;
     }
 
-    .newsletter-form { flex-direction: row; justify-content: center; }
-    .newsletter-form input { flex: 1; max-width: 300px; }
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .legal-list { flex-direction: row; justify-content: center; gap: 20px; }
 }
 
-/* ==========================================
-   DESKTOP (min-width: 1024px)
-   ========================================== */
+
+/* ============================================
+   RESPONSIVE — DESKTOP (1024px+)
+   ============================================ */
 @media (min-width: 1024px) {
     .container { max-width: 1100px; }
 
-     .hero-section {
-   display: flex;
-   flex-direction: column;
-   flex-wrap: nowrap;
-   justify-content: flex-end;
-   align-items: flex-start;
-   align-content: stretch;
-   text-align: left;
-   padding: 0 0 60px 10%;
- }
+    /* Navbar */
+    .logo { height: 40px; }
+    .nav-link { font-size: 12px; }
+    .nav-actions a { font-size: 12px; }
 
-    .hero-section { height: 70vh; padding: 0 0 40px 10%; }
-    .hero-title { font-size: 100px; } /* Tu tamaño original */
-    .hero-title::first-line { font-size: 30px; } /* Tu tamaño original */
-
-    .intro-mosaic {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 350px; /* Altura fija más alta para PC */
+    /* Hero */
+    .hero-gastro {
+        padding: 60px 80px 0;
     }
-    
-    .mosaic-img:first-child { grid-row: span 1; }
 
-    .destinations-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .hero-gastro h1 {
+        font-size: 80px;
+        letter-spacing: 8px;
+    }
+
+    .hero-imgs img {
+        width: 280px;
+        height: 280px;
+    }
+
+    /* Intro */
+    .hero-gastro + .container {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    .hero-gastro + .container h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Cards: 3 columnas siempre */
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    /* Palabra */
+    .palabra h2 { font-size: 3.5rem; }
+    .palabra-box { padding: 36px 48px; }
 }
-
 
