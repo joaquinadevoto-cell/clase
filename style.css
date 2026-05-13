@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 /* --- VARIABLES Y RESET --- */
 :root {
-    --rojo: #c62828;
-    --beige: #E8E4DC;
-    --beige-oscuro: #D7CCC8; /* Para las cajas de palabras */
-    --gris-fondo: #50464a;
-    --vinotinto: #370f1d;
-    --blanco: #f0efeb;
-    --max-width: 1200px;
+    --rojo: #D32F2F;
+    --beige: #F2F1ED;
+    --beige-caja: #D7CCC8; /* El color de la caja de Komorebi/Itadakimasu */
+    --gris-oscuro: #50464a;
+    --vinotinto: #370F1D;
+    --blanco: #ffffff;
     --radius: 15px;
 }
 
@@ -21,55 +20,37 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--beige);
-    color: var(--gris-fondo);
+    color: var(--gris-oscuro);
     line-height: 1.4;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* --- ESTILOS BASE (MOBILE FIRST) --- */
+/* ==========================================
+   DISEÑO MÓVIL (BASE) - Fiel a tus fotos
+   ========================================== */
 
 header {
-    background-color: var(--beige);
     padding: 15px 20px;
+    background-color: var(--beige);
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px; /* Espacio entre el logo y los iconos/menú */
-    padding: 10px 20px;
 }
 
+/* Quitar puntos de lista y subrayados */
 nav ul {
- display: flex;
- gap: 15px;
- list-style: none;
- flex-wrap: wrap;
- justify-content: center;
+    list-style: none;
+    padding: 0;
 }
 
 nav a {
- text-decoration: none;
- color: var(--negro);
- font-size: 13px;
- text-transform: uppercase;
+    text-decoration: none;
+    color: #4A148C; /* Morado de tus capturas */
+    font-size: 14px;
+    font-weight: 500;
 }
-
-nav a.active {
- color: var(--rojo);
- font-weight: 700;
- border-bottom: 2px solid var(--rojo);
- padding-bottom: 5px;
-}
-
-
-.logo { height: 45px;
-margin-right: auto; }
 
 /* Hero Principal */
 .hero {
@@ -83,109 +64,84 @@ margin-right: auto; }
 
 .hero h1 {
     color: var(--rojo);
-    font-size: 60px;
-    font-weight: 800;
-    line-height: 0.8;
+    font-size: 50px;
+    font-weight: 900;
     text-transform: uppercase;
+    line-height: 0.9;
 }
 
-/* Mosaico Intro */
+/* Mosaico de Intro */
 .intro-mosaic {
     display: grid;
-    gap: 10px;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
     padding: 20px;
 }
 
 .intro-mosaic img {
+    width: 100%;
     border-radius: var(--radius);
-    aspect-ratio: 1/1;
     object-fit: cover;
 }
 
-.intro-mosaic img:first-child { grid-row: span 2; height: 100%; }
+.intro-mosaic img:first-child {
+    grid-row: span 2;
+}
 
-/* Destinos */
-.destinos {
-    background-color: var(--gris-fondo);
-    color: white;
+/* Sección de Palabra (Komorebi / Itadakimasu) */
+.palabra-seccion {
     padding: 40px 20px;
+    text-align: center;
 }
 
-.destinos-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.card img {
-    border-radius: var(--radius);
-    width: 100%;
-}
-
-/* Secciones de Palabras (Komorebi / Itadakimasu) */
 .palabra-box {
-    background-color: var(--beige-oscuro);
+    background-color: var(--beige-caja);
     padding: 30px 20px;
     border-radius: var(--radius);
-    text-align: center;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .palabra-box h2 {
     color: var(--rojo);
+    font-size: 1.8rem;
+    font-weight: 900;
     text-transform: uppercase;
-    font-weight: 800;
 }
 
-/* Gastronomía Mobile */
-.hero-gastro {
-    background-color: var(--rojo);
-    padding: 40px 0;
-    text-align: center;
-}
-
-.hero-gastro h1 {
-    color: var(--blanco);
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
+/* Gastronomía: Bloques verticales */
 .bloque {
-    margin: 0 20px 30px;
+    margin: 0 20px 40px;
 }
 
 .bloque h3 {
     text-transform: uppercase;
-    color: var(--gris-fondo);
+    color: var(--rojo);
     margin-bottom: 10px;
+    font-weight: 800;
 }
 
 .bloque img {
     border-radius: var(--radius);
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-/* Newsletter Mobile */
+/* Newsletter */
 .newsletter {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/kiyomizudera.jpeg') center/cover;
-    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/kiyomizudera.jpeg') center/cover;
+    padding: 50px 20px;
     text-align: center;
-    color: white;
 }
 
 .newsletter form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 20px;
 }
 
 .newsletter input, .newsletter button {
-    padding: 15px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 5px;
     border: none;
 }
 
@@ -193,6 +149,7 @@ margin-right: auto; }
     background-color: var(--vinotinto);
     color: white;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* Footer */
@@ -203,74 +160,60 @@ footer {
     text-align: center;
 }
 
-/* --- MEDIA QUERY (DESKTOP / TABLET) --- */
-
+/* ==========================================
+   TABLET (min-width: 700px)
+   ========================================== */
 @media (min-width: 700px) {
+    .hero h1 { font-size: 80px; }
+
+    .intro-mosaic {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .intro-mosaic img:first-child { grid-row: span 1; }
+
+    .destinos-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .newsletter form {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* ==========================================
+   DESKTOP (min-width: 1024px)
+   ========================================== */
+@media (min-width: 1024px) {
     .container {
         max-width: var(--max-width);
         margin: 0 auto;
     }
 
-    /* Hero Escritorio */
-    .hero { height: 80vh; padding-left: 10%; }
-    .hero h1 { font-size: 120px; }
-
-    /* Mosaico a 3 columnas */
-    .intro-mosaic {
-        grid-template-columns: repeat(3, 1fr);
+    .navbar {
+        padding: 10px 5%;
     }
-    .intro-mosaic img:first-child { grid-row: span 1; }
 
-    /* Destinos en Grid */
-    .destinos-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+    /* El menú de navegación se vuelve horizontal en PC */
+    nav ul {
+        display: flex;
         gap: 30px;
     }
 
-    /* Gastronomía en Grid */
+    .hero h1 { font-size: 110px; }
+
+    .destinos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* En escritorio, los platos de comida se alinean */
     .gastro-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 30px;
         padding: 40px;
     }
-
-    /* Newsletter Horizontal */
-    .newsletter form {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .newsletter input { width: 300px; }
-}
-
-@media (min-width: 1024px) {
-  .navbar {
-   flex-direction: row;
-   justify-content: space-between;
- 
-
- .hero {
-   padding: 0 0 60px 10%;
- }
-
- .intro-mosaic { grid-template-columns: repeat(3, 1fr); }
- .intro-mosaic img:first-child { grid-row: span 1; aspect-ratio: 4/5; }
- .intro-mosaic img { aspect-ratio: 4/5; }
-
- .destinos-grid { grid-template-columns: repeat(3, 1fr); gap: 35px; }
- .destinos h2 { font-size: 2.2rem; }
-
- .hero-imgs h1 {
-   font-size: 80px;
-   top: 40px;
- }
-
- .container:has(> .bloque) {
-  display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 25px;
- }
-}
 }
