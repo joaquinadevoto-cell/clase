@@ -456,7 +456,7 @@ body {
 .cultura-card header {
     background-color: var(--rojo);
     padding: 12px;
-    text-align: left;
+    text-align: center;
 }
 
 .cultura-card header h3 {
