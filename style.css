@@ -45,7 +45,8 @@ header {
     padding: 10px 20px;
 }
 
-.logo { height: 45px; }
+.logo { height: 45px;
+margin-right: auto; }
 
 /* Hero Principal */
 .hero {
