@@ -376,10 +376,10 @@ footer a {
 /*  DESKTOP  */
 
 @media (min-width: 1200px) {
- .navbar {
+  .navbar {
    flex-direction: row;
    justify-content: space-between;
- }
+ 
 
  .hero {
    padding: 0 0 60px 10%;
@@ -403,6 +403,8 @@ footer a {
    gap: 25px;
  }
 
+} /*cierre de desktop*/
+ 
 
 
 /*  MOBILE  */
@@ -425,4 +427,4 @@ footer a {
  .container:has(> .bloque) .bloque {
    margin-bottom: 0;
  }
-}
+} /* cierre de mobile*/
