@@ -215,7 +215,7 @@ body {
 }
 
 .btn-submit {
-    background-color: var(--vinotinto);
+    background-color: (--vinotinto: #370F1D);
     color: white;
     padding: 15px;
     border: none;
