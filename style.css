@@ -531,7 +531,7 @@ body {
 .label-red {
     color: var(--rojo);
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
