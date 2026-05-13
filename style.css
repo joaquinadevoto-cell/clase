@@ -89,14 +89,14 @@ body {
  
 /* "CONOCIENDO" — Roboto bold, vinotinto, pequeño */
 .hero-sub {
-    color: #370f1d;
+ color: #370f1d;
  font-size: 30px;
 
 }
  
 /* "JAPÓN" — Zen Tokyo Zoo, rojo, grande */
 .hero-title {
-    color: #c62828;
+   color: #c62828;
  font-size: 100px;
  font-weight: 800;
  line-height: 0.8;
