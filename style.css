@@ -110,10 +110,12 @@ body {
 
 /* INTRO Y MOSAICO (ESTRUCTURA FIJA) */
 .intro-section {
-    padding: 30px 0;
+   padding: 30px 20px;
+    padding: 0 20px;
 }
 
 .intro-description p {
+  
     margin-bottom: 15px;
     font-size: 1rem;
      margin-top: 25px;
@@ -172,14 +174,29 @@ body {
     margin-top: 10px;
 }
 
+/* ── FRASE DESTACADA ── */
+ 
+.quote-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+ 
+.quote-section blockquote {
+    font-size: 1.3rem;
+    font-weight: 700;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
 /* PALABRA CULTURAL KOMOREBI */
 .word-definition-section {
-    padding: 60px 20px;
+     padding: 60px 20px;
     text-align: center;
 }
 
 .definition-box {
-  background-color: var(--beige-caja);
+  background-color: #D7CCC8;
     padding: 40px 20px;
     border-radius: var(--radius);
     margin-top: 20px;
@@ -215,9 +232,9 @@ body {
     border: none;
 }
 
-.btn-submit { 
-  background-color: (#370f1d);
-    color: #370f1d;
+.btn-submit {
+  background-color: #370F1D;
+    color: white;
     padding: 15px;
     border: none;
     border-radius: 5px;
