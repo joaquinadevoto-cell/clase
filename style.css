@@ -214,8 +214,8 @@ body {
     border: none;
 }
 
-.btn-submit {
-    background-color: (--vinotinto: #370F1D);
+.btn-submit { 
+  background-color: (--vinotinto);
     color: white;
     padding: 15px;
     border: none;
@@ -224,6 +224,8 @@ body {
     text-transform: uppercase;
     cursor: pointer;
 }
+    
+
 
 .main-footer {
     background-color: var(--vinotinto);
