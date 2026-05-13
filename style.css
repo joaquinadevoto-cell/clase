@@ -77,14 +77,12 @@ body {
 
 /* HERO SECTION (Incorporación Controlada) */
 .hero-section {
-    height: 60vh; /* Altura original adaptada */
-    background: url('img/fuji-01.png') center/cover no-repeat;
+    background-image: url('img/fuji-01.png'); /* Prueba solo con esto primero */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh; /* Asegúrate de que tenga altura, si mide 0px no verás nada */
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 0 0 30px 5%;
-    margin-bottom: 30px;
 }
 
 .hero-title {
