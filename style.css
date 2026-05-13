@@ -89,24 +89,18 @@ body {
  
 /* "CONOCIENDO" — Roboto bold, vinotinto, pequeño */
 .hero-sub {
-    display: block;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 800;
-    font-size: clamp(14px, 3vw, 32px);
-    color: var(--vinotinto);
-    letter-spacing: 2px;
-    line-height: 1.2;
-    margin-bottom: 2px;
+    color: #370f1d;
+ font-size: 30px;
+
 }
  
 /* "JAPÓN" — Zen Tokyo Zoo, rojo, grande */
 .hero-title {
-    font-family: 'Zen Tokyo Zoo', sans-serif;
-    font-weight: 400;
-    color: var(--rojo);
-    font-size: clamp(52px, 13vw, 140px);
-    line-height: 0.85;
-    text-transform: uppercase;
+    color: #c62828;
+ font-size: 100px;
+ font-weight: 800;
+ line-height: 0.8;
+
 }
 
 /* INTRO Y MOSAICO (ESTRUCTURA FIJA) */
