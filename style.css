@@ -138,7 +138,7 @@ body {
 /* DESTINOS (Gris Oscuro) */
 .destinations-section {
     background-color: var(--gris-oscuro);
-    color: f0efeb);
+    color: f0efeb;
     padding: 50px 0;
 }
 
