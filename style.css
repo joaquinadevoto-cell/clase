@@ -242,6 +242,8 @@ body {
     cursor: pointer;
 }
     
+
+
 .main-footer {
     background-color: var(--vinotinto);
     color: white;
@@ -263,15 +265,6 @@ body {
 
 .legal-list a { color: white; text-decoration: none; }
 
-.back-to-top {
-  display: block;
-  color: white !important;
-  text-decoration: none !important;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-}
 
 /* ── GASTRONOMÍA ── */
  
@@ -635,33 +628,32 @@ body {
         font-size: 1.6rem;
     }
  
-    /* tarjetas cultura: 3 columnas */
-    .cultura-grid {
+    /* tarjetas cultura y festividades: 3 columnas */
+    .container:has(> .cultura-card) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
         align-items: start;
     }
-
-    .cultura-grid h2 {
-       grid-column: 1 / -1;
+ 
+    .container:has(> .cultura-card) h2 {
+        grid-column: 1 / -1;
     }
-
+ 
     .cultura-card {
-       margin-bottom: 0;
+        margin-bottom: 0;
     }
-
+ 
     .cultura-card img {
-    height: 220px;
+        height: 220px;
     }
-    
+ 
     /* iconos filosofía: 4 columnas */
     .icons-grid {
         grid-template-columns: repeat(4, 1fr);
         max-width: 800px;
         margin: 0 auto;
         padding: 60px 20px;
-        gap: 40px;
     }
  
     /* título festividades con líneas decorativas */
@@ -690,4 +682,3 @@ body {
 }
   
   }
-
