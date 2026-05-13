@@ -39,7 +39,7 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     gap: 20px; /* Espacio entre el logo y los iconos/menú */
     padding: 10px 20px;
