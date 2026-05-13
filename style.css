@@ -236,7 +236,7 @@ body {
 
 .footer-logo { font-size: 2rem; letter-spacing: 3px; margin: 15px 0; }
 
-.legal-list {
+.legal-list 
   {
 	display: flex;
 	flex-direction: row;
@@ -244,7 +244,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	align-content: space-evenly;
-} gap: 15px;
+ gap: 15px;
     font-size: 11px;
     margin: 20px 0;
 }
