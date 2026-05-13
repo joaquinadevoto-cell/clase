@@ -218,3 +218,31 @@ footer {
 
     .newsletter input { width: 300px; }
 }
+
+@media (min-width: 1024px) {
+  .navbar {
+   flex-direction: row;
+   justify-content: space-between;
+ 
+
+ .hero {
+   padding: 0 0 60px 10%;
+ }
+
+ .intro-mosaic { grid-template-columns: repeat(3, 1fr); }
+ .intro-mosaic img:first-child { grid-row: span 1; aspect-ratio: 4/5; }
+ .intro-mosaic img { aspect-ratio: 4/5; }
+
+ .destinos-grid { grid-template-columns: repeat(3, 1fr); gap: 35px; }
+ .destinos h2 { font-size: 2.2rem; }
+
+ .hero-imgs h1 {
+   font-size: 80px;
+   top: 40px;
+ }
+
+ .container:has(> .bloque) {
+  display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 25px;
+}
