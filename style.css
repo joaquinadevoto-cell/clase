@@ -635,26 +635,26 @@ body {
         font-size: 1.6rem;
     }
  
-    /* tarjetas cultura y festividades: 3 columnas */
-    .container:has(> .cultura-card) {
+    /* tarjetas cultura: 3 columnas */
+    .cultura-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
         align-items: start;
     }
- 
-    .container:has(> .cultura-card) h2 {
-        grid-column: 1 / -1;
+
+    .cultura-grid h2 {
+       grid-column: 1 / -1;
     }
- 
+
     .cultura-card {
-        margin-bottom: 0;
+       margin-bottom: 0;
     }
- 
+
     .cultura-card img {
-        height: 220px;
+    height: 220px;
     }
- 
+    
     /* iconos filosofía: 4 columnas */
     .icons-grid {
         grid-template-columns: repeat(4, 1fr);
