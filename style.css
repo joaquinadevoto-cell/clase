@@ -4,11 +4,15 @@
 :root {
     --rojo: #c62828;
  
- --beige: #E8E4DC;
+ --beige: #e1decd;
  
  --gris-fondo: #50464a;
  
  --blanco: #f0efeb;
+
+ -- vinotinto: #370f1d;
+
+ -- beige caja: #d3c2a7;
  
  --max-width: 1200px;
  
@@ -138,7 +142,7 @@ body {
 /* DESTINOS (Gris Oscuro) */
 .destinations-section {
     background-color: var(--gris-oscuro);
-    color: f0efeb;
+    color: #f0efeb;
     padding: 50px 0;
 }
 
@@ -168,7 +172,7 @@ body {
     margin-top: 10px;
 }
 
-/* CAJA KOMOREBI */
+/* PALABRA CULTURAL KOMOREBI */
 .word-definition-section {
     padding: 60px 20px;
     text-align: center;
