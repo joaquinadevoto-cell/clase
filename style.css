@@ -607,5 +607,79 @@ body {
     .mosaic-img:first-child { grid-row: span 1; }
 
     .destinations-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    
+/* DESKTOP CULTURA*/
+ #hero-cultura .hero-img {
+        height: 500px;
+    }
+ 
+    #hero-cultura .hero-title {
+        font-size: 90px;
+        top: 40px;
+    }
+ 
+    .intro-cultura {
+        max-width: 700px;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+ 
+    .intro-cultura h2 {
+        font-size: 1.6rem;
+    }
+ 
+    /* tarjetas cultura y festividades: 3 columnas */
+    .container:has(> .cultura-card) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        align-items: start;
+    }
+ 
+    .container:has(> .cultura-card) h2 {
+        grid-column: 1 / -1;
+    }
+ 
+    .cultura-card {
+        margin-bottom: 0;
+    }
+ 
+    .cultura-card img {
+        height: 220px;
+    }
+ 
+    /* iconos filosofía: 4 columnas */
+    .icons-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 60px 20px;
+    }
+ 
+    /* título festividades con líneas decorativas */
+    .section-title-red {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 1.8rem;
+        max-width: var(--max-width);
+        margin: 40px auto 30px;
+        padding: 0 20px;
+    }
+ 
+    .section-title-red::before,
+    .section-title-red::after {
+        content: '';
+        flex: 1;
+        height: 2px;
+        background-color: var(--rojo);
+    }
+ 
+    /* caja palabra */
+  .word-definition {
+    text-align: center;
+    padding: 40px 20px;
 }
+  
+  }
 
