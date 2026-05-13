@@ -12,7 +12,7 @@
 
  --vinotinto: #370F1D;
 
---beige-caja: #D7CCC8;
+--beige-caja: #d3c2a7;
  
  --max-width: 1200px;
  
@@ -196,7 +196,7 @@ body {
 }
 
 .definition-box {
-  background-color: #008e36;
+  background-color: #d3c2a7;
     padding: 20px 20px;
     border-radius: var(--radius);
     margin-top: 20px;
