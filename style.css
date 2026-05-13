@@ -224,8 +224,18 @@ body {
    DESKTOP (min-width: 1024px)
    ========================================== */
 @media (min-width: 1024px) {
-    .hero-section { height: 60vh; }
-    .hero-title { font-size: 100px; }
+    .hero-section {
+        height: 70vh; /* Tu altura original */
+        padding: 0 0 40px 10%;
+    }
+
+    .hero-title {
+        font-size: 100px; /* Tu tamaño original */
+    }
+
+    .hero-title::first-line {
+        font-size: 30px; /* Tu tamaño original */
+    }
 
     .intro-mosaic {
         grid-template-columns: repeat(3, 1fr);
