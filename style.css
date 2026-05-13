@@ -4,11 +4,13 @@
 :root {
     --rojo: #D32F2F;
     --beige: #F2F1ED;
-    --beige-caja: #D7CCC8; /* El color de la caja de Komorebi/Itadakimasu */
+    --beige-caja: #D7CCC8;
     --gris-oscuro: #50464a;
     --vinotinto: #370F1D;
     --blanco: #ffffff;
+    --negro: #1a1a1a;
     --radius: 15px;
+    --max-width: 1200px;
 }
 
 * {
@@ -24,12 +26,20 @@ body {
     line-height: 1.4;
 }
 
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* ==========================================
-   DISEÑO MÓVIL (BASE) - Fiel a tus fotos
+   DISEÑO MÓVIL (BASE)
    ========================================== */
 
-header {
-    padding: 15px 20px;
+/* HEADER Y NAVEGACIÓN */
+.main-header {
+    padding: 15px 0;
     background-color: var(--beige);
 }
 
@@ -39,186 +49,252 @@ header {
     align-items: center;
 }
 
-/* Quitar puntos de lista y subrayados */
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #4A148C; /* Morado de tus capturas */
-    font-size: 14px;
-    font-weight: 500;
-}
-
 .logo {
- height: 45px;
+    height: 40px;
+    display: block;
 }
 
-
-/* Hero Principal */
-.hero {
-    height: 60vh;
-    background: url('img/fuji-01.png') center/cover no-repeat;
+.nav-list {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
+    gap: 15px;
 }
 
-.hero h1 {
+.nav-link {
+    text-decoration: none;
+    color: var(--vinotinto); /* Color oscuro de las fotos */
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.nav-link.active {
+    color: var(--rojo);
+    border-bottom: 2px solid var(--rojo);
+}
+
+/* HERO SECTION */
+.hero-section {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
+                url('img/fuji-01.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero-title {
     color: var(--rojo);
     font-size: 50px;
     font-weight: 900;
     text-transform: uppercase;
-    line-height: 0.9;
+    line-height: 0.85;
 }
 
-/* Mosaico de Intro */
+/* INTRO Y MOSAICO */
+.intro-section {
+    padding: 40px 20px;
+}
+
+.intro-description p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
 .intro-mosaic {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 10px;
-    padding: 20px;
+    margin-top: 20px;
 }
 
-.intro-mosaic img {
+.mosaic-img {
     width: 100%;
-    border-radius: var(--radius);
+    height: 100%;
     object-fit: cover;
+    border-radius: var(--radius);
 }
 
-.intro-mosaic img:first-child {
+.mosaic-img:first-child {
     grid-row: span 2;
 }
 
-/* Sección de Palabra (Komorebi / Itadakimasu) */
-.palabra-seccion {
+/* DESTINOS (Gris Oscuro) */
+.destinations-section {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+    padding: 60px 0;
+}
+
+.section-title {
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.destinations-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.destination-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+.card-info h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* FRASE Y CULTURA */
+.quote-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.main-quote {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--vinotinto);
+}
+
+.word-definition-section {
     padding: 40px 20px;
     text-align: center;
 }
 
-.palabra-box {
-    background-color: var(--beige-caja);
-    padding: 30px 20px;
-    border-radius: var(--radius);
-    margin: 20px 0;
+.definition-label {
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
-.palabra-box h2 {
+.definition-box {
+    background-color: var(--beige-caja);
+    padding: 40px 20px;
+    border-radius: var(--radius);
+}
+
+.word-title {
     color: var(--rojo);
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 900;
     text-transform: uppercase;
 }
 
-/* Gastronomía: Bloques verticales */
-.bloque {
-    margin: 0 20px 40px;
-}
-
-.bloque h3 {
-    text-transform: uppercase;
-    color: var(--rojo);
-    margin-bottom: 10px;
-    font-weight: 800;
-}
-
-.bloque img {
-    border-radius: var(--radius);
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-/* Newsletter */
-.newsletter {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/kiyomizudera.jpeg') center/cover;
-    padding: 50px 20px;
+/* NEWSLETTER */
+.newsletter-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('img/kiyomizudera.jpeg') center/cover no-repeat;
+    padding: 80px 20px;
     text-align: center;
+    color: white;
 }
 
-.newsletter form {
+.newsletter-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 25px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.newsletter input, .newsletter button {
-    padding: 12px;
+.newsletter-form input {
+    padding: 15px;
     border-radius: 5px;
     border: none;
 }
 
-.newsletter button {
+.btn-submit {
     background-color: var(--vinotinto);
     color: white;
-    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
-/* Footer */
-footer {
+/* FOOTER */
+.main-footer {
     background-color: var(--vinotinto);
     color: white;
-    padding: 40px 20px;
+    padding: 50px 0;
     text-align: center;
+}
+
+.footer-logo {
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    margin: 20px 0;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin: 30px auto;
+    width: 80%;
+}
+
+.legal-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.legal-list a {
+    color: white;
+    text-decoration: none;
 }
 
 /* ==========================================
    TABLET (min-width: 700px)
    ========================================== */
 @media (min-width: 700px) {
-    .hero h1 { font-size: 80px; }
+    .hero-title { font-size: 80px; }
 
-    .intro-mosaic {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .intro-mosaic img:first-child { grid-row: span 1; }
-
-    .destinos-grid {
+    .destinations-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
-    .newsletter form {
+    .newsletter-form {
         flex-direction: row;
-        justify-content: center;
     }
+    
+    .newsletter-form input { flex: 1; }
 }
 
 /* ==========================================
    DESKTOP (min-width: 1024px)
    ========================================== */
 @media (min-width: 1024px) {
-    .container {
-        max-width: var(--max-width);
-        margin: 0 auto;
-    }
+    .hero-section { height: 70vh; }
+    
+    .hero-title { font-size: 110px; }
 
-    .navbar {
-        padding: 10px 5%;
-    }
-
-    /* El menú de navegación se vuelve horizontal en PC */
-    nav ul {
-        display: flex;
-        gap: 30px;
-    }
-
-    .hero h1 { font-size: 110px; }
-
-    .destinos-grid {
+    .intro-mosaic {
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
     }
+    
+    .mosaic-img:first-child { grid-row: span 1; }
 
-    /* En escritorio, los platos de comida se alinean */
-    .gastro-container {
-        display: grid;
+    .destinations-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        padding: 40px;
     }
 }
