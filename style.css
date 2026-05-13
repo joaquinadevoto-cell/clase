@@ -1,26 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800;900&display=swap');
 
+/* --- VARIABLES Y RESET --- */
 :root {
     --rojo: #D32F2F;
     --beige: #F2F1ED;
     --beige-caja: #D7CCC8;
     --gris-oscuro: #50464a;
     --vinotinto: #370F1D;
+    --blanco: #ffffff;
+    --negro: #1a1a1a;
     --radius: 15px;
     --max-width: 1200px;
 }
 
-/* 1. RESET CRÍTICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-img {
-    max-width: 100%; /* Evita que las imágenes se salgan del contenedor */
-    height: auto;
-    display: block;
 }
 
 body {
@@ -28,7 +24,7 @@ body {
     background-color: var(--beige);
     color: var(--gris-oscuro);
     line-height: 1.4;
-    overflow-x: hidden; /* Evita scroll horizontal */
+    overflow-x: hidden;
 }
 
 .container {
@@ -38,7 +34,11 @@ body {
     padding: 0 20px;
 }
 
-/* 2. HEADER Y LOGO (CONTROLADO) */
+/* ==========================================
+   DISEÑO MÓVIL (BASE) - Fiel a tus fotos
+   ========================================== */
+
+/* HEADER Y NAVEGACIÓN (CONTROLADO) */
 .main-header {
     padding: 10px 0;
     background-color: var(--beige);
@@ -53,6 +53,7 @@ body {
 .logo {
     height: 40px; /* AQUÍ: Controlamos el tamaño abismal del logo */
     width: auto;
+    display: block;
 }
 
 .nav-list {
@@ -74,41 +75,45 @@ body {
     border-bottom: 2px solid var(--rojo);
 }
 
-/* 3. HERO (CONTROLADO) */
-./* --- HERO SECTION (MOBILE FIRST) --- */
+/* HERO SECTION (Incorporación Controlada) */
 .hero-section {
-    height: 60vh; /* Altura ajustada para móvil */
+    height: 60vh; /* Altura original adaptada */
     background: url('img/fuji-01.png') center/cover no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Alinea el texto abajo */
+    justify-content: flex-end;
     align-items: flex-start;
-    padding: 0 0 30px 5%; /* Espaciado lateral */
+    padding: 0 0 30px 5%;
     margin-bottom: 30px;
 }
 
 .hero-title {
-    color: #c62828;
-    font-size: 50px; /* Tamaño seguro para celulares */
+    color: var(--rojo); /* Tu color original */
+    font-size: 50px; /* Tamaño seguro para mobile, sube en desktop */
     font-weight: 800;
     line-height: 0.8;
 }
 
 /* Efecto de la primera línea (CONOCIENDO) */
 .hero-title::first-line {
-    color: #370f1d;
-    font-size: 20px; /* Tamaño proporcional para móvil */
+    color: var(--vinotinto); /* Tu color original */
+    font-size: 20px; /* Proporcional para mobile */
 }
 
-/* 4. MOSAICO (ESTRUCTURA FIJA) */
+/* INTRO Y MOSAICO (ESTRUCTURA FIJA) */
 .intro-section {
     padding: 30px 0;
+}
+
+.intro-description p {
+    margin-bottom: 15px;
+    font-size: 1rem;
 }
 
 .intro-mosaic {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 150px; /* Altura fija para alinear las imágenes */
+    grid-template-rows: 150px 150px; /* Altura fija para alinear */
     gap: 10px;
     margin-top: 20px;
 }
@@ -116,55 +121,72 @@ body {
 .mosaic-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Recorta la imagen para que rellene el espacio */
+    object-fit: cover;
     border-radius: var(--radius);
 }
 
 .mosaic-img:first-child {
-    grid-row: span 2; /* La primera imagen ocupa toda la altura */
+    grid-row: span 2;
 }
 
-/* 5. DESTINOS (Gris Oscuro) */
+/* DESTINOS (Gris Oscuro) */
 .destinations-section {
     background-color: var(--gris-oscuro);
-    color: white;
-    padding: 40px 0;
+    color: var(--blanco);
+    padding: 50px 0;
+}
+
+.section-title {
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .destinations-grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 25px;
+    margin-top: 30px;
 }
 
 .destination-card img {
     width: 100%;
-    aspect-ratio: 1/1; /* Imágenes cuadradas */
+    aspect-ratio: 1/1; /* Imágenes cuadradas controladas */
     object-fit: cover;
     border-radius: var(--radius);
 }
 
-/* 6. CAJA KOMOREBI */
+.card-info h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* CAJA KOMOREBI */
+.word-definition-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
 .definition-box {
     background-color: var(--beige-caja);
-    padding: 30px 20px;
+    padding: 40px 20px;
     border-radius: var(--radius);
-    text-align: center;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .word-title {
     color: var(--rojo);
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 900;
+    text-transform: uppercase;
 }
 
-/* 7. NEWSLETTER Y FOOTER */
+/* NEWSLETTER Y FOOTER */
 .newsletter-section {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                 url('img/kiyomizudera.jpeg') center/cover no-repeat;
-    padding: 60px 20px;
+    padding: 70px 20px;
     text-align: center;
     color: white;
 }
@@ -176,32 +198,43 @@ body {
     margin-top: 20px;
 }
 
+.newsletter-form input {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
 .btn-submit {
     background-color: var(--vinotinto);
     color: white;
-    padding: 12px;
+    padding: 15px;
     border: none;
+    border-radius: 5px;
     font-weight: 800;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .main-footer {
     background-color: var(--vinotinto);
     color: white;
-    padding: 30px 20px;
+    padding: 40px 0;
     text-align: center;
 }
 
-.footer-logo { font-size: 1.8rem; margin: 10px 0; }
+.footer-logo { font-size: 2rem; letter-spacing: 3px; margin: 15px 0; }
 
 .legal-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    font-size: 10px;
+    gap: 15px;
+    font-size: 11px;
+    margin: 20px 0;
 }
+
+.legal-list a { color: white; text-decoration: none; }
 
 /* ==========================================
    TABLET (min-width: 700px)
@@ -209,40 +242,35 @@ body {
 @media (min-width: 700px) {
     .logo { height: 50px; }
     .nav-link { font-size: 13px; }
-    .hero-title { font-size: 70px; }
-    
+    .hero-title { font-size: 80px; }
+    .hero-title::first-line { font-size: 25px; }
+
     .destinations-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .newsletter-form { flex-direction: row; justify-content: center; }
-    .newsletter-form input { width: 300px; }
+    .newsletter-form input { flex: 1; max-width: 300px; }
 }
 
 /* ==========================================
    DESKTOP (min-width: 1024px)
    ========================================== */
 @media (min-width: 1024px) {
-    .hero-section {
-        height: 70vh; /* Tu altura original */
-        padding: 0 0 40px 10%;
-    }
+    .container { max-width: 1100px; }
 
-    .hero-title {
-        font-size: 100px; /* Tu tamaño original */
-    }
-
-    .hero-title::first-line {
-        font-size: 30px; /* Tu tamaño original */
-    }
+    .hero-section { height: 70vh; padding: 0 0 40px 10%; }
+    .hero-title { font-size: 100px; } /* Tu tamaño original */
+    .hero-title::first-line { font-size: 30px; } /* Tu tamaño original */
 
     .intro-mosaic {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 350px; /* Más alto en escritorio */
+        grid-template-rows: 350px; /* Altura fija más alta para PC */
     }
     
     .mosaic-img:first-child { grid-row: span 1; }
 
-    .destinations-grid { grid-template-columns: repeat(3, 1fr); }
+    .destinations-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; }
 }
