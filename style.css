@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* --- VARIABLES Y RESET --- */
 :root {
@@ -20,7 +20,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; 
     background-color: var(--beige);
     color: var(--gris-oscuro);
     line-height: 1.4;
@@ -243,6 +243,142 @@ body {
 .legal-list a { color: white; text-decoration: none; }
 
 
+/* ── GASTRONOMÍA ── */
+ 
+.hero-gastro {
+    background-color: var(--rojo);
+    overflow: hidden;
+}
+ 
+.hero-imgs {
+    position: relative;
+    text-align: center;
+}
+ 
+.hero-imgs img {
+    width: 100%;
+    display: block;
+}
+ 
+.hero-imgs h1 {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--beige);
+    text-transform: uppercase;
+    line-height: 1;
+}
+ 
+.hero-gastro + .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+ 
+.hero-gastro + .container h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--rojo);
+    margin-bottom: 15px;
+}
+ 
+.bloque {
+    background-color: var(--gris-oscuro);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 25px;
+    color: var(--blanco);
+}
+ 
+.bloque img {
+    width: 100%;
+    max-height: 250px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+}
+ 
+.bloque h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 12px 20px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+ 
+.bloque p {
+    padding: 15px 20px 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+ 
+.container h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--rojo);
+    margin: 40px 0 20px;
+}
+ 
+.palabra {
+    background-color: var(--beige);
+    text-align: center;
+    padding: 60px 20px;
+}
+ 
+.palabra h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gris-oscuro);
+}
+ 
+.palabra h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--rojo);
+    margin: 5px 0 30px;
+}
+ 
+.palabra-box {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+    border-radius: var(--radius);
+    padding: 25px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+ 
+.palabra-box strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--blanco);
+}
+ 
+.volver {
+    display: block;
+    text-align: center;
+    padding: 30px 0;
+    color: var(--gris-oscuro);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
 @media (min-width: 700px) {
     .logo { height: 50px; }
     .nav-link { font-size: 13px; }
@@ -289,3 +425,5 @@ body {
 
     .destinations-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; }
 }
+
+
