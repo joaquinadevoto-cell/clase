@@ -340,6 +340,7 @@ body {
     padding: 15px 20px 20px;
     font-size: 0.9rem;
     line-height: 1.6;
+    color: var(#010101);
 }
  
 .container h2 {
