@@ -237,11 +237,14 @@ body {
 .footer-logo { font-size: 2rem; letter-spacing: 3px; margin: 15px 0; }
 
 .legal-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+  {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-evenly;
+} gap: 15px;
     font-size: 11px;
     margin: 20px 0;
 }
