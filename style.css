@@ -75,20 +75,29 @@ body {
 }
 
 /* 3. HERO (CONTROLADO) */
+./* --- HERO SECTION (MOBILE FIRST) --- */
 .hero-section {
-    height: 40vh; /* Altura moderada en móvil */
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
-                url('img/fuji-01.png') center/cover no-repeat;
+    height: 60vh; /* Altura ajustada para móvil */
+    background: url('img/fuji-01.png') center/cover no-repeat;
     display: flex;
-    align-items: center;
-    padding: 20px;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinea el texto abajo */
+    align-items: flex-start;
+    padding: 0 0 30px 5%; /* Espaciado lateral */
+    margin-bottom: 30px;
 }
 
 .hero-title {
-    color: var(--rojo);
-    font-size: 40px; /* Ajustado para que no rompa en móvil */
-    font-weight: 900;
-    line-height: 0.9;
+    color: #c62828;
+    font-size: 50px; /* Tamaño seguro para celulares */
+    font-weight: 800;
+    line-height: 0.8;
+}
+
+/* Efecto de la primera línea (CONOCIENDO) */
+.hero-title::first-line {
+    color: #370f1d;
+    font-size: 20px; /* Tamaño proporcional para móvil */
 }
 
 /* 4. MOSAICO (ESTRUCTURA FIJA) */
