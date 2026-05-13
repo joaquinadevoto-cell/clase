@@ -141,8 +141,8 @@ body {
 
 /* DESTINOS (Gris Oscuro) */
 .destinations-section {
-    background-color: var(--gris-oscuro);
-    color: #f0efeb;
+    background-color: #50464a;
+    color: #ffffff;
     padding: 50px 0;
 }
 
@@ -179,11 +179,12 @@ body {
 }
 
 .definition-box {
-    background-color: var(--beige-caja);
+  background-color: var(--beige-caja);
     padding: 40px 20px;
     border-radius: var(--radius);
     margin-top: 20px;
 }
+
 
 .word-title {
     color: var(--rojo);
@@ -236,15 +237,12 @@ body {
 
 .footer-logo { font-size: 2rem; letter-spacing: 3px; margin: 15px 0; }
 
-.legal-list 
-  {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	align-content: space-evenly;
- gap: 15px;
+.legal-list { 
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
     font-size: 11px;
     margin: 20px 0;
 }
