@@ -265,6 +265,15 @@ body {
 
 .legal-list a { color: white; text-decoration: none; }
 
+.back-to-top {
+  display: block;
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
 
 /* ── GASTRONOMÍA ── */
  
