@@ -2,15 +2,18 @@
 
 /* --- VARIABLES Y RESET --- */
 :root {
-    --rojo: #D32F2F;
-    --beige: #F2F1ED;
-    --beige-caja: #D7CCC8;
-    --gris-oscuro: #50464a;
-    --vinotinto: #370F1D;
-    --blanco: #ffffff;
-    --negro: #1a1a1a;
-    --radius: 15px;
-    --max-width: 1200px;
+    --rojo: #c62828;
+ 
+ --beige: #E8E4DC;
+ 
+ --gris-fondo: #50464a;
+ 
+ --blanco: #f0efeb;
+ 
+ --max-width: 1200px;
+ 
+ --radius: 25px;
+
 }
 
 * {
