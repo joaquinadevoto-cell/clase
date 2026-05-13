@@ -677,9 +677,8 @@ body {
     }
  
     /* caja palabra */
-    .word-definition {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 60px 20px;
-    }
+  .word-definition {
+    text-align: center;
+    padding: 40px 20px;
+}
   
