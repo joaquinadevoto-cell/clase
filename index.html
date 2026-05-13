@@ -3,130 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japón</title>
+    <title>Japón | Conoce el Sol Naciente</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header id="inicio">
+    <header class="main-header">
         <div class="navbar container">
-            <a href="index.html">
+            <a href="index.html" class="logo-link">
                 <img src="img/logo.png" alt="Logo Japón" class="logo">
             </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="cultura.html">Cultura</a></li>
-                    <li><a href="gastronomia.html">Gastronomía</a></li>
-                    <li><a href="arte.html">Arte</a></li>
-                    <li><a href="#">Festividades</a></li>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li><a href="cultura.html" class="nav-link">Cultura</a></li>
+                    <li><a href="gastronomia.html" class="nav-link">Gastronomía</a></li>
+                    <li><a href="arte.html" class="nav-link">Arte</a></li>
+                    <li><a href="#" class="nav-link">Festividades</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-                <h1>CONOCIENDO <br> JAPÓN</h1>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">CONOCIENDO <br> JAPÓN</h1>
+            </div>
         </section>
 
-        <section class="intro container">
-            <div class="intro-text">
+        <section class="intro-section container">
+            <div class="intro-description">
                 <p>
-                    Donde la tradición se encuentra con el mañana. Explorar Japón es descubrir un mosaico de regiones, cada una con <em>su propio sabor,propio arte y sus propios rituales.</em> 
-                    <br>
-Déjate envolver por un territorio donde lo ancestral y lo innovador no solo conviven, sino que crean algo totalmente único.
-<br>
-   <strong>Tu viaje por el corazon del sol Naciente comienza aqui.</strong> 
+                    Donde la tradición se encuentra con el mañana. Explorar Japón es descubrir un mosaico de regiones, cada una con <em>su propio sabor, propio arte y sus propios rituales.</em> 
+                </p>
+                <p>
+                    Déjate envolver por un territorio donde lo ancestral y lo innovador no solo conviven, sino que crean algo totalmente único.
+                </p>
+                <p class="intro-highlight">
+                    <strong>Tu viaje por el corazón del Sol Naciente comienza aquí.</strong>
                 </p>
             </div>
             
             <div class="intro-mosaic">
-                <img src="img/templo1.jpeg" alt="Templo">
-                <img src="img/tokio-pantallas.jpg" alt="Tokio">
-                <img src="img/bandera.jpg" alt="Bandera">
+                <img src="img/templo1.jpeg" alt="Templo tradicional" class="mosaic-img">
+                <img src="img/tokio-pantallas.jpg" alt="Luces de Tokio" class="mosaic-img">
+                <img src="img/bandera.jpg" alt="Bandera de Japón" class="mosaic-img">
             </div>
         </section>
 
-        <section class="destinos">
+        <section class="destinations-section">
             <div class="container">
-                <h2>DESCUBRÍ LOS DESTINOS MÁS VISITADOS</h2>
-                <p>Algunos de los destinos más visitados reflejan la diversidad cultural del país, desde la innovación de Tokio hasta la tradición de 
-Kioto y la historia de Hiroshima. Cada lugar ofrece una experiencia unica que combina pasado, presente y cultura.</p>
+                <h2 class="section-title">DESCUBRÍ LOS DESTINOS MÁS VISITADOS</h2>
+                <p class="section-subtitle">Algunos de los destinos más visitados reflejan la diversidad cultural del país, desde la innovación de Tokio hasta la tradición de Kioto y la historia de Hiroshima.</p>
 
-                <div class="destinos-grid">
-                    <article class="card">
-                        <img src="img/monumento.jpg" alt="Hiroshima">
-                        <h3>Monumento de la Paz</h3>
-                        <p>Hiroshima</p>
-                    </article>
-                    <article class="card">
-                        <img src="img/shibuya.jpg" alt="Tokio">
-                        <h3>Cruce de Shibuya</h3>
-                        <p>Tokio</p>
-                    </article>
-                    <article class="card">
-                        <img src="img/torre.jpg" alt="Osaka">
-                        <h3>Torre de Tsutenkaku</h3>
-                        <p>Kioto</p>
-                    </article>
-                    <article class="card"> 
-                        <img src="img/templo2.jpg" alt="Kyoto">
-                        <h3>Torre de Koyasu en Templo Kiyomizu-dera</h3>
-                        <p>Kyoto</p>
-                    </article>
-                    <article class="card"> 
-                        <img src="img/dotonbori.jpg" alt="Osaka">
-                        <h3>Dotonbori</h3>
-                        <p>Osaka</p>
-                    </article>
-                    <article class="card"> 
-                        <img src="img/Jardin-de-Koraku.jpg" alt="Okayama">
-                        <h3>Jardin de Koraku-en</h3>
-                        <p>Okayama</p>
-                    </article>
+                <div class="destinations-grid">
+                    <section class="destination-card">
+                        <img src="img/monumento.jpg" alt="Monumento de la Paz">
+                        <div class="card-info">
+                            <h3>Monumento de la Paz</h3>
+                            <p>Hiroshima</p>
+                        </div>
+                    </section>
 
-                    </div>
+                    <section class="destination-card">
+                        <img src="img/shibuya.jpg" alt="Cruce de Shibuya">
+                        <div class="card-info">
+                            <h3>Cruce de Shibuya</h3>
+                            <p>Tokio</p>
+                        </div>
+                    </section>
+
+                    <section class="destination-card">
+                        <img src="img/torre.jpg" alt="Torre Tsutenkaku">
+                        <div class="card-info">
+                            <h3>Torre de Tsutenkaku</h3>
+                            <p>Kioto</p>
+                        </div>
+                    </section>
+
+                    <section class="destination-card"> 
+                        <img src="img/templo2.jpg" alt="Templo Kiyomizu-dera">
+                        <div class="card-info">
+                            <h3>Torre de Koyasu</h3>
+                            <p>Kyoto</p>
+                        </div>
+                    </section>
+
+                    <section class="destination-card"> 
+                        <img src="img/dotonbori.jpg" alt="Dotonbori Osaka">
+                        <div class="card-info">
+                            <h3>Dotonbori</h3>
+                            <p>Osaka</p>
+                        </div>
+                    </section>
+
+                    <section class="destination-card"> 
+                        <img src="img/Jardin-de-Koraku.jpg" alt="Jardin Koraku-en">
+                        <div class="card-info">
+                            <h3>Jardín de Koraku-en</h3>
+                            <p>Okayama</p>
+                        </div>
+                    </section>
+                </div>
             </div>
         </section>
 
-        <section class="frase-destacada">
-            <h2>"Cada región japonesa revela una <br> distinta de entender el <br>tiempo, el espacio y la cultura"</h2>
+        <section class="quote-section">
+            <blockquote class="main-quote">
+                "Cada región japonesa revela una forma distinta de entender el tiempo, el espacio y la cultura"
+            </blockquote>
         </section>
 
-        <section class="komorebi">
-            <h2>Cultura en una palabra</h2>
-            <h2>KOMOREBI（木漏 日）</h2>
-            <p>La luz del sol que se filtra a través de las hojas de los árboles</p>
+        <section class="word-definition-section container">
+            <h2 class="definition-label">Cultura en una palabra</h2>
+            <div class="definition-box">
+                <h2 class="word-title">KOMOREBI <span class="japanese">（木漏れ日）</span></h2>
+                <p class="word-meaning">La luz del sol que se filtra a través de las hojas de los árboles</p>
+            </div>
         </section>
 
-        <section class="newsletter">
+        <section class="newsletter-section">
             <div class="container">
-                <h2>Conectate más con Japón</h2>
-                <p>Suscribite a nuestro newsletter para tener mas novedades</p>
-                <form>
-                    <input type="email" placeholder="nombre@correo.com" required>
-                    <button type="submit">Suscribite</button>
+                <h2>Conéctate más con Japón</h2>
+                <p>Suscribite a nuestro newsletter para recibir novedades</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="nombre@correo.com" aria-label="Correo electrónico" required>
+                    <button type="submit" class="btn-submit">Suscribite</button>
                 </form>
             </div>
         </section>
     </main>
 
-     
+    <footer class="main-footer">
+        <div class="container">
+            <a href="#" class="back-to-top">Volver al inicio</a>
+            
+            <h3 class="footer-logo">JAPÓN</h3>
 
-    <footer>
+            <div class="contact-info">
+                <p>Email: info@japon.com</p>
+                <p>Teléfono: +54 9 11 3443 5541</p>
+            </div>
 
-        <a href="#inicio">Volver al inicio</a>
-       
-        <h3>JAPÓN</h3>
+            <hr class="footer-divider">
 
-        <p>Email: info@japon.com</p>
-        <p>Teléfono: +54 9 11 3443 5541</p>
-
-        <hr>
-
-        <p>Política de privacidad | Condiciones de uso | Cookies</p>
-        <p>2026 © Todos los derechos reservados</p>
+            <nav class="footer-legal">
+                <ul class="legal-list">
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Condiciones de uso</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">2026 &copy; Todos los derechos reservados</p>
+        </div>
     </footer>
 
 </body>
