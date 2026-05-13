@@ -77,14 +77,15 @@ body {
 
 /* HERO SECTION (Incorporación Controlada) */
 .hero-section {
-    background-image: url('img/fuji-01.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 60vh;
-    display: flex;
-    align-items: flex-end;
-    padding: 0 0 30px 5%;
+   height: 70vh;
+ background: url('img/fuji-01.png') center/cover no-repeat;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+ align-items: flex-start;
+ padding: 0 0 40px 5%;
+ margin-bottom: 30px;
+
 }
  
 /* "CONOCIENDO" — Roboto bold, vinotinto, pequeño */
