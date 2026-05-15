@@ -341,7 +341,13 @@ body {
     font-size: 0.95rem;
     line-height: 1.6;
 }
-
+.palabra .word-title {
+    color: var(--rojo);
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
 .volver {
     display: block;
     text-align: center;
