@@ -306,6 +306,7 @@ body {
     aspect-ratio: 4/3;
     object-fit: cover;
     display: block;
+     border-radius: var(--radius); 
 }
 
 .bloque h3 {
@@ -554,6 +555,16 @@ body {
     .mosaic-img:first-child { grid-row: span 1; }
 
     .destinations-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+
+     .bloques-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .bloque {
+        margin-bottom: 0;
+    }
 
     /* cultura desktop */
 
