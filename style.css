@@ -333,7 +333,8 @@ body {
 }
 
 .palabra-box {
-    border-radius: var(--radius);
+      background-color: var(--beige-caja); 
+  border-radius: var(--radius);
     padding: 25px 20px;
     max-width: 500px;
     margin: 0 auto;
