@@ -488,6 +488,7 @@ body {
     font-weight: 700;
     font-size: 1.3rem;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .word-definition .definition-box {
