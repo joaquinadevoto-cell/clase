@@ -797,11 +797,37 @@ footer p:last-child {
 /* ── DESKTOP ARTE (1024px+) ── */
 
 @media (min-width: 1024px) {
+@media (min-width: 1024px) {
 
-    .titulo-arte h1 {
-        font-size: 7rem;
-        right: 60px;
-        top: 30px;
+    /* ── INTRO ARTE DESKTOP ── */
+
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        padding: 60px 40px;
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    .intro h2,
+    .intro p {
+        padding: 0;
+    }
+
+    .intro img {
+        margin-top: 0;
+        border-radius: var(--radius);
+        height: 100%;
+    }
+
+    /* ── TARJETAS ARTE DESKTOP ── */
+
+    .tarjetas {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 40px;
     }
 
     .tarjetas > ul {
@@ -811,36 +837,32 @@ footer p:last-child {
 
     .tarjetas > ul > li {
         flex: 1;
+        border-radius: var(--radius);
+    }
+
+    /* ── OBRAS DESKTOP ── */
+
+    .obras {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 60px 40px;
     }
 
     .obras ul {
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
     }
-}
 
-/* ── DESKTOP ARTE (1024px+) ── */
+    /* ── TITULO ARTE DESKTOP ── */
 
-@media (min-width: 1024px) {
+    .titulo-arte img {
+        max-height: 500px;
+    }
 
     .titulo-arte h1 {
         font-size: 7rem;
         right: 60px;
-        bottom: 30px;
-    }
-
-    .tarjetas ul {
-        flex-direction: row;
-        align-items: start;
-    }
-
-    .tarjetas > ul > li {
-        flex: 1;
-    }
-
-    .obras ul {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        top: 30px;
     }
 }
 /* ── DESKTOP CULTURA (1024px+) ── */
