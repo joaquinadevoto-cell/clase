@@ -689,7 +689,7 @@ footer p:last-child {
 
 .titulo-arte h1 {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 30px;
     font-size: 3.5rem;
     font-weight: 900;
