@@ -797,7 +797,6 @@ footer p:last-child {
 /* ── DESKTOP ARTE (1024px+) ── */
 
 @media (min-width: 1024px) {
-@media (min-width: 1024px) {
 
     /* ── INTRO ARTE DESKTOP ── */
 
@@ -894,7 +893,6 @@ footer p:last-child {
 }
 
 /* ── TABLET (600px+) ── */
-
 @media (min-width: 600px) {
     .platos-tipicos ul,
     .postres ul,
@@ -903,15 +901,14 @@ footer p:last-child {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
-}
+}   /* ← esta llave cierra el media query */
 
 /* ── DESKTOP GASTRO (1024px+) ── */
-
-@media (min-width: 1024px) { 
-  .titulo-gastro h1 {
-    font-size: 3.5rem;
-    top: 30px;
-}
+@media (min-width: 1024px) {
+    .titulo-gastro h1 {
+        font-size: 3.5rem;
+        top: 30px;
+    }
 
     .platos-tipicos,
     .postres,
@@ -925,4 +922,4 @@ footer p:last-child {
     .bebidas ul {
         grid-template-columns: repeat(3, 1fr);
     }
-}
+}   /* ← esta llave cierra el media query */
