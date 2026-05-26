@@ -440,40 +440,6 @@ footer p:last-child {
     line-height: 1.6;
 }
 
-/* ── TABLET (600px+) ── */
-
-@media (min-width: 600px) {
-    .platos-tipicos ul,
-    .postres ul,
-    .bebidas ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-}
-
-/* ── DESKTOP (1024px+) ── */
-
-@media (min-width: 1024px) {
-  .titulo-gastro h1 {
-    font-size: 3.5rem;
-    top: 30px;
-}
-
-    .platos-tipicos,
-    .postres,
-    .bebidas {
-        max-width: var(--max-width);
-        margin: 0 auto;
-    }
-
-    .platos-tipicos ul,
-    .postres ul,
-    .bebidas ul {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 /* ── CULTURA ── */
 
 .titulo-cultura {
@@ -824,3 +790,38 @@ footer p:last-child {
         margin: 0 auto;
     }
 }
+
+/* ── TABLET (600px+) ── */
+
+@media (min-width: 600px) {
+    .platos-tipicos ul,
+    .postres ul,
+    .bebidas ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* ── DESKTOP GASTRO (1024px+) ── */
+
+@media (min-width: 1024px) {
+  .titulo-gastro h1 {
+    font-size: 3.5rem;
+    top: 30px;
+}
+
+    .platos-tipicos,
+    .postres,
+    .bebidas {
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    .platos-tipicos ul,
+    .postres ul,
+    .bebidas ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
