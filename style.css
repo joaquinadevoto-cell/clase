@@ -344,7 +344,7 @@ footer p:last-child {
 
 /* ── GASTRONOMÍA ── */
 
-.titulo-principal {
+.titulo-gastro {
     background-color: var(--rojo);
     position: relative;
     text-align: center;
