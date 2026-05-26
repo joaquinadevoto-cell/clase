@@ -746,17 +746,9 @@ footer p:last-child {
     color: white;
 }
 
-.estilo-card--sumi-e {
-    background-color: var(--rojo);
-}
-
-.estilo-card--wabi-sabi {
-    background-color: #3d1f23;
-}
-
-.estilo-card--ukiyo-e {
-    background-color: #3a3a1e;
-}
+.estilo-card--sumi-e { background-color: var(--rojo); }
+.estilo-card--wabi-sabi { background-color: #3d1f23; }
+.estilo-card--ukiyo-e { background-color: #3a3a1e; }
 
 .estilo-card h3 {
     font-size: 1.5rem;
@@ -832,25 +824,4 @@ footer p:last-child {
     color: #666;
     margin-top: 3px;
     font-style: italic;
-}
-
-@media (min-width: 1024px) {
-    .hero-arte h1 {
-        font-size: 110px;
-        right: 60px;
-        bottom: 30px;
-    }
-
-    .intro-arte h2 { font-size: 1.8rem; }
-
-    .estilos-arte {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 40px 20px;
-    }
-
-    .obras-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-    }
 }
