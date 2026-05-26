@@ -232,71 +232,109 @@ nav a.active {
     padding: 0 5px;
 }
 
-/* newsletter */
+/* ── NEWSLETTER ── */
 
-.newsletter-section {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+.newsletter {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
                 url('img/kiyomizudera.jpeg') center/cover no-repeat;
-    padding: 70px 20px;
+    padding: 60px 20px;
     text-align: center;
     color: white;
 }
 
-.newsletter-form {
+.newsletter h2 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    font-size: 0.9rem;
+}
+
+.newsletter form {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 0;
     margin-top: 20px;
-}
-
-.newsletter-form input {
-    padding: 15px;
     border-radius: 5px;
-    border: none;
+    overflow: hidden;
 }
 
-.btn-submit {
-    background-color: #370F1D;
+.newsletter input {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.newsletter button {
+    background-color: var(--vinotinto);
     color: white;
-    padding: 15px;
+    padding: 14px 20px;
     border: none;
-    border-radius: 5px;
     font-weight: 800;
+    font-size: 0.85rem;
     text-transform: uppercase;
     cursor: pointer;
 }
 
-/* footer */
+/* ── FOOTER ── */
 
-.main-footer {
+footer {
     background-color: var(--vinotinto);
     color: white;
-    padding: 40px 0;
+    padding: 40px 20px;
     text-align: center;
 }
 
-.footer-logo { font-size: 2rem; letter-spacing: 3px; margin: 15px 0; }
+footer h3 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin: 15px 0;
+}
 
-.legal-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    font-size: 11px;
+footer address {
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.2);
     margin: 20px 0;
 }
 
-.legal-list a { color: white; text-decoration: none; }
+footer nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 20px 0;
+}
 
-.back-to-top {
+footer nav a {
+    color: white;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+footer .volver-inicio > a:first-child {
     display: block;
-    color: white !important;
-    text-decoration: none !important;
+    color: white;
+    text-decoration: none;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 30px;
+}
+
+footer p:last-child {
+    font-size: 11px;
+    opacity: 0.6;
+    margin-top: 10px;
 }
 
 /* gastronomia */
