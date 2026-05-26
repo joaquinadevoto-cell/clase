@@ -199,6 +199,7 @@ nav a.active {
 .definicion {
     padding: 40px 20px;
     background-color: var(--beige);
+    text-align: center;
 }
 
 .definicion h2 {
@@ -208,7 +209,6 @@ nav a.active {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 15px;
-    align-items: center;
 }
 
 .definicion h3 {
