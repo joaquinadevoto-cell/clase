@@ -727,7 +727,7 @@ footer p:last-child {
 /* ── TARJETAS ARTE ── */
 
 .tarjetas {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .tarjetas .intro-texto h2 {
@@ -743,7 +743,7 @@ footer p:last-child {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0px;
 }
 
 .tarjetas > ul > li {
