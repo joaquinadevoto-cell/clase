@@ -907,7 +907,7 @@ footer p:last-child {
 
 /* ── DESKTOP GASTRO (1024px+) ── */
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) { 
   .titulo-gastro h1 {
     font-size: 3.5rem;
     top: 30px;
@@ -926,4 +926,3 @@ footer p:last-child {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
