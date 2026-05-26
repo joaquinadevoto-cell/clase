@@ -452,6 +452,28 @@ footer p:last-child {
     }
 }
 
+/* ── DESKTOP (1024px+) ── */
+
+@media (min-width: 1024px) {
+  .titulo-gastro h1 {
+    font-size: 3.5rem;
+    top: 30px;
+}
+
+    .platos-tipicos,
+    .postres,
+    .bebidas {
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    .platos-tipicos ul,
+    .postres ul,
+    .bebidas ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 /* ── CULTURA ── */
 
 .titulo-cultura {
@@ -624,6 +646,33 @@ footer p:last-child {
     line-height: 1.6;
 }
 
+/* ── DESKTOP CULTURA (1024px+) ── */
+
+@media (min-width: 1024px) {
+
+    .titulo-cultura h1 {
+        font-size: 4rem;
+        top: 30px;
+    }
+
+    .practicas-tradicionales ul,
+    .festividades-destacadas ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .practicas-tradicionales li img,
+    .festividades-destacadas li img {
+        height: 220px;
+    }
+
+    .iconos ul {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
 /* ── ARTE ── */
 
 .titulo-arte {
@@ -750,426 +799,27 @@ footer p:last-child {
     font-style: italic;
 }
 
-/* ════════════════════════════════════════════════════ */
-/* ══════════ MEDIA QUERIES - DESKTOP (1024px+) ══════ */
-/* ════════════════════════════════════════════════════ */
+/* ── DESKTOP ARTE (1024px+) ── */
 
 @media (min-width: 1024px) {
 
-    /* ── HEADER ── */
-    header {
-        padding: 15px 0;
-    }
-
-    header nav {
-        max-width: var(--max-width);
-        margin: 0 auto;
-    }
-
-    header img {
-        height: 50px;
-    }
-
-    nav ul {
-        gap: 30px;
-    }
-
-    nav a {
-        font-size: 12px;
-    }
-
-    /* ── DESKTOP INDEX ── */
-
-    .titulo-principal {
-        height: 85vh;
-        padding: 0 0 60px 8%;
-        margin-bottom: 50px;
-    }
-
-    .titulo-principal h1 {
-        font-size: 110px;
-    }
-
-    .titulo-principal span {
-        font-size: 26px;
-    }
-
-    .intro {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 50px 20px;
-    }
-
-    .intro-fotos {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 200px 200px;
-        gap: 15px;
-    }
-
-    .intro-fotos img:first-child {
-        grid-row: span 2;
-        grid-column: span 1;
-    }
-
-    .destinos {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 60px 20px;
-    }
-
-    .destinos h2 {
-        font-size: 1.8rem;
-    }
-
-    .destinos ul {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-    }
-
-    .destinos li h3 {
-        font-size: 14px;
-    }
-
-    .frase-index {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 70px 20px;
-    }
-
-    .frase-index p {
-        font-size: 1.8rem;
-        line-height: 1.6;
-    }
-
-    .definicion {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 70px 20px;
-    }
-
-    .definicion h3 {
-        padding: 35px 50px;
-        font-size: 2.4rem;
-    }
-
-    .definicion p {
-        font-size: 1rem;
-    }
-
-    .newsletter {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 100px 20px;
-    }
-
-    .newsletter h2 {
-        font-size: 2.2rem;
-    }
-
-    .newsletter p {
-        font-size: 1rem;
-    }
-
-    .newsletter form {
-        max-width: 550px;
-        margin: 25px auto 0;
-    }
-
-    .newsletter input {
-        padding: 16px;
-        font-size: 1rem;
-    }
-
-    .newsletter button {
-        padding: 16px 30px;
-        font-size: 0.9rem;
-    }
-
-    .volver-inicio {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 60px 20px;
-    }
-
-    .volver-inicio > a:first-child {
-        font-size: 14px;
-        margin-bottom: 40px;
-    }
-
-    footer h3 {
-        font-size: 2.2rem;
-    }
-
-    footer address {
-        font-size: 1rem;
-    }
-
-    footer nav ul {
-        flex-direction: row;
-        justify-content: center;
-        gap: 40px;
-    }
-
-    footer nav a {
-        font-size: 12px;
-    }
-
-    /* ── DESKTOP GASTRONOMÍA ── */
-
-    .titulo-gastro {
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .titulo-gastro img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-    }
-
-    .titulo-gastro h1 {
-        position: relative;
-        z-index: 2;
-        font-size: 4.5rem;
-        top: auto;
-        left: auto;
-        right: auto;
-        background: rgba(198, 40, 40, 0.85);
-        padding: 25px 50px;
-        border-radius: 15px;
-        letter-spacing: 4px;
-    }
-
-    .platos-tipicos,
-    .postres,
-    .bebidas {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 60px 20px;
-    }
-
-    .platos-tipicos h2,
-    .postres h2,
-    .bebidas h2 {
-        font-size: 1.2rem;
-        margin-bottom: 35px;
-    }
-
-    .platos-tipicos ul,
-    .postres ul,
-    .bebidas ul {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 35px;
-    }
-
-    .platos-tipicos li h3,
-    .postres li h3,
-    .bebidas li h3 {
-        font-size: 1.1rem;
-        margin-bottom: 12px;
-    }
-
-    .platos-tipicos li img,
-    .postres li img,
-    .bebidas li img {
-        aspect-ratio: 3/3;
-        height: 300px;
-        margin-bottom: 15px;
-    }
-
-    .platos-tipicos li p,
-    .postres li p,
-    .bebidas li p {
-        font-size: 0.95rem;
-    }
-
-    /* ── DESKTOP CULTURA ── */
-
-    .titulo-cultura {
-        height: 420px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .titulo-cultura img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-    }
-
-    .titulo-cultura h1 {
-        position: relative;
-        z-index: 2;
-        font-size: 5rem;
-        top: auto;
-        color: white;
-        background: rgba(198, 40, 40, 0.8);
-        padding: 30px 60px;
-        border-radius: 15px;
-        letter-spacing: 4px;
-    }
-
-    .practicas-tradicionales {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 60px 20px;
-    }
-
-    .practicas-tradicionales ul {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 35px;
-    }
-
-    .practicas-tradicionales li img {
-        height: 260px;
-    }
-
-    .practicas-tradicionales li h3 {
-        padding: 15px 20px;
-        font-size: 1.05rem;
-    }
-
-    .iconos {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 70px 20px;
-    }
-
-    .iconos ul {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 35px;
-    }
-
-    .iconos figure img {
-        width: 80px;
-        height: 80px;
-        padding: 15px;
-    }
-
-    .iconos figcaption {
-        font-size: 0.9rem;
-    }
-
-    .iconos figcaption strong {
-        font-size: 1.1rem;
-    }
-
-    .festividades-destacadas {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 60px 20px;
-    }
-
-    .festividades-destacadas h2 {
-        font-size: 1.2rem;
-        margin-bottom: 35px;
-    }
-
-    .festividades-destacadas ul {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 35px;
-    }
-
-    .festividades-destacadas li img {
-        height: 260px;
-    }
-
-    .festividades-destacadas li h3 {
-        padding: 15px 20px;
-        font-size: 1.05rem;
-    }
-
-    /* ── DESKTOP ARTE ── */
-
-    .titulo-arte {
-        height: 420px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-    }
-
-    .titulo-arte img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-    }
-
     .titulo-arte h1 {
-        position: relative;
-        z-index: 2;
-        font-size: 7.5rem;
-        right: auto;
-        top: auto;
-        bottom: 40px;
-        left: 60px;
-        background: rgba(0, 0, 0, 0.3);
-        padding: 20px 40px;
-        border-radius: 10px;
-    }
-
-    .tarjetas {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 60px 20px;
+        font-size: 7rem;
+        right: 60px;
+        bottom: 30px;
     }
 
     .tarjetas ul {
         flex-direction: row;
-        gap: 25px;
+        align-items: start;
     }
 
     .tarjetas > ul > li {
         flex: 1;
     }
 
-    .tarjetas li h3 {
-        font-size: 1.8rem;
-        padding: 25px 20px;
-    }
-
-    .tarjetas li img {
-        width: 85%;
-        margin-bottom: 25px;
-    }
-
-    .tarjetas li > p {
-        font-size: 0.9rem;
-        padding: 0 20px 15px;
-    }
-
-    .tarjetas li > ul {
-        padding: 0 20px 20px 40px;
-        font-size: 0.9rem;
-    }
-
-    .obras {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 70px 20px;
-    }
-
-    .obras h2 {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-    }
-
     .obras ul {
         grid-template-columns: repeat(4, 1fr);
-        gap: 25px;
+        gap: 20px;
     }
-
-    .obras li h3 {
-        font-size: 0.85rem;
-        margin-top: 12px;
-    }
-
 }
