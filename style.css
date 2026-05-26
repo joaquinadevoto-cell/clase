@@ -285,8 +285,21 @@ nav a.active {
 footer {
     background-color: var(--vinotinto);
     color: white;
-    padding: 40px 20px;
     text-align: center;
+}
+
+.volver-inicio {
+    padding: 40px 20px;
+}
+
+.volver-inicio > a:first-child {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
 }
 
 footer h3 {
@@ -319,16 +332,6 @@ footer nav a {
     color: white;
     font-size: 11px;
     text-decoration: none;
-}
-
-footer .volver-inicio > a:first-child {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
 }
 
 footer p:last-child {
