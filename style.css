@@ -592,126 +592,85 @@ footer p:last-child {
     line-height: 1.4;
 }
 
-/* tablet */
+/* ── FESTIVIDADES ── */
 
-@media (min-width: 700px) {
-    .logo { height: 50px; }
-    .nav-link { font-size: 13px; }
-    .hero-title { font-size: 80px; }
-
-    .destinations-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .newsletter-form { flex-direction: row; justify-content: center; }
-    .newsletter-form input { flex: 1; max-width: 300px; }
+.festividades-destacadas {
+    padding: 20px;
 }
 
-/* desktop */
+.festividades-destacadas h2 {
+    font-size: 0.85rem;
+    font-weight: 900;
+    color: var(--rojo);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.festividades-destacadas ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.festividades-destacadas li {
+    background-color: var(--blanco);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.festividades-destacadas li h3 {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 12px 20px;
+    text-align: center;
+}
+
+.festividades-destacadas li img {
+    width: 90%;
+    display: block;
+    margin: 15px auto;
+    border-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.festividades-destacadas li p {
+    padding: 10px 20px 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ── DESKTOP CULTURA (1024px+) ── */
 
 @media (min-width: 1024px) {
-    .container { max-width: 1100px; }
 
-    .hero-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-        text-align: left;
-        padding: 0 0 40px 10%;
-        height: 70vh;
+    .titulo-cultura h1 {
+        font-size: 4rem;
+        top: 30px;
     }
 
-    .hero-title { font-size: 100px; }
-
-    .intro-mosaic {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 350px;
-    }
-
-    .mosaic-img:first-child { grid-row: span 1; }
-
-    .destinations-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; }
-    
-
-     .bloques-grid {
+    .practicas-tradicionales ul,
+    .festividades-destacadas ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
 
-    .bloque {
-        margin-bottom: 0;
+    .practicas-tradicionales li img,
+    .festividades-destacadas li img {
+        height: 220px;
     }
 
-    /* cultura desktop */
-
-    #hero-cultura .hero-img { height: 500px; }
-
-    #hero-cultura .hero-title {
-        font-size: 90px;
-        top: 40px;
-    }
-
-    .intro-cultura {
-        max-width: 700px;
-        margin: 0 auto;
-        padding-bottom: 60px;
-    }
-
-    .intro-cultura h2 { font-size: 1.6rem; }
-
-    /* tarjetas en 3 columnas */
-
-    .tarjetas {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        align-items: start;
-    }
-
-    .cultura-card { margin-bottom: 0; }
-
-    .cultura-card img { height: 220px; }
-
-    /* iconos en 4 columnas */
-
-    .icons-grid {
+    .iconos ul {
         grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
         max-width: 800px;
         margin: 0 auto;
-        padding: 60px 20px;
-    }
-
-    /* festividades titulo con lineas */
-
-    .section-title-red {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        font-size: 1.8rem;
-        max-width: var(--max-width);
-        margin: 40px auto 30px;
-        padding: 0 20px;
-    }
-
-    .section-title-red::before,
-    .section-title-red::after {
-        content: '';
-        flex: 1;
-        height: 2px;
-        background-color: var(--rojo);
-    }
-
-    /* palabra */
-
-    .word-definition {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 60px 20px;
     }
 }
 /* ── ARTE ── */
