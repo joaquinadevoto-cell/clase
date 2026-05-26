@@ -231,7 +231,7 @@ nav a.active {
     font-style: italic;
     font-weight: 600;
     padding: 0 5px;
-    text-align: center;
+      text-align: center;
 }
 
 /* ── NEWSLETTER ── */
@@ -342,98 +342,134 @@ footer p:last-child {
     margin-top: 10px;
 }
 
-/* gastronomia */
+/* ── GASTRONOMÍA ── */
 
-.hero-gastro {
+.titulo-principal {
     background-color: var(--rojo);
+    position: relative;
+    text-align: center;
     overflow: hidden;
 }
 
-.hero-imgs {
-    position: relative;
-    text-align: center;
-}
-
-.hero-imgs img {
+.titulo-principal img {
     width: 100%;
     display: block;
+    opacity: 0.85;
 }
 
-.hero-imgs h1 {
+.titulo-principal h1 {
     position: absolute;
     top: 20px;
     left: 0;
     right: 0;
     text-align: center;
-    font-size: 50px;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--beige);
     text-transform: uppercase;
-    line-height: 1;
+    letter-spacing: 3px;
 }
 
-.bloque {
-    border-radius: var(--radius);
-    overflow: hidden;
-    margin-bottom: 25px;
-}
-
-.bloque img {
-    width: 100%;
-    max-height: 250px;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    display: block;
-     border-radius: var(--radius); 
-}
-
-.bloque h3 {
-    font-size: 1.2rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    background-color: var(--rojo);
-    color: var(--blanco);
-    padding: 12px 20px;
-    text-align: center;
-    letter-spacing: 2px;
-}
-
-.bloque p {
-    padding: 15px 20px 20px;
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-.palabra {
-    background-color: var(--beige);
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.palabra-box {
-      background-color: var(--beige-caja); 
-  border-radius: var(--radius);
-    padding: 25px 20px;
-    max-width: 500px;
-    margin: 0 auto;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-.palabra .word-title {
-    color: var(--rojo);
-    font-size: 2rem;
+.intro h2 {
+    font-size: 1rem;
     font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    color: var(--vinotinto);
+    margin-bottom: 15px;
+    line-height: 1.3;
 }
-.volver {
-    display: block;
-    text-align: center;
-    padding: 30px 0;
-    text-decoration: none;
+
+.intro p {
     font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.platos-tipicos,
+.postres,
+.bebidas {
+    padding: 20px 20px;
+}
+
+.platos-tipicos h2,
+.postres h2,
+.bebidas h2 {
+    font-size: 0.85rem;
+    font-weight: 900;
+    color: var(--rojo);
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.platos-tipicos ul,
+.postres ul,
+.bebidas ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.platos-tipicos li h3,
+.postres li h3,
+.bebidas li h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--vinotinto);
+    margin-bottom: 10px;
+}
+
+.platos-tipicos li img,
+.postres li img,
+.bebidas li img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: var(--radius);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.platos-tipicos li p,
+.postres li p,
+.bebidas li p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ── TABLET (600px+) ── */
+
+@media (min-width: 600px) {
+    .platos-tipicos ul,
+    .postres ul,
+    .bebidas ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* ── DESKTOP (1024px+) ── */
+
+@media (min-width: 1024px) {
+    .titulo-principal h1 {
+        font-size: 3.5rem;
+        top: 30px;
+    }
+
+    .platos-tipicos,
+    .postres,
+    .bebidas {
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    .platos-tipicos ul,
+    .postres ul,
+    .bebidas ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* hero cultura */
