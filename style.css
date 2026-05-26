@@ -311,7 +311,7 @@ footer h3 {
 }
 
 footer address {
-    font-style: normal;
+    font-style: normal !important;
     font-size: 0.9rem;
     line-height: 1.8;
     margin: 10px 0;
