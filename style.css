@@ -638,13 +638,48 @@ footer p:last-child {
     line-height: 1;
 }
 
+/* ── INTRO ARTE ── */
+
+.intro h2 {
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--vinotinto);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.intro p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.intro img {
+    width: 100%;
+    border-radius: var(--radius);
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    margin-top: 20px;
+}
+
 /* ── TARJETAS ARTE ── */
 
 .tarjetas {
     padding: 20px;
 }
 
-.tarjetas ul {
+.tarjetas .intro-texto h2 {
+    font-size: 0.85rem;
+    font-weight: 900;
+    color: var(--rojo);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.tarjetas > ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -654,14 +689,14 @@ footer p:last-child {
 .tarjetas > ul > li {
     border-radius: var(--radius);
     overflow: hidden;
-    background-color: var(--blanco);
+    color: white;
 }
 
-.tarjetas > ul > li:nth-child(1) { background-color: var(--rojo); color: white; }
-.tarjetas > ul > li:nth-child(2) { background-color: #3d1f23; color: white; }
-.tarjetas > ul > li:nth-child(3) { background-color: #3a3a1e; color: white; }
+.tarjetas > ul > li:nth-child(1) { background-color: var(--rojo); }
+.tarjetas > ul > li:nth-child(2) { background-color: #3d1f23; }
+.tarjetas > ul > li:nth-child(3) { background-color: #3a3a1e; }
 
-.tarjetas li h3 {
+.tarjetas > ul > li h3 {
     font-size: 1.5rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -670,7 +705,7 @@ footer p:last-child {
     letter-spacing: 3px;
 }
 
-.tarjetas li img {
+.tarjetas > ul > li img {
     width: 80%;
     margin: 0 auto 20px;
     display: block;
@@ -679,17 +714,37 @@ footer p:last-child {
     object-fit: cover;
 }
 
-.tarjetas li > p {
+.tarjetas > ul > li > p {
     font-size: 0.85rem;
     line-height: 1.7;
-    padding: 0 20px 10px;
+    padding: 0 20px 15px;
 }
 
-.tarjetas li > ul {
-    list-style: disc;
-    padding: 0 20px 20px 40px;
+.tarjetas > ul > li > ul {
+    list-style: none;
+    padding: 0 20px 20px;
+}
+
+.tarjetas > ul > li > ul h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+.tarjetas > ul > li > ul li {
     font-size: 0.85rem;
     line-height: 2;
+    padding-left: 15px;
+    position: relative;
+}
+
+.tarjetas > ul > li > ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    opacity: 0.6;
 }
 
 /* ── OBRAS ── */
@@ -700,10 +755,10 @@ footer p:last-child {
 }
 
 .obras h2 {
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 900;
     text-transform: uppercase;
-    color: var(--vinotinto);
+    color: var(--rojo);
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
@@ -737,6 +792,31 @@ footer p:last-child {
     color: #666;
     margin-top: 3px;
     font-style: italic;
+}
+
+/* ── DESKTOP ARTE (1024px+) ── */
+
+@media (min-width: 1024px) {
+
+    .titulo-arte h1 {
+        font-size: 7rem;
+        right: 60px;
+        top: 30px;
+    }
+
+    .tarjetas > ul {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .tarjetas > ul > li {
+        flex: 1;
+    }
+
+    .obras ul {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
 }
 
 /* ── DESKTOP ARTE (1024px+) ── */
