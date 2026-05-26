@@ -646,33 +646,7 @@ footer p:last-child {
     line-height: 1.6;
 }
 
-/* ── DESKTOP CULTURA (1024px+) ── */
 
-@media (min-width: 1024px) {
-
-    .titulo-cultura h1 {
-        font-size: 4rem;
-        top: 30px;
-    }
-
-    .practicas-tradicionales ul,
-    .festividades-destacadas ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-    }
-
-    .practicas-tradicionales li img,
-    .festividades-destacadas li img {
-        height: 220px;
-    }
-
-    .iconos ul {
-        grid-template-columns: repeat(4, 1fr);
-        max-width: 800px;
-        margin: 0 auto;
-    }
-}
 /* ── ARTE ── */
 
 .titulo-arte {
@@ -821,5 +795,32 @@ footer p:last-child {
     .obras ul {
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
+    }
+}
+/* ── DESKTOP CULTURA (1024px+) ── */
+
+@media (min-width: 1024px) {
+
+    .titulo-cultura h1 {
+        font-size: 4rem;
+        top: 30px;
+    }
+
+    .practicas-tradicionales ul,
+    .festividades-destacadas ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .practicas-tradicionales li img,
+    .festividades-destacadas li img {
+        height: 220px;
+    }
+
+    .iconos ul {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 800px;
+        margin: 0 auto;
     }
 }
