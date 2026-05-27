@@ -697,7 +697,7 @@ footer p:last-child {
     line-height: 1.6;
 }
 /* ── DESKTOP CULTURA (1024px+) ── */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) { 
 
     /* ───── TÍTULO CULTURA (portada Buda) ───── */
     .titulo-cultura {
@@ -914,6 +914,7 @@ footer p:last-child {
         font-size: 0.8rem;
         text-transform: uppercase;
 }
+}
 /* ── ARTE ── */
 
 .titulo-arte {
@@ -1129,4 +1130,5 @@ footer p:last-child {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 0 20px;
+    }
 }
