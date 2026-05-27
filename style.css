@@ -839,42 +839,37 @@ footer p:last-child {
         color: #555;
         line-height: 1.4;
     }
-
-    /* ───── DEFINICIÓN (Ikigai - UNA SOLA CAJA BEIGE) ───── */
-    .definicion {
-        max-width: 900px;
-        margin: 80px auto;
-        text-align: center;
-        background-color: transparent; /* el fondo va en el wrapper interno */
-    }
-    .definicion h2 {
-        color: #e63946;
-        font-size: 1.3rem;
-        font-weight: 900;
-        margin-bottom: 30px;
-        background: none; /* aseguramos que no tenga fondo */
-    }
-    /* La caja beige envuelve h3 + p juntos */
-    .definicion h3,
-    .definicion p {
-        background-color: #d9c9a8;
-        margin: 0;
-    }
-    .definicion h3 {
-        color: #e63946;
-        padding: 40px 20px 15px;
-        font-size: 1.8rem;
-        border-radius: 15px 15px 0 0;
-    }
-    .definicion h3 span {
-        color: #333;
-        font-weight: normal;
-    }
-    .definicion p {
-        padding: 0 20px 40px;
-        border-radius: 0 0 15px 15px;
-        font-size: 0.9rem;
-    }
+/* ───── DEFINICIÓN (Ikigai) ───── */
+.definicion {
+    max-width: 900px;
+    margin: 80px auto;
+    text-align: center;
+}
+.definicion h2 {
+    color: #e63946;
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+.definicion h3 {
+    background-color: #d9c9a8;
+    color: #e63946;
+    padding: 25px 20px 10px;
+    margin: 0;
+    font-size: 1.5rem;
+    border-radius: 15px 15px 0 0;
+}
+.definicion h3 span {
+    color: #333;
+    font-weight: normal;
+}
+.definicion p {
+    background-color: #d9c9a8;
+    padding: 0 20px 25px;
+    margin: 0;
+    border-radius: 0 0 15px 15px;
+    font-size: 0.9rem;
+}
 
     /* ───── FOOTER ───── */
     footer {
