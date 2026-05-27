@@ -855,17 +855,18 @@ footer p:last-child {
     .titulo-arte h1 {
     font-size: 80px;
     top: 50%;
-    right: 60px;
-    left: auto;
-    transform: translateY(-50%);
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
     margin: 0;
     line-height: 0.85;
 }
     .tarjetas > ul {
-        flex-direction: row;
-        gap: 20px;
-        align-items: start;
-    }
+    flex-direction: row;
+    gap: 0;
+    align-items: start;
+}
     .tarjetas > ul > li {
         flex: 1;
     }
