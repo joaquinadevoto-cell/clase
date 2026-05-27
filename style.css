@@ -875,7 +875,7 @@ footer p:last-child {
     padding: 20px 0;
 }
 
-.tarjetas .intro-texto h2 {
+.tarjetas  h2 {
     font-size: 0.85rem;
     font-weight: 900;
     color: var(--rojo);
