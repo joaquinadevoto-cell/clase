@@ -1016,90 +1016,84 @@ footer p:last-child {
 
 @media (min-width: 1024px) {
 
-    /* INDEX - HERO */
-    .titulo-principal {
+/* INDEX - HERO */
+    .page-index .titulo-principal {
         height: 85vh;
         padding: 0 0 60px 8%;
     }
 
-    .titulo-principal span {
+    .page-index .titulo-principal span {
         font-size: 35px;
     }
 
-    .titulo-principal h1 {
-        font-size: 140px;
+    .page-index .titulo-principal h1 {
+        font-size: 160px;
     }
 
     /* INDEX - INTRO */
-    .intro.container {
+    .page-index .intro.container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 60px;
         align-items: center;
         padding: 80px 40px;
-        max-width: var(--max-width);
-        margin: 0 auto;
     }
 
-    .intro-texto p {
+    .page-index .intro-texto p {
         font-size: 1rem;
         margin-bottom: 20px;
-        color: #333;
     }
 
-    .intro-fotos {
+    .page-index .intro-fotos {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 200px 200px;
         gap: 15px;
+        margin-top: 0;
+    }
+
+    .page-index .intro-fotos img:first-child {
+        grid-row: span 2;
     }
 
     /* INDEX - DESTINOS */
-    .destinos {
+    .page-index .destinos {
         padding: 60px 40px;
     }
 
-    .destinos h2 {
+    .page-index .destinos h2,
+    .page-index .destinos > p,
+    .page-index .destinos ul {
+        max-width: var(--max-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .page-index .destinos h2 {
         font-size: 2rem;
-        max-width: var(--max-width);
-        margin: 0 auto 15px;
+        margin-bottom: 15px;
     }
 
-    .destinos > p {
-        max-width: var(--max-width);
-        margin: 0 auto 30px;
+    .page-index .destinos > p {
         font-size: 0.95rem;
+        margin-bottom: 30px;
     }
 
-    .destinos ul {
-        max-width: var(--max-width);
-        margin: 0 auto;
+    .page-index .destinos ul {
         grid-template-columns: repeat(3, 1fr);
         gap: 25px;
     }
 
-    .destinos li img {
-        border-radius: var(--radius);
-    }
-
-    .destinos li h3 {
-        font-size: 14px;
-        margin-top: 10px;
-    }
-
-    .destinos li p {
-        font-size: 12px;
-    }
-
     /* INDEX - NEWSLETTER */
-    .newsletter {
+    .page-index .newsletter {
         padding: 100px 40px;
     }
 
-    .newsletter h2 {
+    .page-index .newsletter h2 {
         font-size: 2.5rem;
     }
 
-    .newsletter form {
+    .page-index .newsletter form {
         max-width: 600px;
         margin: 30px auto 0;
     }
