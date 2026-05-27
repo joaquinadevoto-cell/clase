@@ -1016,6 +1016,94 @@ footer p:last-child {
 
 @media (min-width: 1024px) {
 
+    /* INDEX - HERO */
+    .titulo-principal {
+        height: 85vh;
+        padding: 0 0 60px 8%;
+    }
+
+    .titulo-principal span {
+        font-size: 35px;
+    }
+
+    .titulo-principal h1 {
+        font-size: 140px;
+    }
+
+    /* INDEX - INTRO */
+    .intro.container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        padding: 80px 40px;
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    .intro-texto p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .intro-fotos {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px;
+        gap: 15px;
+    }
+
+    /* INDEX - DESTINOS */
+    .destinos {
+        padding: 60px 40px;
+    }
+
+    .destinos h2 {
+        font-size: 2rem;
+        max-width: var(--max-width);
+        margin: 0 auto 15px;
+    }
+
+    .destinos > p {
+        max-width: var(--max-width);
+        margin: 0 auto 30px;
+        font-size: 0.95rem;
+    }
+
+    .destinos ul {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .destinos li img {
+        border-radius: var(--radius);
+    }
+
+    .destinos li h3 {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .destinos li p {
+        font-size: 12px;
+    }
+
+    /* INDEX - NEWSLETTER */
+    .newsletter {
+        padding: 100px 40px;
+    }
+
+    .newsletter h2 {
+        font-size: 2.5rem;
+    }
+
+    .newsletter form {
+        max-width: 600px;
+        margin: 30px auto 0;
+    }
+
     /* GASTRO - HERO */
     .titulo-gastro img {
         max-height: 450px;
