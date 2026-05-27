@@ -426,37 +426,99 @@ footer p:last-child {
     line-height: 1.6;
 }
 
-/* ── TABLET (600px+) ── */
-
-@media (min-width: 600px) {
-    .platos-tipicos ul,
-    .postres ul,
-    .bebidas ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-}
-
-/* ── DESKTOP (1024px+) ── */
+/* ── DESKTOP GASTRO (1024px+) ── */
 
 @media (min-width: 1024px) {
-  .titulo-gastro h1 {
-    font-size: 3.5rem;
-    top: 30px;
-}
 
+    /* hero */
+    .titulo-gastro img {
+        max-height: 400px;
+    }
+
+    .titulo-gastro h1 {
+        font-size: 3.5rem;
+        top: 30px;
+    }
+
+    /* intro */
+    .intro {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 60px 40px;
+        text-align: center;
+    }
+
+    .intro h2 {
+        font-size: 1.4rem;
+        max-width: 600px;
+        margin: 0 auto 20px;
+    }
+
+    .intro p {
+        max-width: 500px;
+        margin: 0 auto;
+        font-size: 0.95rem;
+    }
+
+    /* secciones */
     .platos-tipicos,
     .postres,
     .bebidas {
         max-width: var(--max-width);
         margin: 0 auto;
+        padding: 40px;
+    }
+
+    .platos-tipicos h2,
+    .postres h2,
+    .bebidas h2 {
+        font-size: 1rem;
+        margin-bottom: 30px;
     }
 
     .platos-tipicos ul,
     .postres ul,
     .bebidas ul {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .platos-tipicos li h3,
+    .postres li h3,
+    .bebidas li h3 {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .platos-tipicos li img,
+    .postres li img,
+    .bebidas li img {
+        aspect-ratio: 4/3;
+        border-radius: var(--radius);
+    }
+
+    .platos-tipicos li p,
+    .postres li p,
+    .bebidas li p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    /* definicion */
+    .definicion {
+        padding: 60px 40px;
+    }
+
+    .definicion h2 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .definicion h3 {
+        font-size: 2.5rem;
+        max-width: 700px;
+        margin: 20px auto 0;
     }
 }
 
