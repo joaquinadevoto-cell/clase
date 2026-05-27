@@ -457,6 +457,10 @@ footer p:last-child {
     text-transform: uppercase;
     letter-spacing: 3px;
 }
+    .intro-container h1 {
+    text-align: left;
+    padding: 20px;
+}
 
 /* ── PRACTICAS TRADICIONALES ── */
 
