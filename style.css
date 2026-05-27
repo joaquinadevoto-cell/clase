@@ -694,33 +694,223 @@ footer p:last-child {
     font-size: 0.9rem;
     line-height: 1.6;
 }
-
 /* ── DESKTOP CULTURA (1024px+) ── */
-
 @media (min-width: 1024px) {
 
+    /* ───── TÍTULO CULTURA (portada Buda) ───── */
+    .titulo-cultura {
+        position: relative;
+    }
+    .titulo-cultura img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        display: block;
+    }
     .titulo-cultura h1 {
-        font-size: 4rem;
-        top: 30px;
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 5rem;
+        color: #e63946;
+        font-weight: 900;
+        letter-spacing: 2px;
+        margin: 0;
     }
 
+    /* ───── INTRO ───── */
+    .intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 80px auto;
+    }
+    .intro h2 {
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-bottom: 40px;
+        line-height: 1.4;
+    }
+    .intro p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* ───── PRÁCTICAS TRADICIONALES Y FESTIVIDADES (tarjetas) ───── */
+    .practicas-tradicionales,
+    .festividades-destacadas {
+        max-width: 1200px;
+        margin: 0 auto 80px;
+        padding: 0 40px;
+    }
     .practicas-tradicionales ul,
     .festividades-destacadas ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
+        list-style: none;
+        padding: 0;
     }
-
+    .practicas-tradicionales li h3,
+    .festividades-destacadas li h3 {
+        background-color: #e63946;
+        color: white;
+        padding: 15px 20px;
+        margin: 0;
+        border-radius: 15px 15px 0 0;
+        font-size: 1.1rem;
+    }
     .practicas-tradicionales li img,
     .festividades-destacadas li img {
+        width: 100%;
         height: 220px;
+        object-fit: cover;
+        border-radius: 0 0 15px 15px;
+        display: block;
+    }
+    .practicas-tradicionales li p,
+    .festividades-destacadas li p {
+        margin-top: 15px;
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
 
+    /* Título "FESTIVIDADES DESTACADAS" con líneas a los costados */
+    .festividades-destacadas h2 {
+        text-align: center;
+        color: #e63946;
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-bottom: 40px;
+    }
+    .festividades-destacadas h2::before,
+    .festividades-destacadas h2::after {
+        content: "";
+        display: inline-block;
+        width: 100px;
+        height: 2px;
+        background-color: #e63946;
+        vertical-align: middle;
+        margin: 0 20px;
+    }
+
+    /* ───── ICONOS (4 columnas con separadores) ───── */
+    .iconos {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 40px;
+    }
     .iconos ul {
+        display: grid;
         grid-template-columns: repeat(4, 1fr);
+        list-style: none;
+        padding: 0;
+        gap: 0;
+    }
+    .iconos li {
+        text-align: center;
+        padding: 0 20px;
+        border-right: 1px solid #ccc;
+    }
+    .iconos li:last-child {
+        border-right: none;
+    }
+    .iconos figure {
+        margin: 0 0 15px 0;
+    }
+    .iconos figure img {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+    }
+    .iconos figcaption {
+        margin-top: 10px;
+        font-size: 0.95rem;
+    }
+    .iconos figcaption strong {
+        display: block;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    .iconos li p {
+        font-size: 0.85rem;
+        font-style: italic;
+        color: #555;
+        line-height: 1.4;
+    }
+
+    /* ───── DEFINICIÓN (Ikigai - caja beige) ───── */
+    .definicion {
         max-width: 800px;
+        margin: 80px auto;
+        text-align: center;
+    }
+    .definicion h2 {
+        color: #e63946;
+        font-size: 1.3rem;
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+    .definicion h3 {
+        background-color: #d9c9a8;
+        color: #e63946;
+        padding: 40px 20px 15px;
+        margin: 0;
+        font-size: 1.8rem;
+        border-radius: 10px 10px 0 0;
+    }
+    .definicion h3 span {
+        color: #333;
+        font-weight: normal;
+    }
+    .definicion p {
+        background-color: #d9c9a8;
+        padding: 0 20px 40px;
+        margin: 0;
+        border-radius: 0 0 10px 10px;
+        font-size: 0.9rem;
+    }
+
+    /* ───── FOOTER ───── */
+    footer {
+        background-color: #3d1820;
+        color: white;
+        padding: 60px 20px 30px;
+        text-align: center;
+    }
+    footer .volver-inicio {
+        max-width: 1000px;
         margin: 0 auto;
     }
+    footer h3 {
+        font-size: 2rem;
+        margin: 20px 0;
+        letter-spacing: 3px;
+    }
+    footer address p {
+        font-style: normal;
+        font-size: 0.85rem;
+        margin: 5px 0;
+    }
+    footer hr {
+        border: none;
+        border-top: 1px solid #ffffff33;
+        margin: 30px auto;
+        max-width: 800px;
+    }
+    footer nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    footer nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.8rem;
+        text-transform: uppercase;
 }
 /* ── ARTE ── */
 
@@ -937,5 +1127,4 @@ footer p:last-child {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 0 20px;
-}
 }
