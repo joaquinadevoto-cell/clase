@@ -924,16 +924,6 @@ footer p:last-child {
     margin: 0;
     line-height: 0.85;
 }
-    .tarjetas .intro-texto h2 {
-    font-size: 0.85rem;
-    font-weight: 900;
-    color: var(--rojo);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    text-align: left;
-    padding-left: 20px;
-}
     .tarjetas > ul {
     flex-direction: row;
     gap: 0;
