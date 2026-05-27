@@ -383,7 +383,7 @@ footer p:last-child {
 .platos-tipicos h2,
 .postres h2,
 .bebidas h2 {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 900;
     color: var(--rojo);
     text-transform: uppercase;
