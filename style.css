@@ -368,8 +368,10 @@ footer p:last-child {
 }
 
 .intro p {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    text-align: left;
 }
 
 .platos-tipicos,
