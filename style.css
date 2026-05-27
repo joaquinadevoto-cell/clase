@@ -604,14 +604,25 @@ footer p:last-child {
 
 @media (min-width: 1024px) {
 
-    /* GASTRO - HERO */
-    .titulo-gastro img {
-        max-height: 450px;
+    /* GASTRO - INTRO */
+    .titulo-gastro ~ .intro {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 40px;
+        text-align: center;
     }
 
-    .titulo-gastro h1 {
-        font-size: 3.5rem;
-        top: 30px;
+    .titulo-gastro ~ .intro h2 {
+        font-size: 1.4rem;
+        max-width: 600px;
+        margin: 0 auto 20px;
+    }
+
+    .titulo-gastro ~ .intro p {
+        max-width: 500px;
+        margin: 0 auto;
+        font-size: 0.95rem;
+        text-align: left;
     }
 
     /* GASTRO - INTRO */
