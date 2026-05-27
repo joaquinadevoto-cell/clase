@@ -428,107 +428,7 @@ footer p:last-child {
     line-height: 1.6;
 }
 
-/* ── DESKTOP GASTRO (1024px+) ── */
 
-@media (min-width: 1024px) {
-
-    /* hero */
-    .titulo-gastro img {
-    max-height: 400px;
-     width: 100%;
-    max-height: 450px;
-     object-fit: cover;
-    display: block;
-    opacity: 0.85;
-    }
-
-    .titulo-gastro h1 {
-        font-size: 3.5rem;
-        top: 30px;
-    }
-
-    /* intro */
-    .intro {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 60px 40px;
-        text-align: center;
-    }
-
-    .intro h2 {
-        font-size: 1.4rem;
-        max-width: 600px;
-        margin: 0 auto 20px;
-    }
-
-    .intro p {
-        max-width: 500px;
-        margin: 0 auto;
-        font-size: 0.95rem;
-        align-items: left;
-    }
-
-    /* secciones */
-    .platos-tipicos,
-    .postres,
-    .bebidas {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 40px;
-    }
-
-    .platos-tipicos h2,
-    .postres h2,
-    .bebidas h2 {
-        font-size: 1rem;
-        margin-bottom: 30px;
-    }
-
-    .platos-tipicos ul,
-    .postres ul,
-    .bebidas ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-    }
-
-    .platos-tipicos li h3,
-    .postres li h3,
-    .bebidas li h3 {
-        font-size: 0.9rem;
-        margin-bottom: 8px;
-    }
-
-    .platos-tipicos li img,
-    .postres li img,
-    .bebidas li img {
-        aspect-ratio: 4/3;
-        border-radius: var(--radius);
-    }
-
-    .platos-tipicos li p,
-    .postres li p,
-    .bebidas li p {
-        font-size: 0.8rem;
-        line-height: 1.5;
-    }
-
-    /* definicion */
-    .definicion {
-        padding: 60px 40px;
-    }
-
-    .definicion h2 {
-        font-size: 1rem;
-        margin-bottom: 5px;
-    }
-
-    .definicion h3 {
-        font-size: 2.5rem;
-        max-width: 700px;
-        margin: 20px auto 0;
-    }
-}
 
 /* ── CULTURA ── */
 
@@ -1099,55 +999,298 @@ footer p:last-child {
     font-style: italic;
 }
 
-/* ── DESKTOP ARTE (1024px+) ── */
+/* ── TABLET (600px+) ── */
+
+@media (min-width: 600px) {
+    .platos-tipicos ul,
+    .postres ul,
+    .bebidas ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* ── DESKTOP (1024px+) ── */
+
 @media (min-width: 1024px) {
+
+    /* GASTRO - HERO */
+    .titulo-gastro img {
+        max-height: 450px;
+    }
+
+    .titulo-gastro h1 {
+        font-size: 3.5rem;
+        top: 30px;
+    }
+
+    /* GASTRO - INTRO */
+    .intro {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .intro h2 {
+        font-size: 1.4rem;
+        max-width: 600px;
+        margin: 0 auto 20px;
+    }
+
+    .intro p {
+        max-width: 500px;
+        margin: 0 auto;
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    /* GASTRO - SECCIONES */
+    .platos-tipicos,
+    .postres,
+    .bebidas {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    .platos-tipicos h2,
+    .postres h2,
+    .bebidas h2 {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .platos-tipicos ul,
+    .postres ul,
+    .bebidas ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .platos-tipicos li h3,
+    .postres li h3,
+    .bebidas li h3 {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .platos-tipicos li p,
+    .postres li p,
+    .bebidas li p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    /* CULTURA - HERO */
+    .titulo-cultura img {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+    }
+
+    .titulo-cultura h1 {
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 5rem;
+        letter-spacing: 2px;
+    }
+
+    /* CULTURA - PRACTICAS Y FESTIVIDADES */
+    .practicas-tradicionales,
+    .festividades-destacadas {
+        max-width: 1300px;
+        margin: 0 auto 80px;
+        padding: 0 60px;
+    }
+
+    .practicas-tradicionales ul,
+    .festividades-destacadas ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        list-style: none;
+        padding: 0;
+    }
+
+    .practicas-tradicionales li h3,
+    .festividades-destacadas li h3 {
+        background-color: var(--rojo);
+        color: white;
+        padding: 15px 20px;
+        margin: 0;
+        border-radius: 15px 15px 0 0;
+        font-size: 1.1rem;
+    }
+
+    .practicas-tradicionales li img,
+    .festividades-destacadas li img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 0 0 15px 15px;
+        display: block;
+        margin: 0;
+    }
+
+    .practicas-tradicionales li p,
+    .festividades-destacadas li p {
+        margin-top: 15px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 0;
+    }
+
+    .festividades-destacadas h2 {
+        text-align: center;
+        color: var(--rojo);
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-bottom: 40px;
+    }
+
+    .festividades-destacadas h2::before,
+    .festividades-destacadas h2::after {
+        content: "";
+        display: inline-block;
+        width: 100px;
+        height: 2px;
+        background-color: var(--rojo);
+        vertical-align: middle;
+        margin: 0 20px;
+    }
+
+    /* CULTURA - ICONOS */
+    .iconos {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 40px;
+    }
+
+    .iconos ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+    }
+
+    .iconos li {
+        padding: 0 20px;
+        border-right: 1px solid #ccc;
+    }
+
+    .iconos li:last-child {
+        border-right: none;
+    }
+
+    .iconos figure img {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .iconos figcaption {
+        margin-top: 10px;
+        font-size: 0.95rem;
+    }
+
+    .iconos figcaption strong {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+
+    .iconos li p {
+        font-size: 0.85rem;
+        font-style: italic;
+    }
+
+    /* DEFINICION */
+    .definicion {
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 40px;
+    }
+
+    .definicion h2 {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .definicion h3 {
+        font-size: 1.5rem;
+        border-radius: 15px 15px 0 0;
+        padding: 25px 20px 10px;
+        margin: 0;
+    }
+
+    .definicion p {
+        background-color: var(--beige-caja);
+        padding: 0 20px 25px;
+        margin: 0;
+        border-radius: 0 0 15px 15px;
+    }
+
+    /* FOOTER */
+    footer .volver-inicio {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    footer nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+
+    /* ARTE - HERO */
     .titulo-arte {
         height: 70vh;
         margin-bottom: 30px;
     }
+
     .titulo-arte img {
         width: 100%;
         height: 100%;
         max-height: none;
         object-fit: cover;
     }
-    .titulo-arte h1 {
-    font-size: 80px;
-    top: 50%;
-    left: 50%;
-    right: auto;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    margin: 0;
-    line-height: 0.85;
-}
-    .intro img {
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    display: block;
-    margin: 20px 0;
-}
-    .tarjetas .intro-texto h2 {
-    font-size: 0.85rem;
-    font-weight: 900;
-    color: var(--rojo);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    text-align: center;
-}
+.titulo-arte h1 {
+        font-size: 80px;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        margin: 0;
+        line-height: 0.85;
+    }
+
     .tarjetas > ul {
-    flex-direction: row;
-    gap: 0;
-    align-items: start;
-}
+        flex-direction: row;
+        gap: 0;
+        align-items: start;
+    }
+
     .tarjetas > ul > li {
         flex: 1;
     }
+
+    /* ARTE - OBRAS */
+    .obras {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 60px 40px;
+    }
+
     .obras ul {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 0 20px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
     }
 }
