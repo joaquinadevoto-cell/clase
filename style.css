@@ -457,10 +457,6 @@ footer p:last-child {
     text-transform: uppercase;
     letter-spacing: 3px;
 }
-    .intro-container h1 {
-    text-align: left;
-    padding: 60px;
-}
 
 /* ── PRACTICAS TRADICIONALES ── */
 
@@ -702,6 +698,11 @@ footer p:last-child {
         font-size: 5rem;
         letter-spacing: 2px;
     }
+
+      .intro-container h2 {
+      text-align: left;
+      padding: 60px;
+}
 
     /* CULTURA - PRACTICAS Y FESTIVIDADES */
     .practicas-tradicionales,
