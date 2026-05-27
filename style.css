@@ -1121,6 +1121,22 @@ footer p:last-child {
     margin: 0;
     line-height: 0.85;
 }
+    .intro img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    margin: 20px 0;
+}
+    .tarjetas .intro-texto h2 {
+    font-size: 0.85rem;
+    font-weight: 900;
+    color: var(--rojo);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+}
     .tarjetas > ul {
     flex-direction: row;
     gap: 0;
