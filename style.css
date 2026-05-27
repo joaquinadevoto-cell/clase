@@ -1334,6 +1334,10 @@ footer p:last-child {
         flex: 1;
     }
 
+    .tarjetas > div h2 {
+    font-size: 1.5rem;
+}
+    
     /* ARTE - OBRAS */
     .obras {
         max-width: var(--max-width);
