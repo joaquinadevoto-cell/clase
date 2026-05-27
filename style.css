@@ -964,7 +964,7 @@ footer p:last-child {
     }
 
     .page-index .intro.container {
-        display: grid;
+    
         grid-template-columns: 1fr 1fr;
         gap: 60px;
         align-items: center;
