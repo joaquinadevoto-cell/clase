@@ -810,6 +810,11 @@ footer p:last-child {
         text-align: left;
     }
 
+      .titulo-gastro h1 {
+        font-size: 3.5rem;
+        top: 30px;
+    }
+
    .titulo-gastro ~ .intro h2 {
         font-size: 1.6rem;
         font-weight: 900;
