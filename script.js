@@ -1,36 +1,217 @@
-const btnMenu   = document.querySelector('.btn-menu')
-const navMobile = document.querySelector('header nav')
-const headerEl  = document.querySelector('header')
+document.addEventListener('DOMContentLoaded', function() {
 
-if (btnMenu && navMobile) {
-    btnMenu.addEventListener('click', (e) => {
-        e.stopPropagation()
-        const abierto = navMobile.classList.toggle('nav-abierta')
-        btnMenu.setAttribute('aria-expanded', abierto)
-        document.body.classList.toggle('menu-abierto', abierto)
-    })
+  // ── 1. MENÚ HAMBURGUESA ──
 
-    navMobile.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMobile.classList.remove('nav-abierta')
-            btnMenu.setAttribute('aria-expanded', 'false')
-            document.body.classList.remove('menu-abierto')
-        })
-    })
+  const btnMenu   = document.querySelector('.btn-menu');
+  const navMobile = document.querySelector('header nav');
+  const headerEl  = document.querySelector('header');
 
-    document.addEventListener('click', (e) => {
-        if (headerEl && !headerEl.contains(e.target)) {
-            navMobile.classList.remove('nav-abierta')
-            btnMenu.setAttribute('aria-expanded', 'false')
-            document.body.classList.remove('menu-abierto')
+  if (btnMenu && navMobile) {
+
+    btnMenu.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const abierto = navMobile.classList.toggle('nav-abierta');
+      btnMenu.setAttribute('aria-expanded', abierto);
+      document.body.classList.toggle('menu-abierto', abierto);
+    });
+
+    navMobile.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        navMobile.classList.remove('nav-abierta');
+        btnMenu.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-abierto');
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      if (headerEl && !headerEl.contains(e.target)) {
+        navMobile.classList.remove('nav-abierta');
+        btnMenu.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-abierto');
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        navMobile.classList.remove('nav-abierta');
+        btnMenu.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-abierto');
+      }
+    });
+  }
+
+
+  // ── 2. HEADER — sombra al hacer scroll ──
+
+  if (headerEl) {
+    window.addEventListener('scroll', function() {
+      headerEl.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+  }
+
+
+  // ── 3. SCROLL REVEAL ──
+
+  const selectores = [
+    '.destinos li',
+    '.practicas-tradicionales li',
+    '.festividades-destacadas li',
+    '.tarjetas > ul > li',
+    '.obras li',
+    '.platos-tipicos li',
+    '.postres li',
+    '.bebidas li',
+    '.iconos li',
+    '.intro-fotos img'
+  ];
+
+  const revealEls = document.querySelectorAll(selectores.join(', '));
+
+  if (revealEls.length > 0) {
+    revealEls.forEach(function(el) {
+      el.classList.add('reveal');
+    });
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
-    })
+      });
+    }, {
+      threshold: 0,
+      rootMargin: '0px 0px -40px 0px'
+    });
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            navMobile.classList.remove('nav-abierta')
-            btnMenu.setAttribute('aria-expanded', 'false')
-            document.body.classList.remove('menu-abierto')
-        }
-    })
+    revealEls.forEach(function(el) {
+      observer.observe(el);
+    });
+  }
+
+
+  // ── 4. HOVER CARDS ──
+
+  document.querySelectorAll(
+    '.destinos li, .tarjetas > ul > li, .obras li'
+  ).forEach(function(card) {
+    card.addEventListener('mouseenter', function() {
+      card.classList.add('hovered');
+    });
+    card.addEventListener('mouseleave', function() {
+      card.classList.remove('hovered');
+    });
+  });
+
+
+  // ── 5. DESTINOS — hover imagen → aparece texto ──
+
+  const destinosItems = document.querySelectorAll('.destinos li');
+
+  const textos = [
+    "Hiroshima alberga el Parque Memorial de la Paz, un símbolo mundial de memoria y esperanza.",
+    "El cruce de Shibuya es uno de los más transitados del mundo: cruzan hasta 3000 personas por ciclo.",
+    "La Torre Tsutenkaku es el símbolo histórico de Osaka, construida en 1912.",
+    "El templo Kiyomizu-dera fue construido sin usar un solo clavo.",
+    "Dotonbori es el corazón de la vida nocturna y gastronómica de Osaka.",
+    "El jardín Koraku-en es uno de los tres jardines más bellos del Japón tradicional."
+  ];
+
+  destinosItems.forEach(function(item, index) {
+    var img = item.querySelector('img');
+    if (!img) return;
+
+    var overlay = document.createElement('div');
+    overlay.classList.add('destino-overlay');
+    overlay.textContent = textos[index] || "Uno de los destinos más emblemáticos de Japón.";
+
+    item.style.position = 'relative';
+    item.insertBefore(overlay, img);
+
+    img.addEventListener('mouseenter', function() {
+      img.style.opacity = '0';
+      overlay.classList.add('destino-overlay-visible');
+    });
+
+    overlay.addEventListener('mouseleave', function() {
+      img.style.opacity = '1';
+      overlay.classList.remove('destino-overlay-visible');
+    });
+  });
+
+
+  // ── 6. DEFINICION — hover → muestra el significado ──
+
+  const defH3 = document.querySelector('.definicion h3');
+  const defP  = document.querySelector('.definicion p');
+
+  if (defH3 && defP) {
+    defP.style.display = 'none';
+
+    defH3.addEventListener('mouseenter', function() {
+      defP.style.display = 'block';
+    });
+
+    defH3.addEventListener('mouseleave', function() {
+      defP.style.display = 'none';
+    });
+  }
+
+
+  // ── 7. ZOOM SUAVE en imágenes ──
+
+  document.querySelectorAll('img').forEach(function(img) {
+    img.classList.add('img-zoom');
+  });
+
+});
+
+Ahora en tu CSS agregá estos bloques nuevos que necesita el scroll reveal, el menú y el scrolled, fuera del @media:
+css/* ── MENÚ HAMBURGUESA ── */
+
+.btn-menu {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--vinotinto);
+    cursor: pointer;
+}
+
+header nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: var(--beige);
+    padding: 20px;
+    gap: 15px;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+
+header nav ul.abierto,
+header nav.nav-abierta ul {
+    display: flex;
+}
+
+/* ── HEADER SCROLLED ── */
+
+header.scrolled {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+/* ── SCROLL REVEAL ── */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
