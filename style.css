@@ -1146,14 +1146,12 @@ footer p:last-child {
         padding: 0;
     }
 
-    .tarjetas > div {
+     .tarjetas > h2 {
         max-width: var(--max-width);
         margin: 0 auto;
         padding: 40px 40px 20px;
-    }
-
-    .tarjetas > div h2 {
         font-size: 1.5rem;
+        display: block;
     }
 
     .tarjetas > ul {
