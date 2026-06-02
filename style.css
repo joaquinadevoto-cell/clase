@@ -899,7 +899,7 @@ footer p:last-child {
     left: 50%;
     transform: translateX(-50%);
     color: var(--rojo);
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: 900;
     text-transform: uppercase;
     white-space: nowrap;
