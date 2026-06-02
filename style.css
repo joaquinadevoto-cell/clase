@@ -1095,7 +1095,7 @@ footer p:last-child {
     .titulo-arte h1 {
         font-size: 80px;
         top: 50%;
-        left: 50%;
+        left: 70%;
         right: auto;
         transform: translate(-50%, -50%);
         text-align: center;
