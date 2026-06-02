@@ -31,24 +31,6 @@ body {
     padding: 0 20px;
 }
 
-.destino-overlay {
-    display: none;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    background-color: var(--vinotinto);
-    color: white;
-    border-radius: var(--radius);
-    padding: 20px;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    z-index: 2;
-}
 
 /* ── HEADER ── */
 
@@ -196,11 +178,6 @@ nav a.active {
     font-size: 11px;
     opacity: 0.7;
     margin-top: 3px;
-}
-.destinos li {
-    position: relative;
-    cursor: pointer;
-}
 
 /* ── DEFINICION ── */
 
