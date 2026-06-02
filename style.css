@@ -894,7 +894,7 @@ footer p:last-child {
      /* CULTURA - INTRO */
 
     .page-cultura .intro-container {
-        max-width: 700px;
+        max-width: var(--max-width);
         margin: 60px auto;
         padding: 0 40px;
         text-align: center;
@@ -1106,7 +1106,7 @@ footer p:last-child {
     /* ARTE - INTRO */
   .page-arte .intro.container {
         display: block;
-        max-width: 800px;
+        max-width: var(--max-width);
         margin: 0 auto;
         padding: 80px 60px 40px;
         text-align: center;
