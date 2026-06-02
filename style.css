@@ -886,7 +886,7 @@ footer p:last-child {
         text-align: center;
     }
 
-    .page-cultura .intro-container p {
+    .page-cultura .intro p {
         font-size: 0.95rem;
         line-height: 1.6;
         text-align: left;
@@ -1178,20 +1178,22 @@ footer p:last-child {
     }
 
 
-    .page-index .intro-texto p {
+   .page-index .intro-texto p {
         font-size: 1rem;
         margin-bottom: 20px;
-        max-width: none;
-        text-align: left;
+        text-align: center;
     }
 
-      .page-index .intro-fotos {
+     .page-index .intro-fotos {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 200px 200px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 250px;
         gap: 15px;
-        margin-top: 0;
-        height: 415px;
+        margin-top: 40px;
+        width: 100%;
+        max-width: var(--max-width);
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .page-index .intro-fotos img {
@@ -1201,15 +1203,15 @@ footer p:last-child {
         border-radius: var(--radius);
     }
 
-    .page-index .intro-fotos img:first-child {
-        grid-row: span 2;
-        height: 415px;
+     .page-index .intro-fotos img:first-child {
+        grid-row: span 1;
+        height: 250px;
     }
 
-    .page-index .destinos {
+     .page-index .destinos {
         padding: 60px 40px;
     }
-
+    
     .page-index .destinos h2 {
         font-size: 2rem;
         margin-bottom: 15px;
