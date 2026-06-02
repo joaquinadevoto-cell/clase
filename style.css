@@ -1078,11 +1078,11 @@ footer p:last-child {
     }
 
     /* ARTE - INTRO */
- .page-arte .intro.container {
+  .page-arte .intro.container {
         display: block;
-        max-width: 700px;
+        max-width: 800px;
         margin: 0 auto;
-        padding: 60px 40px;
+        padding: 80px 60px 40px;
         text-align: center;
     }
 
