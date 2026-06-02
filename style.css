@@ -429,6 +429,22 @@ footer p:last-child {
 
 
 /* ── CULTURA ── */
+.intro-container {
+    padding: 30px 20px;
+}
+.intro-container h2 {
+    font-size: 1.1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--vinotinto);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.intro-container p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
 
 .titulo-cultura {
     position: relative;
