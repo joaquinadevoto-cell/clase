@@ -430,31 +430,33 @@ footer p:last-child {
 
 /* ── CULTURA ── */
 
-.titulo-cultura {
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-}
+ .titulo-cultura {
+        height: 85vh;
+        padding: 0 0 60px 8%;
+        background: url('img/buda-portada.jpg') center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
 
-.titulo-cultura img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    display: block;
-}
+ .titulo-cultura img {
+        display: none;
+    }
 
 .titulo-cultura h1 {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--rojo);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
+        color: var(--rojo);
+        font-size: 140px;
+        font-weight: 900;
+        line-height: 0.85;
+        text-transform: uppercase;
+        position: static;
+        transform: none;
+        left: auto;
+        top: auto;
+        white-space: nowrap;
+        letter-spacing: normal;
+    }
 
 /* ── PRACTICAS TRADICIONALES ── */
 
@@ -850,19 +852,13 @@ footer p:last-child {
     }
 
     /* CULTURA - HERO */
-     .titulo-cultura img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
+     .titulo-cultura {
+        height: 85vh;
+        padding: 0 0 60px 8%;
     }
 
-      .titulo-cultura h1 {
-        top: 40px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 5rem;
-        letter-spacing: 2px;
-        white-space: nowrap;
+       .titulo-cultura h1 {
+        font-size: 140px;
     }
 
      /* CULTURA - INTRO */
