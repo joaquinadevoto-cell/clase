@@ -1,11 +1,5 @@
 // ── 1. DESTINOS: hover imagen → aparece texto ──
 
-const hamburguesa = document.querySelector(".hamburguesa");
-const menu = document.querySelector("header nav ul");
-hamburguesa.addEventListener("click", () => {
-    menu.classList.toggle("abierto");
-    hamburguesa.classList.toggle("activo");
-});
 const destinosItems = document.querySelectorAll('.destinos li');
 
 const textos = [
@@ -19,20 +13,22 @@ const textos = [
 
 destinosItems.forEach(function(item, index) {
     var img = item.querySelector('img');
+    if (!img) return;
 
     var overlay = document.createElement('div');
     overlay.classList.add('destino-overlay');
     overlay.textContent = textos[index] || "Uno de los destinos más emblemáticos de Japón.";
-    item.appendChild(overlay);
+    
     item.style.position = 'relative';
+    item.insertBefore(overlay, img);
 
-    item.addEventListener('mouseenter', function() {
-        img.classList.add('destino-img-hidden');
+    img.addEventListener('mouseenter', function() {
+        img.style.opacity = '0';
         overlay.classList.add('destino-overlay-visible');
     });
 
-    item.addEventListener('mouseleave', function() {
-        img.classList.remove('destino-img-hidden');
+    overlay.addEventListener('mouseleave', function() {
+        img.style.opacity = '1';
         overlay.classList.remove('destino-overlay-visible');
     });
 });
