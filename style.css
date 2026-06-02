@@ -811,9 +811,17 @@ footer p:last-child {
     }
 
       .titulo-gastro h1 {
-        font-size: 3.5rem;
-        top: 30px;
-    }
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--beige);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+      }
 
    .titulo-gastro ~ .intro h2 {
         font-size: 1.6rem;
