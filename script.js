@@ -1,5 +1,3 @@
-// ── 1. DESTINOS: hover imagen → aparece texto ──
-
 const destinosItems = document.querySelectorAll('.destinos li');
 const hamburguesa = document.querySelector(".hamburguesa");
 const menu = document.querySelector("header nav ul");
@@ -8,7 +6,7 @@ hamburguesa.addEventListener("click", () => {
     menu.classList.toggle("abierto");
     hamburguesa.classList.toggle("activo");
 });
-});
+
 const textos = [
     "Hiroshima alberga el Parque Memorial de la Paz, un símbolo mundial de memoria y esperanza.",
     "El cruce de Shibuya es uno de los más transitados del mundo: cruzan hasta 3000 personas por ciclo.",
@@ -21,38 +19,28 @@ const textos = [
 destinosItems.forEach(function(item, index) {
     var img = item.querySelector('img');
     if (!img) return;
-
     var overlay = document.createElement('div');
     overlay.classList.add('destino-overlay');
     overlay.textContent = textos[index] || "Uno de los destinos más emblemáticos de Japón.";
-    
     item.style.position = 'relative';
     item.insertBefore(overlay, img);
-
     img.addEventListener('mouseenter', function() {
         img.style.opacity = '0';
         overlay.classList.add('destino-overlay-visible');
     });
-
     overlay.addEventListener('mouseleave', function() {
         img.style.opacity = '1';
         overlay.classList.remove('destino-overlay-visible');
     });
 });
 
-
-// ── 2. DEFINICION: hover → muestra el significado ──
-
 const defH3 = document.querySelector('.definicion h3');
 const defP = document.querySelector('.definicion p');
-
 if (defH3 && defP) {
     defP.style.display = 'none';
-
     defH3.addEventListener('mouseenter', function() {
         defP.style.display = 'block';
     });
-
     defH3.addEventListener('mouseleave', function() {
         defP.style.display = 'none';
     });
