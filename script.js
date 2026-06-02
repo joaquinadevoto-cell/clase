@@ -42,25 +42,16 @@ destinosItems.forEach(function(item, index) {
 // ── 2. DEFINICION: hover → muestra el significado ──
 
 const defH3 = document.querySelector('.definicion h3');
+const defP = document.querySelector('.definicion p');
 
-if (defH3) {
-    const textoOriginal = defH3.innerHTML;
-    const textoSignificado = '<span style="font-weight:400; font-size: 1.4rem;">La luz del sol que se filtra entre las hojas de los árboles — ese instante de belleza efímera que solo existe en movimiento.</span>';
+if (defH3 && defP) {
+    defP.style.display = 'none';
 
     defH3.addEventListener('mouseenter', function() {
-        defH3.innerHTML = textoSignificado;
+        defP.style.display = 'block';
     });
 
     defH3.addEventListener('mouseleave', function() {
-        defH3.innerHTML = textoOriginal;
+        defP.style.display = 'none';
     });
 }
-
-
-// ── 3. ZOOM SUAVE en imágenes generales ──
-
-const todasLasImagenes = document.querySelectorAll('img');
-
-todasLasImagenes.forEach(function(img) {
-    img.classList.add('img-zoom');
-});
