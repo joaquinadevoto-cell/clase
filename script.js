@@ -1,7 +1,13 @@
 // ── 1. DESTINOS: hover imagen → aparece texto ──
 
 const destinosItems = document.querySelectorAll('.destinos li');
+const hamburguesa = document.querySelector(".hamburguesa");
 const menu = document.querySelector("header nav ul");
+
+hamburguesa.addEventListener("click", () => {
+    menu.classList.toggle("abierto");
+    hamburguesa.classList.toggle("activo");
+});
 const textos = [
     "Hiroshima alberga el Parque Memorial de la Paz, un símbolo mundial de memoria y esperanza.",
     "El cruce de Shibuya es uno de los más transitados del mundo: cruzan hasta 3000 personas por ciclo.",
