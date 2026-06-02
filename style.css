@@ -850,27 +850,30 @@ footer p:last-child {
     }
 
     /* CULTURA - HERO */
-    .titulo-cultura img {
+     .titulo-cultura img {
         width: 100%;
-        height: 500px;
+        height: 600px;
         object-fit: cover;
-        object-position: center top;
+        object-position: center center;
     }
+
+     .titulo-cultura h1 {
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 5rem;
+        letter-spacing: 2px;
+        white-space: nowrap;
+    }
+
+     /* CULTURA - INTRO */
 
     .titulo-cultura ~ .intro {
         max-width: var(--max-width);
         margin: 0 auto;
         padding: 60px 40px;
     }
-
-    .titulo-cultura h1 {
-        top: 60px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 5rem;
-        letter-spacing: 2px;
-    }
-
+ 
       .titulo-cultura ~ .intro h2 {
         font-size: 1.4rem;
         font-weight: 900;
@@ -879,7 +882,7 @@ footer p:last-child {
         margin-bottom: 20px;
         line-height: 1.3;
     }
-    .titulo-cultura ~ .intro p {
+     .titulo-cultura ~ .intro p {
         font-size: 0.95rem;
         line-height: 1.6;
         max-width: none;
@@ -890,9 +893,9 @@ footer p:last-child {
     /* CULTURA - PRACTICAS Y FESTIVIDADES */
     .practicas-tradicionales,
     .festividades-destacadas {
-        max-width: 1300px;
-        margin: 0 auto 80px;
-        padding: 0 60px;
+        max-width: var(--max-width);
+        margin: 0 auto 60px;
+        padding: 0 40px;
     }
 
     .practicas-tradicionales ul,
@@ -903,33 +906,43 @@ footer p:last-child {
         list-style: none;
         padding: 0;
     }
+     .practicas-tradicionales li,
+    .festividades-destacadas li {
+        background-color: var(--blanco);
+        border-radius: var(--radius);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
 
-    .practicas-tradicionales li h3,
+     .practicas-tradicionales li h3,
     .festividades-destacadas li h3 {
         background-color: var(--rojo);
         color: white;
         padding: 15px 20px;
         margin: 0;
-        border-radius: 15px 15px 0 0;
-        font-size: 1.1rem;
+        border-radius: var(--radius) var(--radius) 0 0;
+        font-size: 1rem;
+        text-align: center;
     }
 
-    .practicas-tradicionales li img,
+   .practicas-tradicionales li img,
     .festividades-destacadas li img {
         width: 100%;
         height: 220px;
         object-fit: cover;
-        border-radius: 0 0 15px 15px;
+        border-radius: 0;
         display: block;
         margin: 0;
     }
 
-    .practicas-tradicionales li p,
+   .practicas-tradicionales li p,
     .festividades-destacadas li p {
-        margin-top: 15px;
+        padding: 15px 20px;
         font-size: 0.9rem;
         line-height: 1.5;
-        padding: 0;
+        margin: 0;
+        flex: 1;
     }
 
     .festividades-destacadas h2 {
@@ -1097,7 +1110,7 @@ footer p:last-child {
         aspect-ratio: unset;
         display: block;
     }
-    
+
  /* ARTE - EXPRESIONES */
     .tarjetas {
         padding: 0;
