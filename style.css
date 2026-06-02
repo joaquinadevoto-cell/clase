@@ -1150,7 +1150,8 @@ footer p:last-child {
         max-width: var(--max-width);
         margin: 0 auto;
         padding: 40px 40px 20px;
-        font-size: 1.5rem;
+        font-size: 1 rem;
+        font-weight: 900;
         display: block;
     }
 
