@@ -31,6 +31,30 @@ body {
     padding: 0 20px;
 }
 
+.destino-overlay {
+    display: none;
+    position: absolute;
+    inset: 0;
+    background-color: var(--vinotinto);
+    color: white;
+    border-radius: var(--radius);
+    padding: 15px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.destino-overlay-visible {
+    display: flex;
+}
+
+.destino-img-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 /* ── HEADER ── */
 
 header {
