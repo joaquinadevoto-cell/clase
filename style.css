@@ -820,7 +820,7 @@ footer p:last-child {
     }
 
    .titulo-gastro ~ .intro p {
-        font-size: 0.95rem;
+        font-size: 1rem;
         line-height: 1.7;
         text-align: left;
         max-width: none;
@@ -912,7 +912,7 @@ footer p:last-child {
     }
 
     .page-cultura .intro p {
-        font-size: 0.95rem;
+        font-size: 1rem;
         line-height: 1.6;
         text-align: left;
         max-width: none;
