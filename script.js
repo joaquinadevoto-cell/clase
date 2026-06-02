@@ -1,8 +1,7 @@
 // ── 1. DESTINOS: hover imagen → aparece texto ──
 
 const hamburguesa = document.querySelector(".hamburguesa");
-const menu = document.querySelector("nav ul");
-
+const menu = document.querySelector("header nav ul");
 hamburguesa.addEventListener("click", () => {
     menu.classList.toggle("abierto");
     hamburguesa.classList.toggle("activo");
