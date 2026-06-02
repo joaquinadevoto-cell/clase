@@ -430,15 +430,16 @@ footer p:last-child {
 
 /* ── CULTURA ── */
 
- .titulo-cultura {
-        height: 85vh;
-        padding: 0 0 60px 8%;
-        background: url('img/buda-portada.jpg') center/cover no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-    }
+.titulo-cultura {
+    height: auto;
+    min-height: 70vh;
+    background: url('img/buda-portada.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0 0 40px 5%;
+}
 
  .titulo-cultura img {
         display: none;
@@ -852,10 +853,12 @@ footer p:last-child {
     }
 
     /* CULTURA - HERO */
-     .titulo-cultura {
-        height: 85vh;
+        .titulo-cultura {
+        min-height: 85vh;
+        height: auto;
         padding: 0 0 60px 8%;
     }
+
 
        .titulo-cultura h1 {
         font-size: 140px;
