@@ -850,11 +850,10 @@ footer p:last-child {
     }
 
     /* CULTURA - HERO */
-      .titulo-cultura img {
+     .titulo-cultura img {
         width: 100%;
-        height: 1000px;
+        height: auto;
         object-fit: cover;
-        object-position: center top;
     }
 
       .titulo-cultura h1 {
