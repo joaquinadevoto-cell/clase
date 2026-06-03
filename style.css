@@ -77,6 +77,17 @@ header.scrolled {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ── ZOOM IMÁGENES ── */
+
+.img-zoom {
+    transition: transform 0.3s ease;
+}
+
+.img-zoom:hover {
+    transform: scale(1.03);
+}
+
 /* ── HEADER ── */
 
 header {
