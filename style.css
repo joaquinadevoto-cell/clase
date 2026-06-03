@@ -55,7 +55,7 @@ header nav ul {
     gap: 15px;
 }
 
-header nav.nav-abierta ul {
+header nav.container.nav-abierta ul {
     display: flex;
 }
 
