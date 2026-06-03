@@ -42,11 +42,20 @@ body {
     display: block;
 }
 
-header nav.nav-abierta ul {
-    display: flex;
+header nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--beige);
+    padding: 20px;
+    z-index: 100;
+    gap: 15px;
 }
 
-header nav ul.nav-abierta {
+header nav.nav-abierta ul {
     display: flex;
 }
 
@@ -89,7 +98,6 @@ header img {
 
 nav ul {
     list-style: none;
-    display: flex;
     gap: 12px;
 }
 
