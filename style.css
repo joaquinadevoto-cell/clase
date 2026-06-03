@@ -34,12 +34,12 @@ body {
 /* ── MENÚ HAMBURGUESA ── */
 
 .btn-menu {
-    display: block;
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--vinotinto);
     cursor: pointer;
+    display: block;
 }
 
 header nav ul {
@@ -47,17 +47,15 @@ header nav ul {
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 20px;
+    left: 0;
+    width: 100%;
     background-color: var(--beige);
     padding: 20px;
-    gap: 15px;
     z-index: 100;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    border-radius: 10px;
+    gap: 15px;
 }
 
-header nav ul.abierto,
-header nav.nav-abierta ul {
+header nav ul.nav-abierta {
     display: flex;
 }
 
@@ -1337,18 +1335,21 @@ footer p:last-child {
         max-width: 600px;
         margin: 30px auto 0;
     }
-}
 
 .btn-menu {
-    display: none;
+        display: none;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        padding: 0;
+        background: none;
+        gap: 20px;
+    }
+
 }
 
-header nav ul {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    background: none;
-    padding: 0;
-    box-shadow: none;
-    border-radius: 0;
-}
+
